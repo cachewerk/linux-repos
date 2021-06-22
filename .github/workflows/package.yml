@@ -1,0 +1,46 @@
+name: Build packages
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag'
+        required: true
+
+jobs:
+
+  build:
+
+    name: Build packages
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Docker cache
+        uses: satackey/action-docker-layer-caching@v0.0.11
+        continue-on-error: true
+        with:
+          key: docker-packages-{hash}
+          restore-keys: docker-packages-
+
+      - name: Build the Docker image
+        run: |
+          cd build
+          docker build . --tag fpm --file fpm.Dockerfile
+
+      - name: Bundle packages
+        run: |
+          cd build
+          docker run --tty \
+            -v ${PWD}/fpm:/root/fpm \
+            fpm /bin/bash -c "./fpm.sh ${{ github.event.inputs.tag }}"
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: packages
+          path: build/fpm/dist/*

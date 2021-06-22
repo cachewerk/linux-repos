@@ -1,0 +1,7 @@
+[cachewerk-el]
+name=CacheWerk Enterprise Linux
+baseurl=https://cachewerk.s3.amazonaws.com/repos/rpm/el$releasever/
+gpgkey=https://cachewerk.s3.amazonaws.com/repos/key.gpg
+gpgcheck=0
+repo_gpgcheck=1
+enabled=1

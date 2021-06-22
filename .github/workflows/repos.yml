@@ -1,0 +1,165 @@
+name: Update repositories
+
+on:
+  workflow_run:
+    workflows: [Build packages]
+    types: [completed]
+
+jobs:
+
+  deb-repo:
+
+    name: Update deb repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    if: github.event.workflow_run.conclusion == 'success'
+
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          lfs: true
+
+      - name: Download artifacts
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          workflow: ${{ github.event.workflow.id }}
+          run_id: ${{ github.event.workflow_run.id }}
+          path: artifacts
+
+      - name: Get build tag
+        run: echo "TAG=$(find artifacts -name 'TAG' | head -n 1 | xargs cat)" >> $GITHUB_ENV
+
+      - name: Copy packages
+        run: |
+          mkdir -p deb/pool/${{ env.TAG }}
+          find artifacts -name '*.deb' -exec cp {} deb/pool/${{ env.TAG }} \;
+
+      - name: Set up Docker cache
+        uses: satackey/action-docker-layer-caching@v0.0.11
+        continue-on-error: true
+        with:
+          key: docker-deb-{hash}
+          restore-keys: docker-deb-
+
+      - name: Build the Docker image
+        run: docker build . --tag deb --file build/deb.Dockerfile
+
+      - name: Set up private key
+        run: echo -n '${{ secrets.PRIVATE_KEY }}' | base64 --decode > key-private.asc
+
+      - name: Set up Git
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Update repository
+        run: |
+          docker run --tty \
+            -v ${PWD}:/root/deb \
+            -e GPG_PASSPHRASE='${{ secrets.GPG_PASSPHRASE }}' \
+            deb /bin/bash -c "./build/deb-repo.sh"
+
+      - name: Remove private key
+        run: rm -f key-private.asc
+
+      - name: Commit changes
+        run: |
+          git pull
+          git add deb/*
+          git commit -m "Bump deb repo to ${{ env.TAG }}" || echo "No changes to commit"
+          git push
+
+      - name: Set up AWS CLI
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: us-east-1
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: Sync repo with S3
+        run: |
+          aws s3 cp key.gpg s3://cachewerk/repos/ --acl public-read
+          aws s3 sync deb s3://cachewerk/repos/deb --delete --acl public-read
+
+  rpm-repo:
+
+    name: Update rpm repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: deb-repo
+
+    if: github.event.workflow_run.conclusion == 'success'
+
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          lfs: true
+
+      - name: Download artifacts
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          workflow: ${{ github.event.workflow.id }}
+          run_id: ${{ github.event.workflow_run.id }}
+          path: artifacts
+
+      - name: Get build tag
+        run: echo "TAG=$(find artifacts -name 'TAG' | head -n 1 | xargs cat)" >> $GITHUB_ENV
+
+      - name: Copy packages
+        run: |
+          mkdir -p rpm/el7/${{ env.TAG }}
+          find artifacts -name '*el7*.rpm' -exec cp {} rpm/el7/${{ env.TAG }} \;
+          mkdir -p rpm/el8/${{ env.TAG }}
+          find artifacts -name '*el8*.rpm' -exec cp {} rpm/el8/${{ env.TAG }} \;
+
+      - name: Set up Docker cache
+        uses: satackey/action-docker-layer-caching@v0.0.11
+        continue-on-error: true
+        with:
+          key: docker-rpm-{hash}
+          restore-keys: docker-rpm-
+
+      - name: Build the Docker image
+        run: docker build . --tag rpm --file build/rpm.Dockerfile
+
+      - name: Set up private key
+        run: echo -n '${{ secrets.PRIVATE_KEY }}' | base64 --decode > key-private.asc
+
+      - name: Set up Git
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Update repository
+        run: |
+          docker run --tty \
+            -v ${PWD}:/root/rpm \
+            -e GPG_PASSPHRASE='${{ secrets.GPG_PASSPHRASE }}' \
+            rpm /bin/bash -c "./build/rpm-repo.sh"
+
+      - name: Remove private key
+        run: rm -f key-private.asc
+
+      - name: Commit changes
+        run: |
+          git pull
+          git add rpm/*
+          git commit -m "Bump rpm repos to ${{ env.TAG }}" || echo "No changes to commit"
+          git push
+
+      - name: Set up AWS CLI
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: us-east-1
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: Sync repo with S3
+        run: |
+          aws s3 cp key.gpg s3://cachewerk/repos/ --acl public-read
+          aws s3 sync rpm s3://cachewerk/repos/rpm --delete --acl public-read
