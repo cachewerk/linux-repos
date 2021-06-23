@@ -1,6 +1,8 @@
-# Linux repositories for Relay
+# Relay packages and repositories for Linux
 
-## APT (Debian, Ubuntu, etc.)
+For detailed installations instruction see [relaycache.com](https://relaycache.com/docs/installation).
+
+## Using APT (Debian/Ubuntu)
 
 ```bash
 curl -s https://cachewerk.s3.amazonaws.com/repos/key.gpg | sudo apt-key add -
@@ -11,7 +13,7 @@ sudo apt install php-relay     # default php version
 sudo apt install php8.0-relay  # specific php version
 ```
 
-## RPM (CentOS, Red Hat, etc.)
+## Using YUM (CentOS)
 
 ```bash
 curl -s -o /etc/yum.repos.d/cachewerk.repo "https://cachewerk.s3.amazonaws.com/repos/rpm/el.repo"
