@@ -5,3 +5,19 @@ gpgkey=https://cachewerk.s3.amazonaws.com/repos/key.gpg
 gpgcheck=0
 repo_gpgcheck=1
 enabled=1
+
+[cachewerk-el7]
+name=CacheWerk Enterprise Linux 7
+baseurl=https://cachewerk.s3.amazonaws.com/repos/rpm/el7/
+gpgkey=https://cachewerk.s3.amazonaws.com/repos/key.gpg
+gpgcheck=0
+repo_gpgcheck=1
+enabled=0
+
+[cachewerk-el8]
+name=CacheWerk Enterprise Linux 8
+baseurl=https://cachewerk.s3.amazonaws.com/repos/rpm/el8/
+gpgkey=https://cachewerk.s3.amazonaws.com/repos/key.gpg
+gpgcheck=0
+repo_gpgcheck=1
+enabled=0
