@@ -13,7 +13,6 @@ pkg_config_dest=(
 )
 
 pkg_depends=(
-    "jemalloc"
     "openssl"
     "libev"
     "libzstd"
