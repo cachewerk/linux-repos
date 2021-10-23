@@ -21,10 +21,20 @@ packages=(
   "rpm multi.el7  x86_64 8.0 20200930 $baseurl-php8.0-centos7-x86-64.tar.gz"
   "rpm multi.el7  x86_64 7.4 20190902 $baseurl-php7.4-centos7-x86-64.tar.gz"
 
+  "rpm single.el7 aarch64 8.0 20200930 $baseurl-php8.0-centos7-aarch64.tar.gz"
+  "rpm single.el7 aarch64 7.4 20190902 $baseurl-php7.4-centos7-aarch64.tar.gz"
+  "rpm multi.el7  aarch64 8.0 20200930 $baseurl-php8.0-centos7-aarch64.tar.gz"
+  "rpm multi.el7  aarch64 7.4 20190902 $baseurl-php7.4-centos7-aarch64.tar.gz"
+
   "rpm single.el8 x86_64 8.0 20200930 $baseurl-php8.0-centos8-x86-64.tar.gz"
   "rpm single.el8 x86_64 7.4 20190902 $baseurl-php7.4-centos8-x86-64.tar.gz"
   "rpm multi.el8  x86_64 8.0 20200930 $baseurl-php8.0-centos8-x86-64.tar.gz"
   "rpm multi.el8  x86_64 7.4 20190902 $baseurl-php7.4-centos8-x86-64.tar.gz"
+
+  "rpm single.el8 aarch64 8.0 20200930 $baseurl-php8.0-centos8-aarch64.tar.gz"
+  "rpm single.el8 aarch64 7.4 20190902 $baseurl-php7.4-centos8-aarch64.tar.gz"
+  "rpm multi.el8  aarch64 8.0 20200930 $baseurl-php8.0-centos8-aarch64.tar.gz"
+  "rpm multi.el8  aarch64 7.4 20190902 $baseurl-php7.4-centos8-aarch64.tar.gz"
 )
 
 main
