@@ -8,12 +8,12 @@ version=$1
 baseurl="https://cachewerk.s3.amazonaws.com/relay/$version/relay-$version"
 
 packages=(
-  "deb base       amd64  8.0 20200930 $baseurl-php8.0-debian-x86-64.tar.gz"
+  "deb base       amd64  8.1 20200930 $baseurl-php8.0-debian-x86-64.tar.gz"
   "deb multi      amd64  8.1 20210902 $baseurl-php8.1-debian-x86-64.tar.gz"
   "deb multi      amd64  8.0 20200930 $baseurl-php8.0-debian-x86-64.tar.gz"
   "deb multi      amd64  7.4 20190902 $baseurl-php7.4-debian-x86-64.tar.gz"
 
-  "deb base       arm64  8.0 20200930 $baseurl-php8.0-debian-aarch64.tar.gz"
+  "deb base       arm64  8.1 20200930 $baseurl-php8.0-debian-aarch64.tar.gz"
   "deb multi      arm64  8.1 20210902 $baseurl-php8.1-debian-aarch64.tar.gz"
   "deb multi      arm64  8.0 20200930 $baseurl-php8.0-debian-aarch64.tar.gz"
   "deb multi      arm64  7.4 20190902 $baseurl-php7.4-debian-aarch64.tar.gz"
