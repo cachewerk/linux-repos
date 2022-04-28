@@ -16,7 +16,6 @@ pkg_depends=(
     "libc6 >= 2.17"
     "libev4 >= 1:4.04"
     "liblz4-1 >= 0.0~r130"
-    "libssl1.1 >= 1.1.0"
     "libzstd1 >= 1.3.2"
     "php$php_version-common"
     "php$php_version-igbinary"
