@@ -2,7 +2,8 @@
 
 gpg --batch --import key-private.asc
 
-dists="xenial bionic focal"
+#       16.04  18.04 20.04 22.04
+dists="xenial bionic focal jammy"
 architectures="amd64 arm64"
 
 cd deb
