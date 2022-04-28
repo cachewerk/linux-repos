@@ -202,15 +202,15 @@ Package: php-relay
 Version: 0.3.2
 Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 2049
+Installed-Size: 2061
 Pre-Depends: php-common
 Depends: php8.1-relay, php8.1-igbinary, php8.1-msgpack
 Provides: php-relay
 Filename: pool/v0.3.2/php-relay-0.3.2-php8.1-debian_arm64.deb
-Size: 749282
-MD5sum: 4932057f403d127078d1d36b9211bb09
-SHA1: 3c985fd691b3aaa75b9518cade2ccbb3f3c17f01
-SHA256: f488e2966df40d4de034666a93c6d38bd507f85676ba3f7555b7c8adef5fe947
+Size: 753516
+MD5sum: 58ec4cf7a26fbfa5f30d7f1a576bc615
+SHA1: 8d90e46386bb39d8d8d72969f551e5f78351e0bc
+SHA256: 47f2dd78ed9c3e9c41f5cef2da328b1f2509fc5e6cb7e57b31861b9e5c6e76ef
 Section: php
 Priority: optional
 Homepage: https://relaycache.com
@@ -465,14 +465,14 @@ Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 2018
 Pre-Depends: php-common
-Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
+Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
 Replaces: php-relay (<< 0.3.2)
 Provides: php-relay
 Filename: pool/v0.3.2/php7.4-relay-0.3.2-php7.4-debian_arm64.deb
-Size: 743350
-MD5sum: 0a488a4fe9e26425273827a0f3570833
-SHA1: bc8bdc19fd04a50be999c6bef724ace927643b3d
-SHA256: 01d3045036142103fde8b57f52870f60cda68f4719ed402b8ad115d4c46ed9e5
+Size: 743340
+MD5sum: 778098ec91447c72188a4567af56ad71
+SHA1: 2dbffcad67a975a8e4420bbf043a8f84376f4d84
+SHA256: 855155efe21954f83660f620dc1f6a75904010b71ccba8e047bcd70753705890
 Section: php
 Priority: optional
 Homepage: https://relaycache.com
@@ -707,14 +707,14 @@ Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 2049
 Pre-Depends: php-common
-Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
+Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
 Replaces: php-relay (<< 0.3.2)
 Provides: php-relay
 Filename: pool/v0.3.2/php8.0-relay-0.3.2-php8.0-debian_arm64.deb
-Size: 749600
-MD5sum: 2538d7c53e9f3c3edb84e6b4a30118b8
-SHA1: 4bc64795f2d36ae6fd83bbcc210ea304a19d99f2
-SHA256: 24dabac498b5be80f73c32b81e39959607cb862a9d7dabac610de3185224ec10
+Size: 749590
+MD5sum: 508df5a4d527bd3c1bdc638358554b56
+SHA1: 2d3c0bb4a06b2e773043860534597445f6309fbc
+SHA256: 50e5901ff5a2da76ee4f1a851ecabd674f3c1e227a53c74db6a4a62d658dd07c
 Section: php
 Priority: optional
 Homepage: https://relaycache.com
@@ -817,14 +817,14 @@ Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 2061
 Pre-Depends: php-common
-Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
+Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
 Replaces: php-relay (<< 0.3.2)
 Provides: php-relay
 Filename: pool/v0.3.2/php8.1-relay-0.3.2-php8.1-debian_arm64.deb
-Size: 753824
-MD5sum: e5509460cb3b78b88ec620b2c2e0f194
-SHA1: a0d9dc2d89c95cdd99fcb6dcf6cf7c0a74cdae3a
-SHA256: 8a8064629e33f0edf41f3bd6a28ffa1d3a35989f6fcac2e8e012899083a766fb
+Size: 753814
+MD5sum: 2423df787e52fbce1971be9521e29a8c
+SHA1: d94af29b8e0ee858fad98ce966df4b4d88a746eb
+SHA256: 65b2e52548081e049d5c3733fe91f449cdbdc1cf84c0075fc8fb8af319391dfd
 Section: php
 Priority: optional
 Homepage: https://relaycache.com
