@@ -14,7 +14,6 @@ pkg_config_dest=(
 
 pkg_depends=(
     "openssl"
-    "libev"
     "libzstd"
     "lz4"
     "php$php_version_short-php(api) = $php_api-64"

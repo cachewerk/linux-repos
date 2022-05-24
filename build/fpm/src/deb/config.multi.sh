@@ -14,7 +14,6 @@ pkg_config_dest=(
 
 pkg_depends=(
     "libc6 >= 2.17"
-    "libev4 >= 1:4.04"
     "liblz4-1 >= 0.0~r130"
     "libzstd1 >= 1.3.2"
     "php$php_version-common"

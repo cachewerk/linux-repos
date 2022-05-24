@@ -16,7 +16,6 @@ pkg_config_dest=(
 
 pkg_depends=(
     "openssl11"
-    "libev"
     "libzstd"
     "lz4"
     "php(api) = $php_api-64"
