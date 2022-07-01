@@ -12,7 +12,14 @@ for dist in $dists; do
   for arch in $architectures; do
     mkdir -p dists/$dist/main/binary-$arch
 
-    find pool -name "*-$arch.deb" -exec bash -c "mv \$0 \${0/-$arch/_$arch}" {} \;
+    case "$dist" in
+      jammy) pattern="*-$arch+libssl3.deb" ;;
+      *) pattern="*-$arch.deb" ;;
+    esac
+
+    echo "Building $dist repository for $arch with $pattern"
+
+    find pool -name "$pattern" -exec bash -c "mv \$0 \${0/-$arch/_$arch}" {} \;
 
     dpkg-scanpackages --multiversion --arch $arch \
       pool > dists/$dist/main/binary-$arch/Packages

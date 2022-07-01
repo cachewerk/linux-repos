@@ -23,6 +23,7 @@ fpm_build()
   php_version_short=${4//./}
   php_api=$5
   pkg_url=$6
+  pkg_mod=$7
 
   if [[ "$version" == "v0.1.0" && "$pkg_type" == "rpm" ]]; then
     echo "Skipping RPMs for v0.1.0"
@@ -34,7 +35,7 @@ fpm_build()
   echo "Building Relay ($version) .$pkg_type package for PHP $php_version on $pkg_arch"
 
   echo "Downloading $pkg_url"
-  curl -s $pkg_url | tar xz -C /tmp
+  curl -s ${pkg_url//+/%2B} | tar xz -C /tmp
 
   src_path=/tmp/$(basename $pkg_url .tar.gz)
   dest_path=/root/fpm/src/$pkg_type/$pkg_arch-php$php_version
@@ -53,7 +54,7 @@ fpm_build()
   done
 
   pkg_version=${version#v}
-  pkg_filename="$pkg_name-$pkg_version-php$php_version-$pkg_identifier-$pkg_arch.$pkg_type"
+  pkg_filename="$pkg_name-$pkg_version-php$php_version-$pkg_identifier-${pkg_arch}${pkg_mod}.$pkg_type"
 
   args=(
     "--input-type dir"
