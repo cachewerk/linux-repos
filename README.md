@@ -1,6 +1,6 @@
 # Relay packages and repositories for Linux
 
-For detailed installations instruction see [relaycache.com](https://relaycache.com/docs/installation).
+For detailed installations instruction see [relay.so](https://relay.so/docs/installation).
 
 ## Using APT (Debian, Ubuntu)
 

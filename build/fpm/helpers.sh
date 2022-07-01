@@ -62,7 +62,7 @@ fpm_build()
     "--vendor 'CacheWerk, Inc.'"
     "--maintainer 'Relay Team <hello@cachewerk.com>'"
     "--description 'The next-generation caching layer for PHP.'"
-    "--url 'https://relaycache.com'"
+    "--url 'https://relay.so'"
     "--license 'Proprietary'"
     "--category 'php'"
     "--name '$pkg_name'"
