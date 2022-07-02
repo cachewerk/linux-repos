@@ -6,7 +6,7 @@ Installed-Size: 5851
 Pre-Depends: php-common
 Depends: php8.0-relay, php8.0-igbinary, php8.0-msgpack
 Provides: php-relay
-Filename: pool/v0.1.0/php-relay-0.1.0-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.1.0/php-relay-0.1.0-php8.0-debian_arm64.deb
 Size: 1821300
 MD5sum: dcc1761c29651c452476c1c66ce72e7f
 SHA1: 29319b9166fc9b2fc2281896c4106f38addf46f2
@@ -26,7 +26,7 @@ Installed-Size: 5858
 Pre-Depends: php-common
 Depends: php8.0-relay, php8.0-igbinary, php8.0-msgpack
 Provides: php-relay
-Filename: pool/v0.1.1/php-relay-0.1.1-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.1.1/php-relay-0.1.1-php8.0-debian_arm64.deb
 Size: 1822306
 MD5sum: 51252954e2a37508ce6d449461b6a446
 SHA1: 672e571be789d3334149e1f2e8c04b76d2be90db
@@ -46,7 +46,7 @@ Installed-Size: 5864
 Pre-Depends: php-common
 Depends: php8.0-relay, php8.0-igbinary, php8.0-msgpack
 Provides: php-relay
-Filename: pool/v0.1.2/php-relay-0.1.2-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.1.2/php-relay-0.1.2-php8.0-debian_arm64.deb
 Size: 1826954
 MD5sum: b91821f600068a1977c4b3bc42c20ede
 SHA1: ee1bf63a7c57e57982260c70721c3aa9c7c4c33f
@@ -66,7 +66,7 @@ Installed-Size: 5916
 Pre-Depends: php-common
 Depends: php8.0-relay, php8.0-igbinary, php8.0-msgpack
 Provides: php-relay
-Filename: pool/v0.1.3/php-relay-0.1.3-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.1.3/php-relay-0.1.3-php8.0-debian_arm64.deb
 Size: 1842900
 MD5sum: aebf7db30fd424fa291b6cf54f9d9aec
 SHA1: 436353eb2d622b10b04556f6e1b9e304879bfa62
@@ -86,7 +86,7 @@ Installed-Size: 1824
 Pre-Depends: php-common
 Depends: php8.0-relay, php8.0-igbinary, php8.0-msgpack
 Provides: php-relay
-Filename: pool/v0.2.0/php-relay-0.2.0-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.2.0/php-relay-0.2.0-php8.0-debian_arm64.deb
 Size: 680188
 MD5sum: eee9021538a77343cf340dbcf9e72c32
 SHA1: 6ce1c21158bd5a5045218b623b4f40313615ee8a
@@ -106,7 +106,7 @@ Installed-Size: 1873
 Pre-Depends: php-common
 Depends: php8.0-relay, php8.0-igbinary, php8.0-msgpack
 Provides: php-relay
-Filename: pool/v0.2.1/php-relay-0.2.1-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.2.1/php-relay-0.2.1-php8.0-debian_arm64.deb
 Size: 697860
 MD5sum: 3201a93a6f851b4cf8884e4fe5b04ca2
 SHA1: 66627702307e1c3296cac4b24984657bdfe1beb4
@@ -126,7 +126,7 @@ Installed-Size: 1881
 Pre-Depends: php-common
 Depends: php8.0-relay, php8.0-igbinary, php8.0-msgpack
 Provides: php-relay
-Filename: pool/v0.2.2/php-relay-0.2.2-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.2.2/php-relay-0.2.2-php8.0-debian_arm64.deb
 Size: 699616
 MD5sum: 2ad630b5595715c024634ecc7e09ba4a
 SHA1: 25fdbdc3c0e57bc19be6f55e54b5fb80713fc9fe
@@ -146,7 +146,7 @@ Installed-Size: 1829
 Pre-Depends: php-common
 Depends: php8.0-relay, php8.0-igbinary, php8.0-msgpack
 Provides: php-relay
-Filename: pool/v0.2.3/php-relay-0.2.3-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.2.3/php-relay-0.2.3-php8.0-debian_arm64.deb
 Size: 679854
 MD5sum: 54f93651a9c5d8a8edc217fe9a9f8340
 SHA1: f4dbed6c4016073b973fc124e9b6e19569a176e5
@@ -166,7 +166,7 @@ Installed-Size: 1949
 Pre-Depends: php-common
 Depends: php8.0-relay, php8.0-igbinary, php8.0-msgpack
 Provides: php-relay
-Filename: pool/v0.3.0/php-relay-0.3.0-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.3.0/php-relay-0.3.0-php8.0-debian_arm64.deb
 Size: 719610
 MD5sum: 82a4590aca085259698d9eb31d002ae8
 SHA1: c3d6f598b03ebf624b840fe63dad2d9ca1ac237a
@@ -186,7 +186,7 @@ Installed-Size: 1958
 Pre-Depends: php-common
 Depends: php8.0-relay, php8.0-igbinary, php8.0-msgpack
 Provides: php-relay
-Filename: pool/v0.3.1/php-relay-0.3.1-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.3.1/php-relay-0.3.1-php8.0-debian_arm64.deb
 Size: 722918
 MD5sum: 530544176c8f5f84fc65f0f9125d5037
 SHA1: 4dc4fd339a418430a4d046198ae6358796db111a
@@ -206,7 +206,7 @@ Installed-Size: 2049
 Pre-Depends: php-common
 Depends: php8.0-relay, php8.0-igbinary, php8.0-msgpack
 Provides: php-relay
-Filename: pool/v0.3.2/php-relay-0.3.2-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.3.2/php-relay-0.3.2-php8.0-debian_arm64.deb
 Size: 749282
 MD5sum: efa17d9800177860147fe75227d24cc3
 SHA1: 4c0be4c320dc7a5d467a1bc34137f36b95947c69
@@ -226,7 +226,7 @@ Installed-Size: 2061
 Pre-Depends: php-common
 Depends: php8.1-relay, php8.1-igbinary, php8.1-msgpack
 Provides: php-relay
-Filename: pool/v0.3.2/php-relay-0.3.2-php8.1-debian_arm64.deb
+Filename: pools/focal/v0.3.2/php-relay-0.3.2-php8.1-debian_arm64.deb
 Size: 753516
 MD5sum: 58ec4cf7a26fbfa5f30d7f1a576bc615
 SHA1: 8d90e46386bb39d8d8d72969f551e5f78351e0bc
@@ -246,7 +246,7 @@ Installed-Size: 2429
 Pre-Depends: php-common
 Depends: php8.1-relay, php8.1-igbinary, php8.1-msgpack
 Provides: php-relay
-Filename: pool/v0.4.0/php-relay-0.4.0-php8.1-debian_arm64.deb
+Filename: pools/focal/v0.4.0/php-relay-0.4.0-php8.1-debian_arm64.deb
 Size: 850870
 MD5sum: c6436609d7d7405061edaf05092c0482
 SHA1: a7233d5576bc64a7622c13ce3cef6b019889acc1
@@ -266,7 +266,7 @@ Installed-Size: 2429
 Pre-Depends: php-common
 Depends: php8.1-relay, php8.1-igbinary, php8.1-msgpack
 Provides: php-relay
-Filename: pool/v0.4.1/php-relay-0.4.1-php8.1-debian_arm64.deb
+Filename: pools/focal/v0.4.1/php-relay-0.4.1-php8.1-debian_arm64.deb
 Size: 851106
 MD5sum: 39e26382f7897de08d666849c6c4bef3
 SHA1: 6b24ab4fcf74a43e51346cc9307a49affa5bb2fe
@@ -286,7 +286,7 @@ Installed-Size: 2240
 Pre-Depends: php-common
 Depends: php8.1-relay, php8.1-igbinary, php8.1-msgpack
 Provides: php-relay
-Filename: pool/v0.4.2/php-relay-0.4.2-php8.1-debian_arm64.deb
+Filename: pools/focal/v0.4.2/php-relay-0.4.2-php8.1-debian_arm64.deb
 Size: 751288
 MD5sum: 7e7a0d91ea78cfc97c359b5badcf56ea
 SHA1: 09b03f087fd290de3e628688012c0b352ceac028
@@ -308,7 +308,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
 Replaces: php-relay (<< 0.1.0)
 Provides: php-relay
-Filename: pool/v0.1.0/php7.4-relay-0.1.0-php7.4-debian_arm64.deb
+Filename: pools/focal/v0.1.0/php7.4-relay-0.1.0-php7.4-debian_arm64.deb
 Size: 1820242
 MD5sum: c4266e2753e1c2af7c470e0c02117cbb
 SHA1: 5b520b33eafdc267bce5390f707484eb5681272d
@@ -330,7 +330,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
 Replaces: php-relay (<< 0.1.1)
 Provides: php-relay
-Filename: pool/v0.1.1/php7.4-relay-0.1.1-php7.4-debian_arm64.deb
+Filename: pools/focal/v0.1.1/php7.4-relay-0.1.1-php7.4-debian_arm64.deb
 Size: 1819708
 MD5sum: 1d8d99db6679daf52fb1963385b46842
 SHA1: efc480c0ec117631d9178acee2872826ff7e94b4
@@ -352,7 +352,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
 Replaces: php-relay (<< 0.1.2)
 Provides: php-relay
-Filename: pool/v0.1.2/php7.4-relay-0.1.2-php7.4-debian_arm64.deb
+Filename: pools/focal/v0.1.2/php7.4-relay-0.1.2-php7.4-debian_arm64.deb
 Size: 1824714
 MD5sum: 6c64c9b7b6a957950b6600f13eaf66b7
 SHA1: e81db2fe6086129c1e7bc2f187a99920d3df3e6d
@@ -374,7 +374,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
 Replaces: php-relay (<< 0.1.3)
 Provides: php-relay
-Filename: pool/v0.1.3/php7.4-relay-0.1.3-php7.4-debian_arm64.deb
+Filename: pools/focal/v0.1.3/php7.4-relay-0.1.3-php7.4-debian_arm64.deb
 Size: 1839880
 MD5sum: 880978b7c6594dd3c999d813829aaf6e
 SHA1: 00f4461f9e08f2b741461abb0ae06f3614d256d5
@@ -396,7 +396,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
 Replaces: php-relay (<< 0.2.0)
 Provides: php-relay
-Filename: pool/v0.2.0/php7.4-relay-0.2.0-php7.4-debian_arm64.deb
+Filename: pools/focal/v0.2.0/php7.4-relay-0.2.0-php7.4-debian_arm64.deb
 Size: 675006
 MD5sum: 6c3e66ef13a3c8539da547631596a0a7
 SHA1: 27ff6b3bff9be10806ddd87ff500a6e4f16903e3
@@ -418,7 +418,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
 Replaces: php-relay (<< 0.2.1)
 Provides: php-relay
-Filename: pool/v0.2.1/php7.4-relay-0.2.1-php7.4-debian_arm64.deb
+Filename: pools/focal/v0.2.1/php7.4-relay-0.2.1-php7.4-debian_arm64.deb
 Size: 693856
 MD5sum: d019c3760a79af96af1c35585a7507d8
 SHA1: 7f11d71959c254b7273bcb97260aa5889a18c2f7
@@ -440,7 +440,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
 Replaces: php-relay (<< 0.2.2)
 Provides: php-relay
-Filename: pool/v0.2.2/php7.4-relay-0.2.2-php7.4-debian_arm64.deb
+Filename: pools/focal/v0.2.2/php7.4-relay-0.2.2-php7.4-debian_arm64.deb
 Size: 694726
 MD5sum: 05ad712fd769571b1c53363d6643e528
 SHA1: 169420e49e6aafb115da30aef119e9199cc13c6f
@@ -462,7 +462,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
 Replaces: php-relay (<< 0.2.3)
 Provides: php-relay
-Filename: pool/v0.2.3/php7.4-relay-0.2.3-php7.4-debian_arm64.deb
+Filename: pools/focal/v0.2.3/php7.4-relay-0.2.3-php7.4-debian_arm64.deb
 Size: 675860
 MD5sum: c26c0d1d3c7c17dfec2de5359d348291
 SHA1: 48cd11f880e56a741b58a1f4625b33a445242154
@@ -484,7 +484,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
 Replaces: php-relay (<< 0.3.0)
 Provides: php-relay
-Filename: pool/v0.3.0/php7.4-relay-0.3.0-php7.4-debian_arm64.deb
+Filename: pools/focal/v0.3.0/php7.4-relay-0.3.0-php7.4-debian_arm64.deb
 Size: 713830
 MD5sum: 504a8bb8822ad3668060c4206b62517f
 SHA1: 3c4b3e5ee272ca37c5a208f078655edd92d7d7da
@@ -506,7 +506,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
 Replaces: php-relay (<< 0.3.1)
 Provides: php-relay
-Filename: pool/v0.3.1/php7.4-relay-0.3.1-php7.4-debian_arm64.deb
+Filename: pools/focal/v0.3.1/php7.4-relay-0.3.1-php7.4-debian_arm64.deb
 Size: 717572
 MD5sum: ccd8b603ee5f769901cf0d277cd70bc5
 SHA1: a8afd30b5172f6728e91a389e0c33bb6f7a52bf3
@@ -528,7 +528,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
 Replaces: php-relay (<< 0.3.2)
 Provides: php-relay
-Filename: pool/v0.3.2/php7.4-relay-0.3.2-php7.4-debian_arm64.deb
+Filename: pools/focal/v0.3.2/php7.4-relay-0.3.2-php7.4-debian_arm64.deb
 Size: 743340
 MD5sum: 778098ec91447c72188a4567af56ad71
 SHA1: 2dbffcad67a975a8e4420bbf043a8f84376f4d84
@@ -550,7 +550,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
 Replaces: php-relay (<< 0.4.0)
 Provides: php-relay
-Filename: pool/v0.4.0/php7.4-relay-0.4.0-php7.4-debian_arm64.deb
+Filename: pools/focal/v0.4.0/php7.4-relay-0.4.0-php7.4-debian_arm64.deb
 Size: 838936
 MD5sum: c81a5d1f610eda819bdb3fbfa5ea4053
 SHA1: 79fe841785b1fae19e5557f66322e21bc08c14f7
@@ -572,7 +572,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
 Replaces: php-relay (<< 0.4.1)
 Provides: php-relay
-Filename: pool/v0.4.1/php7.4-relay-0.4.1-php7.4-debian_arm64.deb
+Filename: pools/focal/v0.4.1/php7.4-relay-0.4.1-php7.4-debian_arm64.deb
 Size: 838874
 MD5sum: 162a1a2ae9c2b6fc9446612a1c238f71
 SHA1: b9f017c304e1b27e6090e4c93b1aedbdbed8aa32
@@ -594,7 +594,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
 Replaces: php-relay (<< 0.4.2)
 Provides: php-relay
-Filename: pool/v0.4.2/php7.4-relay-0.4.2-php7.4-debian_arm64.deb
+Filename: pools/focal/v0.4.2/php7.4-relay-0.4.2-php7.4-debian_arm64.deb
 Size: 734966
 MD5sum: 68a6f65ce737258dcf6fbeb6dee74820
 SHA1: d68cacaf12c509273c0b636b40e1bd4d6b725ae9
@@ -616,7 +616,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
 Replaces: php-relay (<< 0.1.0)
 Provides: php-relay
-Filename: pool/v0.1.0/php8.0-relay-0.1.0-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.1.0/php8.0-relay-0.1.0-php8.0-debian_arm64.deb
 Size: 1821612
 MD5sum: fdd483f9eea2b0f11c2bbe1310ee788f
 SHA1: 4e239d1a91760f5d78f901fd74ddcc9d85eb680a
@@ -638,7 +638,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
 Replaces: php-relay (<< 0.1.1)
 Provides: php-relay
-Filename: pool/v0.1.1/php8.0-relay-0.1.1-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.1.1/php8.0-relay-0.1.1-php8.0-debian_arm64.deb
 Size: 1822632
 MD5sum: 2152b8adf8d8ccc6212839e155e017ec
 SHA1: 0d2fd2856c49d8145440fec42697df3ca31d7724
@@ -660,7 +660,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
 Replaces: php-relay (<< 0.1.2)
 Provides: php-relay
-Filename: pool/v0.1.2/php8.0-relay-0.1.2-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.1.2/php8.0-relay-0.1.2-php8.0-debian_arm64.deb
 Size: 1827268
 MD5sum: 44eb4847d6da54bc3c5888105057a7b6
 SHA1: 2afa9d5bf59ca9dbd42b25ce74fdc37771a3509b
@@ -682,7 +682,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
 Replaces: php-relay (<< 0.1.3)
 Provides: php-relay
-Filename: pool/v0.1.3/php8.0-relay-0.1.3-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.1.3/php8.0-relay-0.1.3-php8.0-debian_arm64.deb
 Size: 1843198
 MD5sum: 58001d526f938ff19181f1d259a6bea5
 SHA1: fb232d298cc6dbe1c1871d088d84c1461c1ff45f
@@ -704,7 +704,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
 Replaces: php-relay (<< 0.2.0)
 Provides: php-relay
-Filename: pool/v0.2.0/php8.0-relay-0.2.0-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.2.0/php8.0-relay-0.2.0-php8.0-debian_arm64.deb
 Size: 680494
 MD5sum: e09b25a276ced5e6a9f662ddb52284ae
 SHA1: 36a3f48b26b0d574dee7bfd6d322460bc5bf39fc
@@ -726,7 +726,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
 Replaces: php-relay (<< 0.2.1)
 Provides: php-relay
-Filename: pool/v0.2.1/php8.0-relay-0.2.1-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.2.1/php8.0-relay-0.2.1-php8.0-debian_arm64.deb
 Size: 698166
 MD5sum: 512872ca64199a6eaacf813f5e6f66ef
 SHA1: 04f97ed85412a15ecb9dd23a86ceb79b639e6b10
@@ -748,7 +748,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
 Replaces: php-relay (<< 0.2.2)
 Provides: php-relay
-Filename: pool/v0.2.2/php8.0-relay-0.2.2-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.2.2/php8.0-relay-0.2.2-php8.0-debian_arm64.deb
 Size: 699934
 MD5sum: 6756b03b8332c7edd647c8281893517e
 SHA1: f7425185706f28e2859778f9e7fbb8a69397053d
@@ -770,7 +770,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
 Replaces: php-relay (<< 0.2.3)
 Provides: php-relay
-Filename: pool/v0.2.3/php8.0-relay-0.2.3-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.2.3/php8.0-relay-0.2.3-php8.0-debian_arm64.deb
 Size: 680162
 MD5sum: 434b60611ad128d9b13a72be790202cc
 SHA1: 48a4700fbef38691f88f4515a134db9a534f0cd3
@@ -792,7 +792,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
 Replaces: php-relay (<< 0.3.0)
 Provides: php-relay
-Filename: pool/v0.3.0/php8.0-relay-0.3.0-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.3.0/php8.0-relay-0.3.0-php8.0-debian_arm64.deb
 Size: 719924
 MD5sum: b1883470b7764a6bedc1a1cd49b4ea9b
 SHA1: 3af98492bd5a5700c4e10897442bcd2f78792b06
@@ -814,7 +814,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
 Replaces: php-relay (<< 0.3.1)
 Provides: php-relay
-Filename: pool/v0.3.1/php8.0-relay-0.3.1-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.3.1/php8.0-relay-0.3.1-php8.0-debian_arm64.deb
 Size: 723230
 MD5sum: f5eaf31ea85d1c1ee2329f6d1f3ba56e
 SHA1: e484fbd50eed503f2409aeb0461bb2bb920cdeca
@@ -836,7 +836,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
 Replaces: php-relay (<< 0.3.2)
 Provides: php-relay
-Filename: pool/v0.3.2/php8.0-relay-0.3.2-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.3.2/php8.0-relay-0.3.2-php8.0-debian_arm64.deb
 Size: 749590
 MD5sum: 508df5a4d527bd3c1bdc638358554b56
 SHA1: 2d3c0bb4a06b2e773043860534597445f6309fbc
@@ -858,7 +858,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
 Replaces: php-relay (<< 0.4.0)
 Provides: php-relay
-Filename: pool/v0.4.0/php8.0-relay-0.4.0-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.4.0/php8.0-relay-0.4.0-php8.0-debian_arm64.deb
 Size: 846022
 MD5sum: 1cda0a44474aad2f4b301ec0aef96285
 SHA1: d5d45035766a153d227cf788bd48dea3ad174689
@@ -880,7 +880,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
 Replaces: php-relay (<< 0.4.1)
 Provides: php-relay
-Filename: pool/v0.4.1/php8.0-relay-0.4.1-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.4.1/php8.0-relay-0.4.1-php8.0-debian_arm64.deb
 Size: 845734
 MD5sum: 258883ed9704a883e6c427397ead343f
 SHA1: 68919d1889acdae5b0b42d98f2fc0c7760c435e1
@@ -902,7 +902,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
 Replaces: php-relay (<< 0.4.2)
 Provides: php-relay
-Filename: pool/v0.4.2/php8.0-relay-0.4.2-php8.0-debian_arm64.deb
+Filename: pools/focal/v0.4.2/php8.0-relay-0.4.2-php8.0-debian_arm64.deb
 Size: 738758
 MD5sum: eefc2e1ecba98c3e47298563f7ab4fb6
 SHA1: e77c2d33b1a05fd7b526bb9835977a55812e8d12
@@ -924,7 +924,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
 Replaces: php-relay (<< 0.2.2)
 Provides: php-relay
-Filename: pool/v0.2.2/php8.1-relay-0.2.2-php8.1-debian_arm64.deb
+Filename: pools/focal/v0.2.2/php8.1-relay-0.2.2-php8.1-debian_arm64.deb
 Size: 705446
 MD5sum: 5e205ab70cc517d7366fdfe21cd0af43
 SHA1: 40e4b1ac8e4c175c2d7a4e3d6ca3b94284091705
@@ -946,7 +946,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
 Replaces: php-relay (<< 0.2.3)
 Provides: php-relay
-Filename: pool/v0.2.3/php8.1-relay-0.2.3-php8.1-debian_arm64.deb
+Filename: pools/focal/v0.2.3/php8.1-relay-0.2.3-php8.1-debian_arm64.deb
 Size: 684410
 MD5sum: b29aa056d813521ee6ee0a4859c21a74
 SHA1: 9683a01fe3beba9b593b9208b8ad7e1d6724c5dd
@@ -968,7 +968,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
 Replaces: php-relay (<< 0.3.0)
 Provides: php-relay
-Filename: pool/v0.3.0/php8.1-relay-0.3.0-php8.1-debian_arm64.deb
+Filename: pools/focal/v0.3.0/php8.1-relay-0.3.0-php8.1-debian_arm64.deb
 Size: 724474
 MD5sum: 398122b4270a5198cbb51317b12105c0
 SHA1: 7b4554b842ce1ba1a89bee88ee48b754e0a055ce
@@ -990,7 +990,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libssl1.1 (>= 1.1.0), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
 Replaces: php-relay (<< 0.3.1)
 Provides: php-relay
-Filename: pool/v0.3.1/php8.1-relay-0.3.1-php8.1-debian_arm64.deb
+Filename: pools/focal/v0.3.1/php8.1-relay-0.3.1-php8.1-debian_arm64.deb
 Size: 727770
 MD5sum: 62930b6e09dfeebb56505059e0fe73b4
 SHA1: 586094a9adb6144a82c2b502c92e40d994e791ba
@@ -1012,7 +1012,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), libev4 (>= 1:4.04), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
 Replaces: php-relay (<< 0.3.2)
 Provides: php-relay
-Filename: pool/v0.3.2/php8.1-relay-0.3.2-php8.1-debian_arm64.deb
+Filename: pools/focal/v0.3.2/php8.1-relay-0.3.2-php8.1-debian_arm64.deb
 Size: 753814
 MD5sum: 2423df787e52fbce1971be9521e29a8c
 SHA1: d94af29b8e0ee858fad98ce966df4b4d88a746eb
@@ -1034,7 +1034,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
 Replaces: php-relay (<< 0.4.0)
 Provides: php-relay
-Filename: pool/v0.4.0/php8.1-relay-0.4.0-php8.1-debian_arm64.deb
+Filename: pools/focal/v0.4.0/php8.1-relay-0.4.0-php8.1-debian_arm64.deb
 Size: 851176
 MD5sum: 14b126524be3670c4fde8cc98d76cd4f
 SHA1: 5ffb25045e52ef382231ff878d91170b1e1902bb
@@ -1056,7 +1056,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
 Replaces: php-relay (<< 0.4.1)
 Provides: php-relay
-Filename: pool/v0.4.1/php8.1-relay-0.4.1-php8.1-debian_arm64.deb
+Filename: pools/focal/v0.4.1/php8.1-relay-0.4.1-php8.1-debian_arm64.deb
 Size: 851392
 MD5sum: 8b7e75046820a4155234ab6c1c249b6b
 SHA1: 4a8bfcd478437354bf3f34274f1f84e25e11ae6b
@@ -1078,7 +1078,7 @@ Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
 Replaces: php-relay (<< 0.4.2)
 Provides: php-relay
-Filename: pool/v0.4.2/php8.1-relay-0.4.2-php8.1-debian_arm64.deb
+Filename: pools/focal/v0.4.2/php8.1-relay-0.4.2-php8.1-debian_arm64.deb
 Size: 751582
 MD5sum: beb1edf19b535a82f7e68cba1b3790e9
 SHA1: 08b9362b94eb84c7db16049b7307038f54ce7bf2
