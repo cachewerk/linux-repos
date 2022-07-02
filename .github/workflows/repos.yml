@@ -88,8 +88,8 @@ jobs:
 
     name: Update rpm repository
     runs-on: ubuntu-latest
-    timeout-minutes: 10
     needs: deb-repo
+    timeout-minutes: 10
 
     if: github.event.workflow_run.conclusion == 'success'
 

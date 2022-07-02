@@ -6,23 +6,26 @@ gpg --batch --import key-private.asc
 dists="xenial bionic focal jammy stretch buster bullseye"
 architectures="amd64 arm64"
 
+symlink_pkg='pkg=${0/pool/$1}; mkdir -p $(dirname $pkg); [ ! -L $pkg ] && ln -sr $0 $pkg'
+
 cd deb
 
 for dist in $dists; do
+
+  case "$dist" in
+    jammy)
+      find pool -name "*.deb" -name '*+libssl*' -exec bash -c "$symlink_pkg" {} pools/$dist \; ;;
+    *)
+      find pool -name "*.deb" ! -name '*+*' -exec bash -c "$symlink_pkg" {} pools/$dist \; ;;
+  esac
+
   for arch in $architectures; do
     mkdir -p dists/$dist/main/binary-$arch
 
-    case "$dist" in
-      jammy) pattern="*-$arch+libssl3.deb" ;;
-      *) pattern="*-$arch.deb" ;;
-    esac
-
     echo "Building $dist repository for $arch with $pattern"
 
-    find pool -name "$pattern" -exec bash -c "mv \$0 \${0/-$arch/_$arch}" {} \;
-
     dpkg-scanpackages --multiversion --arch $arch \
-      pool > dists/$dist/main/binary-$arch/Packages
+      pools/$dist > dists/$dist/main/binary-$arch/Packages
 
     gzip -kf9 dists/$dist/main/binary-$arch/Packages
   done

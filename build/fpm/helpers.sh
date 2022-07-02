@@ -25,9 +25,10 @@ fpm_build()
   pkg_url=$6
   pkg_mod=$7
 
+  # we don't have centos builds for v0.1.0
   if [[ "$version" == "v0.1.0" && "$pkg_type" == "rpm" ]]; then
     echo "Skipping RPMs for v0.1.0"
-    return 0 # we don't have centos builds for v0.1.0
+    return 0
   fi
 
   source /root/fpm/src/$pkg_type/config.$config.sh
@@ -54,7 +55,7 @@ fpm_build()
   done
 
   pkg_version=${version#v}
-  pkg_filename="$pkg_name-$pkg_version-php$php_version-$pkg_identifier-${pkg_arch}${pkg_mod}.$pkg_type"
+  pkg_filename="${pkg_name}-${pkg_version}-php${php_version}-${pkg_identifier}${pkg_mod}_${pkg_arch}.${pkg_type}"
 
   args=(
     "--input-type dir"
