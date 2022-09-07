@@ -9,6 +9,7 @@ RUN apt-get -y install \
   git vim nano curl wget rsync \
   build-essential autoconf libtool rpm binutils
 
-RUN gem install fpm
+RUN gem install public_suffix -v 4.0.7 \
+  && gem install fpm
 
 WORKDIR /root/fpm
