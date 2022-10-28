@@ -13,7 +13,7 @@ sudo apt install php-relay     # default php version
 sudo apt install php8.1-relay  # specific php version
 ```
 
-## Using YUM (CentOS, RHEL)
+## Using YUM (CentOS, RHEL, Rocky Linux)
 
 ```bash
 curl -s -o /etc/yum.repos.d/cachewerk.repo "https://cachewerk.s3.amazonaws.com/repos/rpm/el.repo"
