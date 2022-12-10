@@ -1,0 +1,34 @@
+name: Checks
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+
+  debian-version:
+
+    name: Debian default version
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    env:
+      PKG_DEFAULT_PHP_VERSION: '8.1'
+
+    steps:
+
+      - name: Build the Docker image
+        env:
+          RULES_URL: https://salsa.debian.org/php-team/php-defaults/-/raw/main/debian/rules
+        run: |
+          RULES=$(curl -sSL $RULES_URL)
+          VARIABLE_LINE=$(echo "$RULES" | grep '^PHP_DEFAULT_VERSION ')
+          RAW_VERSION=${VARIABLE_LINE#*:=}
+          PHP_DEFAULT_VERSION=${RAW_VERSION// /}
+
+          echo "Remote default version: ${PHP_DEFAULT_VERSION}"
+          echo "Package base version: ${PKG_DEFAULT_PHP_VERSION}"
+
+          if [ "$PHP_DEFAULT_VERSION" != "$PKG_DEFAULT_PHP_VERSION" ]; then
+            exit 1
+          fi
