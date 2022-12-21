@@ -5,7 +5,7 @@ set -e
 source /root/fpm/helpers.sh
 
 version=$1
-baseurl="https://cachewerk.s3.amazonaws.com/relay/$version/relay-$version"
+baseurl="https://builds.r2.relay.so/$version/relay-$version"
 
 packages=(
   "deb base       amd64  8.1 20200930 $baseurl-php8.1-debian-x86-64.tar.gz"
