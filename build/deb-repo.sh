@@ -31,7 +31,7 @@ for dist in $dists; do
   done
 
   apt-ftparchive release \
-    -o APT::FTPArchive::Release::Origin="cachewerk.s3.amazonaws.com" \
+    -o APT::FTPArchive::Release::Origin="repos.r2.relay.so" \
     -o APT::FTPArchive::Release::Label="CacheWerk" \
     -o APT::FTPArchive::Release::Architectures="amd64 aarch64" \
     -o APT::FTPArchive::Release::Codename="$dist" \
