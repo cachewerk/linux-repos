@@ -72,16 +72,13 @@ jobs:
           git commit -m "Bump deb repo to ${{ env.TAG }}" || echo "No changes to commit"
           git push
 
-      - name: Set up AWS CLI
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-region: us-east-1
-          aws-access-key-id: ${{ secrets.R2_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-
       - name: Sync repo with R2
         env:
           R2_ENDPOINT: https://a1220fd38ad4771f7b7b38f5f3c2b00d.r2.cloudflarestorage.com
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          AWS_DEFAULT_OUTPUT: json
         run: |
           aws s3 cp key.gpg s3://relay-repos/ --acl public-read --endpoint-url ${{ env.R2_ENDPOINT }}
           aws s3 sync deb s3://relay-repos/deb --delete --acl public-read --endpoint-url ${{ env.R2_ENDPOINT }}
@@ -154,16 +151,13 @@ jobs:
           git commit -m "Bump rpm repos to ${{ env.TAG }}" || echo "No changes to commit"
           git push
 
-      - name: Set up AWS CLI
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-region: us-east-1
-          aws-access-key-id: ${{ secrets.R2_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-
       - name: Sync repo with R2
         env:
           R2_ENDPOINT: https://a1220fd38ad4771f7b7b38f5f3c2b00d.r2.cloudflarestorage.com
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          AWS_DEFAULT_OUTPUT: json
         run: |
           aws s3 cp key.gpg s3://relay-repos/ --acl public-read --endpoint-url ${{ env.R2_ENDPOINT }}
           aws s3 sync rpm s3://relay-repos/rpm --delete --acl public-read --endpoint-url ${{ env.R2_ENDPOINT }}
