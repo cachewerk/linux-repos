@@ -16,7 +16,7 @@ jobs:
     timeout-minutes: 5
 
     env:
-      PKG_DEFAULT_PHP_VERSION: '8.1'
+      PKG_DEFAULT_PHP_VERSION: '8.2'
 
     steps:
 
