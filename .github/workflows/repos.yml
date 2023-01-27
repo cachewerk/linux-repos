@@ -80,8 +80,8 @@ jobs:
           AWS_DEFAULT_REGION: auto
           AWS_DEFAULT_OUTPUT: json
         run: |
-          aws s3 cp key.gpg s3://relay-repos/ --acl public-read --endpoint-url ${{ env.R2_ENDPOINT }}
-          aws s3 sync deb s3://relay-repos/deb --delete --acl public-read --endpoint-url ${{ env.R2_ENDPOINT }}
+          aws s3 cp key.gpg s3://relay-repos/ --no-progress --acl public-read --endpoint-url ${{ env.R2_ENDPOINT }}
+          aws s3 sync deb s3://relay-repos/deb --no-progress --acl public-read --endpoint-url ${{ env.R2_ENDPOINT }}
 
   rpm-repo:
 
@@ -159,5 +159,5 @@ jobs:
           AWS_DEFAULT_REGION: auto
           AWS_DEFAULT_OUTPUT: json
         run: |
-          aws s3 cp key.gpg s3://relay-repos/ --acl public-read --endpoint-url ${{ env.R2_ENDPOINT }}
-          aws s3 sync rpm s3://relay-repos/rpm --delete --acl public-read --endpoint-url ${{ env.R2_ENDPOINT }}
+          aws s3 cp key.gpg s3://relay-repos/ --no-progress --acl public-read --endpoint-url ${{ env.R2_ENDPOINT }}
+          aws s3 sync rpm s3://relay-repos/rpm --no-progress --acl public-read --endpoint-url ${{ env.R2_ENDPOINT }}
