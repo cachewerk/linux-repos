@@ -28,8 +28,21 @@ jobs:
           AWS_DEFAULT_REGION: auto
           AWS_DEFAULT_OUTPUT: json
         run: |
-          aws s3 cp key.gpg s3://relay-repos/ --no-progress --acl public-read --endpoint-url ${{ env.R2_ENDPOINT }}
-          aws s3 sync deb s3://relay-repos/deb --no-progress --delete --acl public-read --endpoint-url ${{ env.R2_ENDPOINT }}
+          aws s3 cp key.gpg s3://relay-repos/ \
+            --no-progress \
+            --acl public-read \
+            --endpoint-url ${{ env.R2_ENDPOINT }}
+          aws s3 sync deb s3://relay-repos/deb \
+            --delete \
+            --size-only \
+            --no-progress \
+            --acl public-read \
+            --endpoint-url ${{ env.R2_ENDPOINT }}
+          aws s3 sync deb/dists s3://relay-repos/deb \
+            --delete \
+            --no-progress \
+            --acl public-read \
+            --endpoint-url ${{ env.R2_ENDPOINT }}
 
   rpm-repo:
 
@@ -52,5 +65,23 @@ jobs:
           AWS_DEFAULT_REGION: auto
           AWS_DEFAULT_OUTPUT: json
         run: |
-          aws s3 cp key.gpg s3://relay-repos/ --no-progress --acl public-read --endpoint-url ${{ env.R2_ENDPOINT }}
-          aws s3 sync rpm s3://relay-repos/rpm --no-progress --delete --acl public-read --endpoint-url ${{ env.R2_ENDPOINT }}
+          aws s3 cp key.gpg s3://relay-repos/ \
+            --no-progress \
+            --acl public-read \
+            --endpoint-url ${{ env.R2_ENDPOINT }}
+          aws s3 sync rpm s3://relay-repos/rpm \
+            --delete \
+            --size-only \
+            --no-progress \
+            --acl public-read \
+            --endpoint-url ${{ env.R2_ENDPOINT }}
+          aws s3 sync rpm/el7/repodata s3://relay-repos/rpm \
+            --delete \
+            --no-progress \
+            --acl public-read \
+            --endpoint-url ${{ env.R2_ENDPOINT }}
+          aws s3 sync rpm/el8/repodata s3://relay-repos/rpm \
+            --delete \
+            --no-progress \
+            --acl public-read \
+            --endpoint-url ${{ env.R2_ENDPOINT }}
