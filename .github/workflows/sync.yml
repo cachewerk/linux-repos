@@ -38,8 +38,7 @@ jobs:
             --no-progress \
             --acl public-read \
             --endpoint-url ${{ env.R2_ENDPOINT }}
-          aws s3 sync deb/dists s3://relay-repos/deb \
-            --delete \
+          aws s3 sync deb/dists s3://relay-repos/deb/dists/ \
             --no-progress \
             --acl public-read \
             --endpoint-url ${{ env.R2_ENDPOINT }}
@@ -75,13 +74,11 @@ jobs:
             --no-progress \
             --acl public-read \
             --endpoint-url ${{ env.R2_ENDPOINT }}
-          aws s3 sync rpm/el7/repodata s3://relay-repos/rpm \
-            --delete \
+          aws s3 sync rpm/el7/repodata s3://relay-repos/rpm/el7/repodata/ \
             --no-progress \
             --acl public-read \
             --endpoint-url ${{ env.R2_ENDPOINT }}
-          aws s3 sync rpm/el8/repodata s3://relay-repos/rpm \
-            --delete \
+          aws s3 sync rpm/el8/repodata s3://relay-repos/rpm/el8/repodata/ \
             --no-progress \
             --acl public-read \
             --endpoint-url ${{ env.R2_ENDPOINT }}
