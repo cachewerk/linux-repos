@@ -127,6 +127,8 @@ jobs:
           find artifacts -name '*el7*.rpm' -exec cp {} rpm/el7/${{ env.TAG }} \;
           mkdir -p rpm/el8/${{ env.TAG }}
           find artifacts -name '*el8*.rpm' -exec cp {} rpm/el8/${{ env.TAG }} \;
+          mkdir -p rpm/el9/${{ env.TAG }}
+          find artifacts -name '*el9*.rpm' -exec cp {} rpm/el9/${{ env.TAG }} \;
 
       - name: Set up Docker cache
         uses: satackey/action-docker-layer-caching@v0.0.11
@@ -186,6 +188,10 @@ jobs:
             --acl public-read \
             --endpoint-url ${{ env.R2_ENDPOINT }}
           aws s3 sync rpm/el8/repodata s3://relay-repos/rpm/el8/repodata/ \
+            --no-progress \
+            --acl public-read \
+            --endpoint-url ${{ env.R2_ENDPOINT }}
+          aws s3 sync rpm/el9/repodata s3://relay-repos/rpm/el9/repodata/ \
             --no-progress \
             --acl public-read \
             --endpoint-url ${{ env.R2_ENDPOINT }}
