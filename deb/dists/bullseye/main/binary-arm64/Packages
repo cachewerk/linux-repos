@@ -1961,10 +1961,10 @@ Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.2-co
 Replaces: php-relay (<< 0.6.2)
 Provides: php-relay
 Filename: pools/bullseye/v0.6.2/php8.2-relay-0.6.2-php8.2-debian_arm64.deb
-Size: 1237178
-MD5sum: 650419df2093e15fea2538068a5c438d
-SHA1: e41b452e746fbe29ad0fe4e794998804b29b1300
-SHA256: f32b007c551f83760b5e0eb80206194cab6ee16dea2af40050c863c4c294c965
+Size: 1237174
+MD5sum: e7051d5a190e2e1317993741ce76bec7
+SHA1: b96485e6c5428cb335cb42fc1792688c32b7d759
+SHA256: 6e1bf6495a51391538123328776bd386603659683684163fca51eaf51636c981
 Section: php
 Priority: optional
 Homepage: https://relay.so
