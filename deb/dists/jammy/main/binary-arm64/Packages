@@ -202,15 +202,15 @@ Package: php-relay
 Version: 0.6.2
 Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3957
+Installed-Size: 4006
 Pre-Depends: php-common
 Depends: php8.2-relay, php8.2-igbinary, php8.2-msgpack
 Provides: php-relay
 Filename: pools/jammy/v0.6.2/php-relay-0.6.2-php8.2-debian+libssl3_arm64.deb
-Size: 1559816
-MD5sum: ae9660fa8ec84cde76cf32299296ddf0
-SHA1: aafbd47cde847d6dd41089b20a54a6907c8f655f
-SHA256: aac8c4dd88a956d7456faa513191579baec7ffb27a6488bd19250d90ad62b345
+Size: 1577202
+MD5sum: 38abde869d5f10278d8b2c9d6c6ab2b2
+SHA1: 61055e4e82919f018274fbe2e2393225ba07e3f9
+SHA256: 95d6d5922e0306307de613e1edbf696eae3da7d552c4963bbc0a007964046c4e
 Section: php
 Priority: optional
 Homepage: https://relay.so

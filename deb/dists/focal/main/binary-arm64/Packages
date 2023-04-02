@@ -482,15 +482,15 @@ Package: php-relay
 Version: 0.6.2
 Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3706
+Installed-Size: 3756
 Pre-Depends: php-common
 Depends: php8.2-relay, php8.2-igbinary, php8.2-msgpack
 Provides: php-relay
 Filename: pools/focal/v0.6.2/php-relay-0.6.2-php8.2-debian_arm64.deb
-Size: 1218874
-MD5sum: 91f0bb00968ce7559269caec6007aae1
-SHA1: 171d0424222498f2e1d9d3729d8f2c0779363c34
-SHA256: d2880f951a5c9109df6dee889a88a65efd27884aeaa3e06823f041ded9270a12
+Size: 1236876
+MD5sum: 3505fa5b41ee3825d061effb04cbc914
+SHA1: bad4a2efadc8c64f0531ad4c5d4a297e56e307cd
+SHA256: 1cac0eee004d3321a49d24214fc44435b0ff9b4e4d72188948555f7926a2e07a
 Section: php
 Priority: optional
 Homepage: https://relay.so
