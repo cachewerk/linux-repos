@@ -82,3 +82,7 @@ jobs:
             --no-progress \
             --acl public-read \
             --endpoint-url ${{ env.R2_ENDPOINT }}
+          aws s3 sync rpm/el9/repodata s3://relay-repos/rpm/el9/repodata/ \
+            --no-progress \
+            --acl public-read \
+            --endpoint-url ${{ env.R2_ENDPOINT }}

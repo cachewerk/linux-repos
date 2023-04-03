@@ -67,6 +67,24 @@ packages=(
   "rpm multi.el8  aarch64 8.1 20210902 $baseurl-php8.1-centos8-aarch64.tar.gz"
   "rpm multi.el8  aarch64 8.0 20200930 $baseurl-php8.0-centos8-aarch64.tar.gz"
   "rpm multi.el8  aarch64 7.4 20190902 $baseurl-php7.4-centos8-aarch64.tar.gz"
+
+  "rpm single.el9 x86_64 8.2 20220829 $baseurl-php8.2-el9-x86-64.tar.gz"
+  "rpm single.el9 x86_64 8.1 20210902 $baseurl-php8.1-el9-x86-64.tar.gz"
+  "rpm single.el9 x86_64 8.0 20200930 $baseurl-php8.0-el9-x86-64.tar.gz"
+  "rpm single.el9 x86_64 7.4 20190902 $baseurl-php7.4-el9-x86-64.tar.gz"
+  "rpm multi.el9  x86_64 8.2 20220829 $baseurl-php8.2-el9-x86-64.tar.gz"
+  "rpm multi.el9  x86_64 8.1 20210902 $baseurl-php8.1-el9-x86-64.tar.gz"
+  "rpm multi.el9  x86_64 8.0 20200930 $baseurl-php8.0-el9-x86-64.tar.gz"
+  "rpm multi.el9  x86_64 7.4 20190902 $baseurl-php7.4-el9-x86-64.tar.gz"
+
+  "rpm single.el9 aarch64 8.2 20220829 $baseurl-php8.2-el9-aarch64.tar.gz"
+  "rpm single.el9 aarch64 8.1 20210902 $baseurl-php8.1-el9-aarch64.tar.gz"
+  "rpm single.el9 aarch64 8.0 20200930 $baseurl-php8.0-el9-aarch64.tar.gz"
+  "rpm single.el9 aarch64 7.4 20190902 $baseurl-php7.4-el9-aarch64.tar.gz"
+  "rpm multi.el9  aarch64 8.2 20220829 $baseurl-php8.2-el9-aarch64.tar.gz"
+  "rpm multi.el9  aarch64 8.1 20210902 $baseurl-php8.1-el9-aarch64.tar.gz"
+  "rpm multi.el9  aarch64 8.0 20200930 $baseurl-php8.0-el9-aarch64.tar.gz"
+  "rpm multi.el9  aarch64 7.4 20190902 $baseurl-php7.4-el9-aarch64.tar.gz"
 )
 
 main

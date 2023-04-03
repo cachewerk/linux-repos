@@ -6,7 +6,7 @@ gpg --batch --import key-private.asc
 
 cd rpm
 
-for DISTRO in el7 el8; do
+for DISTRO in el7 el8 el9; do
   pushd $DISTRO
     createrepo \
       --update --database --pretty \
