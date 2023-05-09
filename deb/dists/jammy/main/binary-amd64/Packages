@@ -238,6 +238,26 @@ Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
 
+Package: php-relay
+Version: 0.6.4
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 3961
+Pre-Depends: php-common
+Depends: php8.2-relay, php8.2-igbinary, php8.2-msgpack
+Provides: php-relay
+Filename: pools/jammy/v0.6.4/php-relay-0.6.4-php8.2-debian+libssl3_amd64.deb
+Size: 1575782
+MD5sum: 131ccd3de4f98f8906f026999c85f67d
+SHA1: 11d6d3148b1e79680b17143d5a0d397a48054904
+SHA256: 9c69c0f8f0e6c3168cd334da4849cf7d7c85b23d9833650c6c23b2e99d258aec
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
 Package: php7.4-relay
 Source: php-relay
 Version: 0.4.2
@@ -473,6 +493,28 @@ Size: 1140840
 MD5sum: acb29d3e01324659693dcce8c4160f35
 SHA1: be081e86176d9800ec2f0c8fe591f2acfc668fa0
 SHA256: 31a8049ad432427c4d87eea2507ecdf75d6e426cdd0cce6983f00127277fb79b
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php7.4-relay
+Source: php-relay
+Version: 0.6.4
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 2767
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
+Replaces: php-relay (<< 0.6.4)
+Provides: php-relay
+Filename: pools/jammy/v0.6.4/php7.4-relay-0.6.4-php7.4-debian+libssl3_amd64.deb
+Size: 1161666
+MD5sum: 8d8b80f6fc6e5b9e63ae9c3a31a87bf8
+SHA1: 3d1ebeeff483273ed7df996c9a80fd8d134c6e07
+SHA256: f7d13155cd5811082a6d13263ddf0b237e9918bfdd23f53f80f7ff9af72f5848
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -722,6 +764,28 @@ Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
 
+Package: php8.0-relay
+Source: php-relay
+Version: 0.6.4
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 3887
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
+Replaces: php-relay (<< 0.6.4)
+Provides: php-relay
+Filename: pools/jammy/v0.6.4/php8.0-relay-0.6.4-php8.0-debian+libssl3_amd64.deb
+Size: 1537082
+MD5sum: dea2d4cfb96700443d33ce297500bb8f
+SHA1: 08497a16bcd0604715d3a1599c2ba2bd0a49fa38
+SHA256: 566ba0df228b7304f9ee5eebd22128987c779650ae56cc966a94f81d8204b0f6
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
 Package: php8.1-relay
 Source: php-relay
 Version: 0.4.2
@@ -964,6 +1028,28 @@ Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
 
+Package: php8.1-relay
+Source: php-relay
+Version: 0.6.4
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 3905
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
+Replaces: php-relay (<< 0.6.4)
+Provides: php-relay
+Filename: pools/jammy/v0.6.4/php8.1-relay-0.6.4-php8.1-debian+libssl3_amd64.deb
+Size: 1548192
+MD5sum: b4dad833cb56cab3858186ae55467cf3
+SHA1: 21fd2615a0d3adb8c3a70f289978993e928d1682
+SHA256: 3d2eb0d62d33488f537deee8b54928f153b7d9b5c45a497165c955e0a1d7bf5c
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
 Package: php8.2-relay
 Source: php-relay
 Version: 0.5.1
@@ -1067,6 +1153,28 @@ Size: 1550040
 MD5sum: 1ba18783c4044f7011e1b3b3a0c3524c
 SHA1: 503cb81c85846e48f853d686a84c6d954f4fa319
 SHA256: 0e0a8c7752be6f827073acaec89a7a03cbee2fd4b6b803f254d66b9c36fed582
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php8.2-relay
+Source: php-relay
+Version: 0.6.4
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 3961
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.2-common, php8.2-igbinary, php8.2-msgpack
+Replaces: php-relay (<< 0.6.4)
+Provides: php-relay
+Filename: pools/jammy/v0.6.4/php8.2-relay-0.6.4-php8.2-debian+libssl3_amd64.deb
+Size: 1576090
+MD5sum: 00c0bb0e2b99aa59d3cec51ec8a8db40
+SHA1: cc5fcdccd7172a2f7b2e182ea3c4f91f1cfab380
+SHA256: 9a74491975277cbca00b2b51cf4329c4b4fbb7811bcb7ed9034b07dc1146227f
 Section: php
 Priority: optional
 Homepage: https://relay.so
