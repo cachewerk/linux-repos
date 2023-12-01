@@ -2625,16 +2625,16 @@ Source: php-relay
 Version: 0.6.8
 Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 2246
+Installed-Size: 2251
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.3-common, php8.3-igbinary, php8.3-msgpack
 Replaces: php-relay (<< 0.6.8)
 Provides: php-relay
 Filename: pools/buster/v0.6.8/php8.3-relay-0.6.8-php8.3-debian_arm64.deb
-Size: 774264
-MD5sum: 90487f298c803aa9849f998f447f2d86
-SHA1: c712576ab906a4fedb4cf7679e3b5dfd01b45178
-SHA256: fc4e622fb0735c90f5f9686c68c2ce2447c5c7997f2d67f92434d725f6bad934
+Size: 774504
+MD5sum: e8df05e6b8d6951d5ca428ad68601398
+SHA1: af687d9779f816a9be41d2c14acbdc777d592fbc
+SHA256: e1867718024bcc5cfe68132a3cf52fdbdb6f69a8ada9bbbfc78623c75fe0d6b9
 Section: php
 Priority: optional
 Homepage: https://relay.so
