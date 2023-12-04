@@ -2,8 +2,8 @@
 
 gpg --batch --import key-private.asc
 
-#       16.04  18.04 20.04 22.04       9     10       11
-dists="xenial bionic focal jammy stretch buster bullseye"
+#       16.04  18.04 20.04 22.04       9     10       11       12
+dists="xenial bionic focal jammy stretch buster bullseye bookworm"
 architectures="amd64 arm64"
 
 symlink_pkg='pkg=${0/pool/$1}; mkdir -p $(dirname $pkg); [ ! -L $pkg ] && ln -sr $0 $pkg'
