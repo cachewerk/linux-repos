@@ -13,7 +13,7 @@ cd deb
 for dist in $dists; do
 
   case "$dist" in
-    jammy)
+    jammy | bookworm)
       find pool -name "*.deb" -name '*+libssl*' -exec bash -c "$symlink_pkg" {} pools/$dist \; ;;
     *)
       find pool -name "*.deb" ! -name '*+*' -exec bash -c "$symlink_pkg" {} pools/$dist \; ;;
