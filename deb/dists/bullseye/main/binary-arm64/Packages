@@ -202,15 +202,15 @@ Package: php-relay
 Version: 0.3.2
 Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 2061
+Installed-Size: 2049
 Pre-Depends: php-common
-Depends: php8.1-relay, php8.1-igbinary, php8.1-msgpack
+Depends: php8.0-relay, php8.0-igbinary, php8.0-msgpack
 Provides: php-relay
-Filename: pools/bullseye/v0.3.2/php-relay-0.3.2-php8.1-debian_arm64.deb
-Size: 753516
-MD5sum: 58ec4cf7a26fbfa5f30d7f1a576bc615
-SHA1: 8d90e46386bb39d8d8d72969f551e5f78351e0bc
-SHA256: 47f2dd78ed9c3e9c41f5cef2da328b1f2509fc5e6cb7e57b31861b9e5c6e76ef
+Filename: pools/bullseye/v0.3.2/php-relay-0.3.2-php8.0-debian_arm64.deb
+Size: 749282
+MD5sum: efa17d9800177860147fe75227d24cc3
+SHA1: 4c0be4c320dc7a5d467a1bc34137f36b95947c69
+SHA256: ed6c25f79e10d1af8166402370805b270832204ccc4e33611446601470edf092
 Section: php
 Priority: optional
 Homepage: https://relaycache.com
@@ -222,15 +222,15 @@ Package: php-relay
 Version: 0.3.2
 Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 2049
+Installed-Size: 2061
 Pre-Depends: php-common
-Depends: php8.0-relay, php8.0-igbinary, php8.0-msgpack
+Depends: php8.1-relay, php8.1-igbinary, php8.1-msgpack
 Provides: php-relay
-Filename: pools/bullseye/v0.3.2/php-relay-0.3.2-php8.0-debian_arm64.deb
-Size: 749282
-MD5sum: efa17d9800177860147fe75227d24cc3
-SHA1: 4c0be4c320dc7a5d467a1bc34137f36b95947c69
-SHA256: ed6c25f79e10d1af8166402370805b270832204ccc4e33611446601470edf092
+Filename: pools/bullseye/v0.3.2/php-relay-0.3.2-php8.1-debian_arm64.deb
+Size: 753516
+MD5sum: 58ec4cf7a26fbfa5f30d7f1a576bc615
+SHA1: 8d90e46386bb39d8d8d72969f551e5f78351e0bc
+SHA256: 47f2dd78ed9c3e9c41f5cef2da328b1f2509fc5e6cb7e57b31861b9e5c6e76ef
 Section: php
 Priority: optional
 Homepage: https://relaycache.com
