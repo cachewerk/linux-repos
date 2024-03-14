@@ -593,12 +593,12 @@ Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 0
 Pre-Depends: php-common
-Depends: php8.2-relay, php8.2-igbinary, php8.2-msgpack
-Filename: pools/buster/v0.7.0/php-relay-0.7.0-php8.2-debian_amd64.deb
-Size: 1014
-MD5sum: 0265e7fc6a05999d5deee078e0763e19
-SHA1: 9428fbd91b8bade6c0f015a67da791518a2545b3
-SHA256: ebb22759a093b06be2da6b52f2ed46506d5b765b49ca8b6db995729667448adc
+Depends: php8.3-relay, php8.3-igbinary, php8.3-msgpack
+Filename: pools/buster/v0.7.0/php-relay-0.7.0-php8.3-debian_amd64.deb
+Size: 1016
+MD5sum: dc69151a164863b74da631e29884bf19
+SHA1: f1514f83ad610d65b9442ee09cfbd993e3f42b21
+SHA256: 6cd80df9392c06b52c70ec8b88b9c83408a0920ed8941898df9e8bef541797d1
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -612,12 +612,12 @@ Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 0
 Pre-Depends: php-common
-Depends: php8.3-relay, php8.3-igbinary, php8.3-msgpack
-Filename: pools/buster/v0.7.0/php-relay-0.7.0-php8.3-debian_amd64.deb
-Size: 1016
-MD5sum: dc69151a164863b74da631e29884bf19
-SHA1: f1514f83ad610d65b9442ee09cfbd993e3f42b21
-SHA256: 6cd80df9392c06b52c70ec8b88b9c83408a0920ed8941898df9e8bef541797d1
+Depends: php8.2-relay, php8.2-igbinary, php8.2-msgpack
+Filename: pools/buster/v0.7.0/php-relay-0.7.0-php8.2-debian_amd64.deb
+Size: 1014
+MD5sum: 0265e7fc6a05999d5deee078e0763e19
+SHA1: 9428fbd91b8bade6c0f015a67da791518a2545b3
+SHA256: ebb22759a093b06be2da6b52f2ed46506d5b765b49ca8b6db995729667448adc
 Section: php
 Priority: optional
 Homepage: https://relay.so
