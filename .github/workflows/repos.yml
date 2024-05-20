@@ -18,12 +18,12 @@ jobs:
     steps:
 
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           lfs: true
 
       - name: Download artifacts
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v3
         with:
           workflow: ${{ github.event.workflow.id }}
           run_id: ${{ github.event.workflow_run.id }}
@@ -36,13 +36,6 @@ jobs:
         run: |
           mkdir -p deb/pool/${{ env.TAG }}
           find artifacts -name '*.deb' -exec cp {} deb/pool/${{ env.TAG }} \;
-
-      - name: Set up Docker cache
-        uses: satackey/action-docker-layer-caching@v0.0.11
-        continue-on-error: true
-        with:
-          key: docker-deb-{hash}
-          restore-keys: docker-deb-
 
       - name: Build the Docker image
         run: docker build . --tag deb --file build/deb.Dockerfile
@@ -107,12 +100,12 @@ jobs:
     steps:
 
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           lfs: true
 
       - name: Download artifacts
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v3
         with:
           workflow: ${{ github.event.workflow.id }}
           run_id: ${{ github.event.workflow_run.id }}
@@ -129,13 +122,6 @@ jobs:
           find artifacts -name '*el8*.rpm' -exec cp {} rpm/el8/${{ env.TAG }} \;
           mkdir -p rpm/el9/${{ env.TAG }}
           find artifacts -name '*el9*.rpm' -exec cp {} rpm/el9/${{ env.TAG }} \;
-
-      - name: Set up Docker cache
-        uses: satackey/action-docker-layer-caching@v0.0.11
-        continue-on-error: true
-        with:
-          key: docker-rpm-{hash}
-          restore-keys: docker-rpm-
 
       - name: Build the Docker image
         run: docker build . --tag rpm --file build/rpm.Dockerfile

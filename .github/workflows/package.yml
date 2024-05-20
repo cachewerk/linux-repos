@@ -18,14 +18,7 @@ jobs:
     steps:
 
       - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Docker cache
-        uses: satackey/action-docker-layer-caching@v0.0.11
-        continue-on-error: true
-        with:
-          key: docker-packages-{hash}
-          restore-keys: docker-packages-
+        uses: actions/checkout@v4
 
       - name: Build the Docker image
         run: |
@@ -40,7 +33,7 @@ jobs:
             fpm /bin/bash -c "./fpm.sh ${{ github.event.inputs.tag }}"
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: packages
           path: build/fpm/dist/*
