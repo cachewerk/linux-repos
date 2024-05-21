@@ -2,8 +2,8 @@ name: Synchronize R2
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 0 * * 0' # once a week
+  # schedule:
+  #  - cron: '0 0 * * 0' # once a week
 
 jobs:
 
@@ -34,7 +34,6 @@ jobs:
             --endpoint-url ${{ env.R2_ENDPOINT }}
           aws s3 sync deb s3://relay-repos/deb \
             --delete \
-            --size-only \
             --no-progress \
             --acl public-read \
             --endpoint-url ${{ env.R2_ENDPOINT }}
@@ -70,7 +69,6 @@ jobs:
             --endpoint-url ${{ env.R2_ENDPOINT }}
           aws s3 sync rpm s3://relay-repos/rpm \
             --delete \
-            --size-only \
             --no-progress \
             --acl public-read \
             --endpoint-url ${{ env.R2_ENDPOINT }}
