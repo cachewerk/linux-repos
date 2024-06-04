@@ -9,7 +9,7 @@ pkg_binary_dest=(
 )
 
 pkg_config_dest=(
-    "etc/opt/remi/php$php_version_short/php.d/60-redis.ini"
+    "etc/opt/remi/php$php_version_short/php.d/60-relay.ini"
 )
 
 pkg_depends=(
