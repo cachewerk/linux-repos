@@ -22,7 +22,7 @@ jobs:
 
       - name: Check upstream PHP_DEFAULT_VERSION
         env:
-          RULES_URL: https://salsa.debian.org/php-team/php-defaults/-/raw/main/debian/rules
+          RULES_URL: https://salsa.debian.org/php-team/php-defaults/-/raw/deb.sury.org/main/debian/rules?ref_type=heads
         run: |
           RULES=$(curl -sSL $RULES_URL)
           VARIABLE_LINE=$(echo "$RULES" | grep '^PHP_DEFAULT_VERSION ')
