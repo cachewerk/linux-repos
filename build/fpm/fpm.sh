@@ -15,6 +15,12 @@ packages=(
   "deb multi      amd64  8.1 20210902 $baseurl-php8.1-debian-x86-64.tar.gz"
   "deb multi      amd64  8.0 20200930 $baseurl-php8.0-debian-x86-64.tar.gz"
   "deb multi      amd64  7.4 20190902 $baseurl-php7.4-debian-x86-64.tar.gz"
+  "deb ls         amd64  8.4 20240924 $baseurl-php8.4-debian-x86-64.tar.gz"
+  "deb ls         amd64  8.3 20230831 $baseurl-php8.3-debian-x86-64.tar.gz"
+  "deb ls         amd64  8.2 20220829 $baseurl-php8.2-debian-x86-64.tar.gz"
+  "deb ls         amd64  8.1 20210902 $baseurl-php8.1-debian-x86-64.tar.gz"
+  "deb ls         amd64  8.0 20200930 $baseurl-php8.0-debian-x86-64.tar.gz"
+  "deb ls         amd64  7.4 20190902 $baseurl-php7.4-debian-x86-64.tar.gz"
 
   "deb base       amd64  8.3 20230831 $baseurl-php8.3-debian-x86-64+libssl3.tar.gz +libssl3"
   "deb multi      amd64  8.4 20240924 $baseurl-php8.4-debian-x86-64+libssl3.tar.gz +libssl3"
