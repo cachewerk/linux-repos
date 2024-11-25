@@ -58,6 +58,12 @@ packages=(
   "rpm multi.el7  x86_64 8.1 20210902 $baseurl-php8.1-centos7-x86-64.tar.gz"
   "rpm multi.el7  x86_64 8.0 20200930 $baseurl-php8.0-centos7-x86-64.tar.gz"
   "rpm multi.el7  x86_64 7.4 20190902 $baseurl-php7.4-centos7-x86-64.tar.gz"
+  "rpm ls.el7     x86_64 8.4 20240924 $baseurl-php8.4-centos7-x86-64.tar.gz"
+  "rpm ls.el7     x86_64 8.3 20230831 $baseurl-php8.3-centos7-x86-64.tar.gz"
+  "rpm ls.el7     x86_64 8.2 20220829 $baseurl-php8.2-centos7-x86-64.tar.gz"
+  "rpm ls.el7     x86_64 8.1 20210902 $baseurl-php8.1-centos7-x86-64.tar.gz"
+  "rpm ls.el7     x86_64 8.0 20200930 $baseurl-php8.0-centos7-x86-64.tar.gz"
+  "rpm ls.el7     x86_64 7.4 20190902 $baseurl-php7.4-centos7-x86-64.tar.gz"
 
   "rpm single.el7 aarch64 8.4 20240924 $baseurl-php8.4-centos7-aarch64.tar.gz"
   "rpm single.el7 aarch64 8.3 20230831 $baseurl-php8.3-centos7-aarch64.tar.gz"
