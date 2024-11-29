@@ -7,6 +7,7 @@ main()
   echo -n "$version" > /root/fpm/dist/TAG
 
   for package in "${packages[@]}"; do
+    unset ${!pkg_@}
     fpm_build $package
   done
 
