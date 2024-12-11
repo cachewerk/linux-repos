@@ -8,8 +8,9 @@ For detailed installations instruction see [relay.so](https://relay.so/docs/inst
 curl -fsSL "https://repos.r2.relay.so/key.gpg" | sudo apt-key add -
 sudo add-apt-repository "deb https://repos.r2.relay.so/deb $(lsb_release -cs) main"
 
-sudo apt install php-relay     # default php version
-sudo apt install php8.1-relay  # specific php version
+sudo apt install php-relay      # default php version
+sudo apt install php8.1-relay   # specific php version
+sudo apt install lsphp81-relay  # for litespeed setups
 ```
 
 If `apt-key` or `add-apt-repository` are deprecated or not available, use:
@@ -28,6 +29,7 @@ curl -s -o "/etc/yum.repos.d/cachewerk.repo" "https://repos.r2.relay.so/rpm/el.r
 
 yum install relay-php        # single php version
 yum install php81-php-relay  # multiple php versions
+yum install lsphp81-relay    # for litespeed setups
 ```
 
 ### Amazon Linux 2
