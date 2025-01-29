@@ -20,6 +20,13 @@ jobs:
         with:
           lfs: true
 
+      # Install `2.22.35` until AWS S3 SDK compatibility inconsistencies
+      # with R2 are resolved: https://www.cloudflarestatus.com/
+      - name: Install AWS CLI
+        uses: unfor19/install-aws-cli-action@v1
+        with:
+          version: 2.22.35
+
       - name: Sync repo with R2
         env:
           R2_ENDPOINT: https://a1220fd38ad4771f7b7b38f5f3c2b00d.r2.cloudflarestorage.com
@@ -54,6 +61,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           lfs: true
+
+      # Install `2.22.35` until AWS S3 SDK compatibility inconsistencies
+      # with R2 are resolved: https://www.cloudflarestatus.com/
+      - name: Install AWS CLI
+        uses: unfor19/install-aws-cli-action@v1
+        with:
+          version: 2.22.35
 
       - name: Sync repo with R2
         env:
