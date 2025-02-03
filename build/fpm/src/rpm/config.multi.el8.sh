@@ -17,6 +17,8 @@ pkg_depends=(
     "libzstd"
     "lz4"
     "php$php_version_short-php(api) = $php_api-64"
+    "php$php_version_short-php-json"
+    "php$php_version_short-php-session"
     "php$php_version_short-php-msgpack"
     "php$php_version_short-php-igbinary"
 )
