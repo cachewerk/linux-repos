@@ -8,7 +8,7 @@ version=$1
 baseurl="https://builds.r2.relay.so/$version/relay-$version"
 
 packages=(
-  "deb base       amd64  8.3 20230831 $baseurl-php8.3-debian-x86-64.tar.gz"
+  "deb base       amd64  8.4 20240924 $baseurl-php8.3-debian-x86-64.tar.gz"
   "deb multi      amd64  8.4 20240924 $baseurl-php8.4-debian-x86-64.tar.gz"
   "deb multi      amd64  8.3 20230831 $baseurl-php8.3-debian-x86-64.tar.gz"
   "deb multi      amd64  8.2 20220829 $baseurl-php8.2-debian-x86-64.tar.gz"
@@ -22,7 +22,7 @@ packages=(
   "deb ls         amd64  8.0 20200930 $baseurl-php8.0-debian-x86-64.tar.gz"
   "deb ls         amd64  7.4 20190902 $baseurl-php7.4-debian-x86-64.tar.gz"
 
-  "deb base       amd64  8.3 20230831 $baseurl-php8.3-debian-x86-64+libssl3.tar.gz +libssl3"
+  "deb base       amd64  8.4 20240924 $baseurl-php8.3-debian-x86-64+libssl3.tar.gz +libssl3"
   "deb multi      amd64  8.4 20240924 $baseurl-php8.4-debian-x86-64+libssl3.tar.gz +libssl3"
   "deb multi      amd64  8.3 20230831 $baseurl-php8.3-debian-x86-64+libssl3.tar.gz +libssl3"
   "deb multi      amd64  8.2 20220829 $baseurl-php8.2-debian-x86-64+libssl3.tar.gz +libssl3"
@@ -36,7 +36,7 @@ packages=(
   "deb ls         amd64  8.0 20200930 $baseurl-php8.0-debian-x86-64+libssl3.tar.gz +libssl3"
   "deb ls         amd64  7.4 20190902 $baseurl-php7.4-debian-x86-64+libssl3.tar.gz +libssl3"
 
-  "deb base       arm64  8.3 20230831 $baseurl-php8.3-debian-aarch64.tar.gz"
+  "deb base       arm64  8.4 20240924 $baseurl-php8.3-debian-aarch64.tar.gz"
   "deb multi      arm64  8.4 20240924 $baseurl-php8.4-debian-aarch64.tar.gz"
   "deb multi      arm64  8.3 20230831 $baseurl-php8.3-debian-aarch64.tar.gz"
   "deb multi      arm64  8.2 20220829 $baseurl-php8.2-debian-aarch64.tar.gz"
@@ -50,7 +50,7 @@ packages=(
   "deb ls         arm64  8.0 20200930 $baseurl-php8.0-debian-aarch64.tar.gz"
   "deb ls         arm64  7.4 20190902 $baseurl-php7.4-debian-aarch64.tar.gz"
 
-  "deb base       arm64  8.3 20230831 $baseurl-php8.3-debian-aarch64+libssl3.tar.gz +libssl3"
+  "deb base       arm64  8.4 20240924 $baseurl-php8.3-debian-aarch64+libssl3.tar.gz +libssl3"
   "deb multi      arm64  8.4 20240924 $baseurl-php8.4-debian-aarch64+libssl3.tar.gz +libssl3"
   "deb multi      arm64  8.3 20230831 $baseurl-php8.3-debian-aarch64+libssl3.tar.gz +libssl3"
   "deb multi      arm64  8.2 20220829 $baseurl-php8.2-debian-aarch64+libssl3.tar.gz +libssl3"
