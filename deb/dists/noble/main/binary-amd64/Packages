@@ -347,6 +347,25 @@ Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 0
 Pre-Depends: php-common
+Depends: php8.4-relay, php8.4-igbinary, php8.4-msgpack
+Filename: pools/noble/v0.10.1/php-relay-0.10.1-php8.4-debian+libssl3_amd64.deb
+Size: 1086
+MD5sum: e4038c8eb390babcc2a4244a930a19b9
+SHA1: 45b72ecc2343cb38a9ba633cbded0dfb5d01d506
+SHA256: 87d21e796cffe2a56791f8ce6ecd63f6161e62b0122469a3cdb57c8d5b79131d
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php-relay
+Version: 0.10.1
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 0
+Pre-Depends: php-common
 Depends: php8.3-relay, php8.3-igbinary, php8.3-msgpack
 Filename: pools/noble/v0.10.1/php-relay-0.10.1-php8.3-debian+libssl3_amd64.deb
 Size: 1086
@@ -486,13 +505,13 @@ Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 3269
 Pre-Depends: php-common
-Depends: php8.1-relay, php8.1-igbinary, php8.1-msgpack
+Depends: php8.2-relay, php8.2-igbinary, php8.2-msgpack
 Provides: php-relay
-Filename: pools/noble/v0.5.1/php-relay-0.5.1-php8.1-debian+libssl3_amd64.deb
+Filename: pools/noble/v0.5.1/php-relay-0.5.1-php8.2-debian+libssl3_amd64.deb
 Size: 1307462
-MD5sum: e6efd7102ac61e2ddd6e1129b7f4d091
-SHA1: 46b6c9023d32d2262d8ef6dec75f250d03e6349f
-SHA256: 33f05ce177336c81b170d2bd08baea5df56ebfa4262936e6c38011e317c4d965
+MD5sum: bd33f421bf674bf4bea2fe4ade2cfa69
+SHA1: 5cacc6cf61d60b5a811a8f41dbd9dee02761d731
+SHA256: 971b64860d82fef13df51ffd5f04b5bb124e6a50214fa296f84c752084cbe424
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -506,13 +525,13 @@ Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 3269
 Pre-Depends: php-common
-Depends: php8.2-relay, php8.2-igbinary, php8.2-msgpack
+Depends: php8.1-relay, php8.1-igbinary, php8.1-msgpack
 Provides: php-relay
-Filename: pools/noble/v0.5.1/php-relay-0.5.1-php8.2-debian+libssl3_amd64.deb
+Filename: pools/noble/v0.5.1/php-relay-0.5.1-php8.1-debian+libssl3_amd64.deb
 Size: 1307462
-MD5sum: bd33f421bf674bf4bea2fe4ade2cfa69
-SHA1: 5cacc6cf61d60b5a811a8f41dbd9dee02761d731
-SHA256: 971b64860d82fef13df51ffd5f04b5bb124e6a50214fa296f84c752084cbe424
+MD5sum: e6efd7102ac61e2ddd6e1129b7f4d091
+SHA1: 46b6c9023d32d2262d8ef6dec75f250d03e6349f
+SHA256: 33f05ce177336c81b170d2bd08baea5df56ebfa4262936e6c38011e317c4d965
 Section: php
 Priority: optional
 Homepage: https://relay.so

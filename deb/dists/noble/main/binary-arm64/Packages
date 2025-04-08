@@ -361,6 +361,25 @@ License: Proprietary
 Vendor: CacheWerk, Inc.
 
 Package: php-relay
+Version: 0.10.1
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 0
+Pre-Depends: php-common
+Depends: php8.4-relay, php8.4-igbinary, php8.4-msgpack
+Filename: pools/noble/v0.10.1/php-relay-0.10.1-php8.4-debian+libssl3_arm64.deb
+Size: 1088
+MD5sum: e79a130e1485ace798247d291a6dcbb2
+SHA1: f240becb580a778a5f8bbfccf5f480389968e2c0
+SHA256: 8a80d88956d21b07a4a53d9412e40f4e37f25d7f48aa666d8591f9aad9231118
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php-relay
 Version: 0.4.2
 Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
