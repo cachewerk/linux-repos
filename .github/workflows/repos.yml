@@ -85,6 +85,8 @@ jobs:
             --acl public-read \
             --endpoint-url ${{ env.R2_ENDPOINT }}
           aws s3 sync deb s3://relay-repos/deb \
+            --exclude "*" \
+            --include "*${{ env.TAG }}*" \
             --delete \
             --no-progress \
             --acl public-read \
@@ -177,6 +179,8 @@ jobs:
             --acl public-read \
             --endpoint-url ${{ env.R2_ENDPOINT }}
           aws s3 sync rpm s3://relay-repos/rpm \
+            --exclude "*" \
+            --include "*${{ env.TAG }}*" \
             --delete \
             --no-progress \
             --acl public-read \
