@@ -39,7 +39,7 @@ jobs:
             --no-progress \
             --acl public-read \
             --endpoint-url ${{ env.R2_ENDPOINT }}
-          aws s3 sync deb s3://relay-repos/deb \
+          git show --oneline --name-only | tail -n +2 | grep \.deb | xargs -I {} aws s3 sync deb/{} s3://relay-repos/deb/{} \
             --delete \
             --no-progress \
             --acl public-read \
@@ -81,7 +81,7 @@ jobs:
             --no-progress \
             --acl public-read \
             --endpoint-url ${{ env.R2_ENDPOINT }}
-          aws s3 sync rpm s3://relay-repos/rpm \
+          git show --oneline --name-only | tail -n +2 | grep \.rpm | xargs -I {} aws s3 sync rpm/{} s3://relay-repos/rpm/{} \
             --delete \
             --no-progress \
             --acl public-read \
