@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:24.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -9,8 +9,6 @@ RUN apt-get -y install \
   git vim nano curl wget rsync \
   build-essential autoconf libtool rpm binutils
 
-RUN gem install public_suffix -v 4.0.7 \
-  && gem install dotenv -v 2.8.1 \
-  && gem install fpm
+RUN gem install fpm
 
 WORKDIR /root/fpm
