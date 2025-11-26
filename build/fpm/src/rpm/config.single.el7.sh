@@ -16,6 +16,8 @@ pkg_config_dest=(
 
 pkg_depends=(
     "openssl11"
+    "hiredis >= 1.1.0"
+    "ck >= 0.7.0"
     "libzstd"
     "lz4"
     "php(api) = $php_api-64"

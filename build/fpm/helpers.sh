@@ -47,7 +47,7 @@ fpm_build()
 
   for binary_path in "${pkg_binary_dest[@]}"; do
     mkdir -p $dest_path/$binary_path
-    cp $src_path/relay-pkg.so $dest_path/$binary_path/relay.so
+    cp $src_path/relay.so $dest_path/$binary_path/relay.so
   done
 
   for config_file in "${pkg_config_dest[@]}"; do

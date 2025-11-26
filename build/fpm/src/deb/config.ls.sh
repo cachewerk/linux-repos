@@ -13,6 +13,8 @@ pkg_config_dest=(
 
 pkg_depends=(
     "libc6 >= 2.17"
+    "libhiredis1.1.0 >= 1.1.0"
+    "libck0 >= 0.7.0"
     "liblz4-1 >= 0.0~r130"
     "libzstd1 >= 1.3.2"
     "lsphp$php_version_short-common"
