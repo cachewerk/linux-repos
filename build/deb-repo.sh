@@ -2,8 +2,8 @@
 
 gpg --batch --import key-private.asc
 
-#       16.04  18.04 20.04 22.04 24.04       9     10       11       12
-dists="xenial bionic focal jammy noble stretch buster bullseye bookworm"
+#       16.04  18.04 20.04 22.04 24.04       9     10       11       12     13
+dists="xenial bionic focal jammy noble stretch buster bullseye bookworm trixie"
 architectures="amd64 arm64"
 
 symlink_pkg='pkg=${0/pool/$1}; mkdir -p $(dirname $pkg); [ ! -L $pkg ] && ln -sr $0 $pkg'
@@ -13,7 +13,7 @@ cd deb
 for dist in $dists; do
 
   case "$dist" in
-    jammy | noble | bookworm)
+    jammy | noble | bookworm | trixie)
       find pool -name "*.deb" -name '*+libssl*' -exec bash -c "$symlink_pkg" {} pools/$dist \; ;;
     *)
       find pool -name "*.deb" ! -name '*+*' -exec bash -c "$symlink_pkg" {} pools/$dist \; ;;
