@@ -35,7 +35,7 @@ debs=(
 
 for deb in "${debs[@]}"; do
   case "$deb" in
-    jammy | noble | plucky | bookworm | trixie) variant=+libssl ;;
+    jammy | noble | plucky | bookworm | trixie) variant=+libssl3 ;;
     *) variant="" ;;
   esac
 
