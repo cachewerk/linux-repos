@@ -1,6 +1,7 @@
 
 main()
 {
+  rm -rf /tmp/relay*
   rm -rf /root/fpm/dist
   mkdir /root/fpm/dist
 
@@ -57,7 +58,7 @@ fpm_build()
   done
 
   pkg_version=${version#v}
-  pkg_filename="${pkg_name}-${pkg_version}-php${php_version}-${pkg_identifier}_${pkg_arch}.${type}"
+  pkg_filename="${pkg_name}-${pkg_version}-php${php_version}-${pkg_identifier}-${pkg_arch}.${type}"
 
   args=(
     "--input-type dir"
