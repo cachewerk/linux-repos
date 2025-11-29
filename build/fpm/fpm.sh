@@ -25,6 +25,7 @@ debs=(
   focal    # 20.04
   jammy    # 22.04
   noble    # 24.04
+  plucky   # 25.04
   stretch  # 9
   buster   # 10
   bullseye # 11
@@ -34,7 +35,7 @@ debs=(
 
 for deb in "${debs[@]}"; do
   case "$dist" in
-    jammy | noble | bookworm | trixie) variant=+libssl ;;
+    jammy | noble | plucky | bookworm | trixie) variant=+libssl ;;
     *) variant="" ;;
   esac
 

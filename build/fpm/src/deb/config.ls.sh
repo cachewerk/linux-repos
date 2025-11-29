@@ -4,7 +4,7 @@ pkg_name="lsphp$php_version_short-relay"
 pkg_identifier=$distro
 
 case "$dist" in
-  noble | trixie)
+  noble | plucky | trixie)
     pkg_binary="relay.so" ;;
   *)
     pkg_binary="relay-pkg.so" ;;

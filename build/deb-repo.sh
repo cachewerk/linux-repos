@@ -8,6 +8,7 @@ dists=(
   focal    # 20.04
   jammy    # 22.04
   noble    # 24.04
+  plucky   # 25.04
   stretch  # 9
   buster   # 10
   bullseye # 11
