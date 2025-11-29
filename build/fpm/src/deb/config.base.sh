@@ -16,7 +16,7 @@ pkg_depends=(
     "php$php_version-msgpack"
 )
 
-[[ ! "$pkg_binary" == *-pkg ]] && pkg_depends+=(
+[[ ! "$pkg_binary" == *-pkg* ]] && pkg_depends+=(
   "libhiredis1.1.0 >= 1.1.0"
   "libck0 >= 0.7.0"
 )
