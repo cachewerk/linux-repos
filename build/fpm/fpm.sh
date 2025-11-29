@@ -50,7 +50,7 @@ for deb in "${debs[@]}"; do
       api=${php_api[$php]}
 
       packages+=(
-        "$deb deb multi $arch $php $api $baseurl-php$php-debian-${arch_url}.tar.gz"
+        "$deb deb multi $arch $php $api $baseurl-php$php-debian-${arch_url}${variant}.tar.gz"
         "$deb deb ls    $arch $php $api $baseurl-php$php-debian-${arch_url}${variant}.tar.gz"
       )
     done
