@@ -3,7 +3,7 @@
 pkg_name="php-relay"
 pkg_identifier=$distro
 
-case "$dist" in
+case "$distro" in
   noble | plucky | trixie)
     pkg_binary="relay.so" ;;
   *)
