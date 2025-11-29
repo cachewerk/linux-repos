@@ -19,18 +19,38 @@ declare -A php_api=(
 
 packages=()
 
-for variant in "" +libssl3; do
+debs=(
+  xenial   # 16.04
+  bionic   # 18.04
+  focal    # 20.04
+  jammy    # 22.04
+  noble    # 24.04
+  stretch  # 9
+  buster   # 10
+  bullseye # 11
+  bookworm # 12
+  trixie   # 13
+)
+
+for deb in "${debs[@]}"; do
+  case "$dist" in
+    jammy | noble | bookworm | trixie) variant=+libssl ;;
+    *) variant="" ;;
+  esac
+
   for arch in amd64 arm64; do
     arch_url=$(echo $arch | sed 's/amd64/x86-64/; s/arm64/aarch64/')
 
-    packages+=("deb base $arch 8.4 20240924 $baseurl-php8.4-debian-$arch_url.tar.gz")
+    packages+=(
+      "$deb deb base $arch 8.4 20240924 $baseurl-php8.4-debian-${arch_url}${variant}.tar.gz"
+    )
 
     for php in 7.4 8.0 8.1 8.2 8.3 8.4 8.5; do
       api=${php_api[$php]}
 
       packages+=(
-        "deb multi $arch $php $api $baseurl-php$php-debian-$arch_url.tar.gz $variant"
-        "deb ls    $arch $php $api $baseurl-php$php-debian-$arch_url${variant}.tar.gz $variant"
+        "$deb deb multi $arch $php $api $baseurl-php$php-debian-${arch_url}.tar.gz"
+        "$deb deb ls    $arch $php $api $baseurl-php$php-debian-${arch_url}${variant}.tar.gz"
       )
     done
   done
@@ -42,9 +62,9 @@ for el in el7 el8 el9; do
       api=${php_api[$php]}
 
       packages+=(
-        "rpm single.$el $arch $php $api $baseurl-php$php-$el-${arch/_/-}.tar.gz"
-        "rpm multi.$el  $arch $php $api $baseurl-php$php-$el-${arch/_/-}.tar.gz"
-        "rpm ls.$el     $arch $php $api $baseurl-php$php-$el-${arch/_/-}.tar.gz"
+        "$el rpm single.$el $arch $php $api $baseurl-php$php-$el-${arch/_/-}.tar.gz"
+        "$el rpm multi.$el  $arch $php $api $baseurl-php$php-$el-${arch/_/-}.tar.gz"
+        "$el rpm ls.$el     $arch $php $api $baseurl-php$php-$el-${arch/_/-}.tar.gz"
       )
     done
   done

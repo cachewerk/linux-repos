@@ -1,12 +1,24 @@
 #!/bin/bash
 
 pkg_name="php-relay"
-pkg_identifier="debian"
+pkg_identifier=$distro
+
+case "$dist" in
+  noble | trixie)
+    pkg_binary="relay.so" ;;
+  *)
+    pkg_binary="relay-pkg.so" ;;
+esac
 
 pkg_depends=(
     "php$php_version-relay"
     "php$php_version-igbinary"
     "php$php_version-msgpack"
+)
+
+[[ ! "$pkg_binary" == *-pkg ]] && pkg_depends+=(
+  "libhiredis1.1.0 >= 1.1.0"
+  "libck0 >= 0.7.0"
 )
 
 fpm_args=(

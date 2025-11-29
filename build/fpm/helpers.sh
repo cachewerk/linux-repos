@@ -14,30 +14,29 @@ main()
   exit 0
 }
 
-# build the package based on parameters
 fpm_build()
 {
-  pkg_type=$1
-  config=$2
-  pkg_arch=$3
-  php_version=$4
-  php_version_short=${4//./}
-  php_api=$5
-  pkg_url=$6
-  pkg_mod=$7
+  distro=$1
+  type=$2
+  config=$3
+  pkg_arch=$4
+  php_version=$5
+  php_version_short=${5//./}
+  php_api=$6
+  pkg_url=$7
 
   # we don't have centos builds for v0.1.0
-  if [[ "$version" == "v0.1.0" && "$pkg_type" == "rpm" ]]; then
+  if [[ "$version" == "v0.1.0" && "$type" == "rpm" ]]; then
     echo "Skipping RPMs for v0.1.0"
     return 0
   fi
 
-  source /root/fpm/src/$pkg_type/config.$config.sh
+  source /root/fpm/src/$type/config.$config.sh
 
-  echo "Building Relay ($version) .$pkg_type package for PHP $php_version on $pkg_arch"
+  echo "Building Relay ($version) .$type package for PHP $php_version on $pkg_arch"
 
   src_path=/tmp/$(basename $pkg_url .tar.gz)
-  dest_path=/root/fpm/src/$pkg_type/$pkg_arch-php$php_version
+  dest_path=/root/fpm/src/$type/$pkg_arch-php$php_version
 
   if [[ ! -d "$src_path" ]]; then
     echo "Downloading $pkg_url"
@@ -58,11 +57,11 @@ fpm_build()
   done
 
   pkg_version=${version#v}
-  pkg_filename="${pkg_name}-${pkg_version}-php${php_version}-${pkg_identifier}${pkg_mod}_${pkg_arch}.${pkg_type}"
+  pkg_filename="${pkg_name}-${pkg_version}-php${php_version}-${pkg_identifier}_${pkg_arch}.${type}"
 
   args=(
     "--input-type dir"
-    "--output-type $pkg_type"
+    "--output-type $type"
 
     "--vendor 'CacheWerk, Inc.'"
     "--maintainer 'Relay Team <hello@cachewerk.com>'"
