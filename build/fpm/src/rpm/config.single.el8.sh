@@ -2,6 +2,7 @@
 
 pkg_name="php-relay"
 pkg_provides="php-relay"
+pkg_binary="relay-pkg.so"
 pkg_identifier="el8"
 
 pkg_binary_dest=(
@@ -16,8 +17,6 @@ pkg_config_dest=(
 
 pkg_depends=(
     "openssl"
-    "hiredis >= 1.1.0"
-    "ck >= 0.7.0"
     "libzstd"
     "lz4"
     "php(api) = $php_api-64"

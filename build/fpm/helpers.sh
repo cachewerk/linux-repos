@@ -8,8 +8,7 @@ main()
 
   for package in "${packages[@]}"; do
     unset ${!pkg_@}
-    fpm_build relay $package
-    fpm_build relay-pkg $package
+    fpm_build $package
   done
 
   exit 0
@@ -18,15 +17,14 @@ main()
 # build the package based on parameters
 fpm_build()
 {
-  build=$1
-  pkg_type=$2
-  config=$3
-  pkg_arch=$4
-  php_version=$5
-  php_version_short=${5//./}
-  php_api=$6
-  pkg_url=$7
-  pkg_mod=$8
+  pkg_type=$1
+  config=$2
+  pkg_arch=$3
+  php_version=$4
+  php_version_short=${4//./}
+  php_api=$5
+  pkg_url=$6
+  pkg_mod=$7
 
   # we don't have centos builds for v0.1.0
   if [[ "$version" == "v0.1.0" && "$pkg_type" == "rpm" ]]; then
@@ -36,7 +34,7 @@ fpm_build()
 
   source /root/fpm/src/$pkg_type/config.$config.sh
 
-  echo "Building Relay ($version) .$pkg_type package for PHP $php_version on $pkg_arch ($build.so)"
+  echo "Building Relay ($version) .$pkg_type package for PHP $php_version on $pkg_arch"
 
   src_path=/tmp/$(basename $pkg_url .tar.gz)
   dest_path=/root/fpm/src/$pkg_type/$pkg_arch-php$php_version
@@ -51,17 +49,13 @@ fpm_build()
 
   for binary_path in "${pkg_binary_dest[@]}"; do
     mkdir -p $dest_path/$binary_path
-    cp $src_path/$build.so $dest_path/$binary_path/relay.so
+    cp $src_path/$pkg_binary $dest_path/$binary_path/relay.so
   done
 
   for config_file in "${pkg_config_dest[@]}"; do
     mkdir -p $(dirname $dest_path/$config_file)
     cp $src_path/relay.ini $dest_path/$config_file
   done
-
-  if [[ "$build" == *-pkg ]]; then
-    pkg_mod="${pkg_mod}+static"
-  fi
 
   pkg_version=${version#v}
   pkg_filename="${pkg_name}-${pkg_version}-php${php_version}-${pkg_identifier}${pkg_mod}_${pkg_arch}.${pkg_type}"

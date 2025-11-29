@@ -2,6 +2,7 @@
 
 pkg_name="lsphp$php_version_short-relay"
 pkg_provides="lsphp$php_version_short-relay"
+pkg_binary="relay-pkg.so"
 pkg_identifier="el7"
 
 pkg_binary_dest=(
@@ -14,8 +15,6 @@ pkg_config_dest=(
 
 pkg_depends=(
     "openssl11"
-    "hiredis >= 1.1.0"
-    "ck >= 0.7.0"
     "libzstd"
     "lz4"
     "lsphp$php_version_short(api) = $php_api"
