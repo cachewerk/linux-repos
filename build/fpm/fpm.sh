@@ -58,11 +58,7 @@ for deb in "${debs[@]}"; do
 done
 
 for el in el7 el8 el9; do
-  case "$el" in
-    el7) url_distro=centos7 ;;
-    el8) url_distro=centos8 ;;
-    el9) url_distro=el9 ;;
-  esac
+  url_distro=$(echo $el | sed 's/el7/centos7/; s/el8/centos8/')
 
   for arch in x86_64 aarch64; do
     for php in 7.4 8.0 8.1 8.2 8.3 8.4 8.5; do
