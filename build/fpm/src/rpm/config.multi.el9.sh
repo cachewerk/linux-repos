@@ -2,6 +2,7 @@
 
 pkg_name="php$php_version_short-php-relay"
 pkg_provides="php$php_version_short-php-relay"
+pkg_binary="relay-pkg.so"
 pkg_identifier="el9"
 
 pkg_binary_dest=(
