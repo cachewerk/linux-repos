@@ -2,7 +2,7 @@
 
 gpg --batch --import key-private.asc
 
-source build/fpm/deb-dists.sh
+source build/deb-dists.sh
 
 architectures="amd64 arm64"
 

@@ -3,7 +3,7 @@
 set -e
 
 source /root/fpm/helpers.sh
-source /root/fpm/deb-dists.sh
+source /root/deb-dists.sh
 
 version=$1
 baseurl="https://builds.r2.relay.so/$version/relay-$version"
