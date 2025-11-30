@@ -58,14 +58,16 @@ for deb in "${debs[@]}"; do
 done
 
 for el in el7 el8 el9; do
+  url_distro=$(echo $el | sed 's/el7/centos7/; s/el8/centos8/')
+
   for arch in x86_64 aarch64; do
     for php in 7.4 8.0 8.1 8.2 8.3 8.4 8.5; do
       api=${php_api[$php]}
 
       packages+=(
-        "$el rpm single.$el $arch $php $api $baseurl-php$php-$el-${arch/_/-}.tar.gz"
-        "$el rpm multi.$el  $arch $php $api $baseurl-php$php-$el-${arch/_/-}.tar.gz"
-        "$el rpm ls.$el     $arch $php $api $baseurl-php$php-$el-${arch/_/-}.tar.gz"
+        "$el rpm single.$el $arch $php $api $baseurl-php$php-$url_distro-${arch/_/-}.tar.gz"
+        "$el rpm multi.$el  $arch $php $api $baseurl-php$php-$url_distro-${arch/_/-}.tar.gz"
+        "$el rpm ls.$el     $arch $php $api $baseurl-php$php-$url_distro-${arch/_/-}.tar.gz"
       )
     done
   done
