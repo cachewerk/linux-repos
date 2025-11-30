@@ -2,19 +2,7 @@
 
 gpg --batch --import key-private.asc
 
-dists=(
-  xenial   # 16.04
-  bionic   # 18.04
-  focal    # 20.04
-  jammy    # 22.04
-  noble    # 24.04
-  plucky   # 25.04
-  stretch  # 9
-  buster   # 10
-  bullseye # 11
-  bookworm # 12
-  trixie   # 13
-)
+source build/fpm/deb-dists.sh
 
 architectures="amd64 arm64"
 
@@ -22,7 +10,7 @@ symlink_pkg='pkg=${0/pool/$1}; mkdir -p $(dirname $pkg); [ ! -L $pkg ] && ln -sr
 
 cd deb
 
-for dist in "${dists[@]}"; do
+for dist in "${deb_dists[@]}"; do
   find pool -name "*$dist*.deb" -exec bash -c "$symlink_pkg" {} pools/$dist \;
 
   for arch in $architectures; do
