@@ -30,6 +30,7 @@ jobs:
           cd build
           docker run --tty \
             -v ${PWD}/fpm:/root/fpm \
+            -v ${PWD}/deb-dists.sh:/root/deb-dists.sh \
             fpm /bin/bash -c "./fpm.sh ${{ github.event.inputs.tag }}"
 
       - name: Upload artifacts

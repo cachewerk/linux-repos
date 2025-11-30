@@ -3,6 +3,7 @@
 set -e
 
 source /root/fpm/helpers.sh
+source /root/deb-dists.sh
 
 version=$1
 baseurl="https://builds.r2.relay.so/$version/relay-$version"
@@ -19,21 +20,7 @@ declare -A php_api=(
 
 packages=()
 
-debs=(
-  xenial   # 16.04
-  bionic   # 18.04
-  focal    # 20.04
-  jammy    # 22.04
-  noble    # 24.04
-  plucky   # 25.04
-  stretch  # 9
-  buster   # 10
-  bullseye # 11
-  bookworm # 12
-  trixie   # 13
-)
-
-for deb in "${debs[@]}"; do
+for deb in "${deb_dists[@]}"; do
   case "$deb" in
     jammy | noble | plucky | bookworm | trixie) variant=+libssl3 ;;
     *) variant="" ;;
