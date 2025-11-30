@@ -29,11 +29,11 @@ jobs:
         run: |
           cd build
           docker run --tty \
-            -v ${PWD}/fpm:/root/fpm \
+            -v ${PWD}:/root/build \
             fpm /bin/bash -c "./fpm.sh ${{ github.event.inputs.tag }}"
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: packages
-          path: build/fpm/dist/*
+          path: build/dist/*
