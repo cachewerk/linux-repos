@@ -23,7 +23,7 @@ symlink_pkg='pkg=${0/pool/$1}; mkdir -p $(dirname $pkg); [ ! -L $pkg ] && ln -sr
 cd deb
 
 for dist in "${dists[@]}"; do
-  find pool -name "*.deb" -name "*$dist*" -exec bash -c "$symlink_pkg" {} pools/$dist \;
+  find pool -name "*$dist*.deb" -exec bash -c "$symlink_pkg" {} pools/$dist \;
 
   for arch in $architectures; do
     mkdir -p dists/$dist/main/binary-$arch
