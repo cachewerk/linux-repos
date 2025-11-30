@@ -2,10 +2,10 @@
 main()
 {
   rm -rf /tmp/relay*
-  rm -rf /root/fpm/dist
-  mkdir /root/fpm/dist
+  rm -rf /root/build/dist
+  mkdir /root/build/dist
 
-  echo -n "$version" > /root/fpm/dist/TAG
+  echo -n "$version" > /root/build/dist/TAG
 
   for package in "${packages[@]}"; do
     unset ${!pkg_@}
@@ -32,12 +32,12 @@ fpm_build()
     return 0
   fi
 
-  source /root/fpm/src/$type/config.$config.sh
+  source /root/build/src/$type/config.$config.sh
 
   echo "Building Relay ($version) .$type package for PHP $php_version on $pkg_arch"
 
   src_path=/tmp/$(basename $pkg_url .tar.gz)
-  dest_path=/root/fpm/src/$type/$pkg_arch-php$php_version
+  dest_path=/root/build/src/$type/$pkg_arch-php$php_version
 
   if [[ ! -d "$src_path" ]]; then
     echo "Downloading $pkg_url"

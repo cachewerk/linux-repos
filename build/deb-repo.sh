@@ -2,7 +2,7 @@
 
 gpg --batch --import key-private.asc
 
-source build/deb-dists.sh
+source build/distros.sh
 
 architectures="amd64 arm64"
 

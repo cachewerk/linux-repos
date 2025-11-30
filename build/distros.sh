@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Debian/Ubuntu distributions
-# Shared between fpm.sh and deb-repo.sh
-
 deb_dists=(
   xenial   # 16.04
   bionic   # 18.04
@@ -15,4 +12,10 @@ deb_dists=(
   bullseye # 11
   bookworm # 12
   trixie   # 13
+)
+
+el_dists=(
+  el7
+  el8
+  el9
 )

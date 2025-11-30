@@ -37,5 +37,5 @@ fpm_args=(
   "--replaces 'php-relay << ${version#v}'"
   "--deb-pre-depends 'php-common'"
   "--deb-field 'Source: php-relay'"
-  "--after-install /root/fpm/src/deb/after-install-multi.sh"
+  "--after-install /root/build/src/deb/after-install-multi.sh"
 )

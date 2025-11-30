@@ -11,4 +11,4 @@ RUN apt-get -y install \
 
 RUN gem install fpm
 
-WORKDIR /root/fpm
+WORKDIR /root/build

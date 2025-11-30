@@ -23,5 +23,5 @@ pkg_depends=(
 
 fpm_args=(
   "--deb-pre-depends 'php-common'"
-  "--after-install /root/fpm/src/deb/after-install.sh"
+  "--after-install /root/build/src/deb/after-install.sh"
 )

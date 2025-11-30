@@ -29,5 +29,5 @@ pkg_depends=(
 )
 
 fpm_args=(
-  "--after-install /root/fpm/src/rpm/after-install.sh"
+  "--after-install /root/build/src/rpm/after-install.sh"
 )

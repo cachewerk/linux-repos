@@ -33,5 +33,5 @@ pkg_depends=(
 )
 
 fpm_args=(
-  "--after-install /root/fpm/src/deb/after-install.sh"
+  "--after-install /root/build/src/deb/after-install.sh"
 )

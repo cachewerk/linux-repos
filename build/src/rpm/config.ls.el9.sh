@@ -3,7 +3,7 @@
 pkg_name="lsphp$php_version_short-relay"
 pkg_provides="lsphp$php_version_short-relay"
 pkg_binary="relay-pkg.so"
-pkg_identifier="el8"
+pkg_identifier="el9"
 
 pkg_binary_dest=(
     "usr/local/lsws/lsphp$php_version_short/lib64/php/modules"
@@ -15,6 +15,8 @@ pkg_config_dest=(
 
 pkg_depends=(
     "openssl"
+    # "hiredis >= 1.1.0"
+    # "ck >= 0.7.0"
     "libzstd"
     "lz4"
     "lsphp$php_version_short(api) = $php_api"
@@ -25,5 +27,5 @@ pkg_depends=(
 )
 
 fpm_args=(
-  "--after-install /root/fpm/src/rpm/after-install.sh"
+  "--after-install /root/build/src/rpm/after-install.sh"
 )

@@ -2,8 +2,8 @@
 
 set -e
 
-source /root/fpm/helpers.sh
-source /root/deb-dists.sh
+source /root/build/helpers.sh
+source /root/build/distros.sh
 
 version=$1
 baseurl="https://builds.r2.relay.so/$version/relay-$version"
@@ -44,7 +44,7 @@ for deb in "${deb_dists[@]}"; do
   done
 done
 
-for el in el7 el8 el9; do
+for el in "${el_dists[@]}"; do
   url_distro=$(echo $el | sed 's/el7/centos7/; s/el8/centos8/')
 
   for arch in x86_64 aarch64; do
