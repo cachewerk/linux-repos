@@ -13,6 +13,17 @@ cd deb
 for dist in "${deb_dists[@]}"; do
   find pool -name "*$dist*.deb" -exec bash -c "$symlink_pkg" {} pools/$dist \;
 
+  # Rename symlinks using hyphens before arch to underscores (e.g. -amd64.deb -> _amd64.deb)
+  # so that dpkg-scanpackages --arch can parse the architecture from the filename
+  for arch in $architectures; do
+    find pools/$dist -name "*-${arch}.deb" -type l | while read -r link; do
+      newlink="${link%-${arch}.deb}_${arch}.deb"
+      if [ "$link" != "$newlink" ]; then
+        mv -f "$link" "$newlink"
+      fi
+    done
+  done
+
   for arch in $architectures; do
     mkdir -p dists/$dist/main/binary-$arch
 
