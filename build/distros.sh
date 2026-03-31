@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# WARNING: Keep `deb/sources.list` in sync the `deb_dists` list
 deb_dists=(
   xenial   # 16.04
   bionic   # 18.04
