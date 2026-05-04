@@ -143,6 +143,24 @@ License: Proprietary
 Vendor: CacheWerk, Inc.
 
 Package: lsphp74-relay
+Version: 0.22.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 3113
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), lsphp74-common, lsphp74-igbinary, lsphp74-msgpack
+Filename: pools/bullseye/v0.22.0/lsphp74-relay-0.22.0-php7.4-bullseye_arm64.deb
+Size: 1063660
+MD5sum: 7895343728babc62b3b32f0f4b979008
+SHA1: f162447d1702af6c6c5d57739e1c5c2c0c4d196e
+SHA256: fd5efd0a75f77f15866ff59cd17254314414d527622e288123b4ec97b2063717
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: lsphp74-relay
 Version: 0.9.1
 Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
@@ -297,6 +315,24 @@ Size: 1284238
 MD5sum: 98cab579a6a87fb49295d919d85b9006
 SHA1: d7623dcfe6f876e124db0fd62212987c9cab2c39
 SHA256: 09e2af425a2e708d1de4553f58d7b7f1bc9c502fdeef970f9279d10d5eb91641
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: lsphp80-relay
+Version: 0.22.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 4190
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), lsphp80-common, lsphp80-igbinary, lsphp80-msgpack
+Filename: pools/bullseye/v0.22.0/lsphp80-relay-0.22.0-php8.0-bullseye_arm64.deb
+Size: 1322820
+MD5sum: b9ab3418da427647de63616307769e66
+SHA1: 40eabc97b028212bac6e1f9728e44231dd46f31a
+SHA256: 5f1651a1a909be2016691e236f42216a6e55f95db5f5e81708ce0bf1d93e1161
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -467,6 +503,24 @@ License: Proprietary
 Vendor: CacheWerk, Inc.
 
 Package: lsphp81-relay
+Version: 0.22.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 4194
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), lsphp81-common, lsphp81-igbinary, lsphp81-msgpack
+Filename: pools/bullseye/v0.22.0/lsphp81-relay-0.22.0-php8.1-bullseye_arm64.deb
+Size: 1323744
+MD5sum: 5126c68058cc291f824d8aa2e9207270
+SHA1: 909102b4df1159bf3f7244c10eefd2aeb0e4575a
+SHA256: d7ce1e4acc294833e19be4e9dd53a3dd51710eb15cd853737ad8c4350b1bcc4c
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: lsphp81-relay
 Version: 0.9.1
 Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
@@ -621,6 +675,24 @@ Size: 1294786
 MD5sum: 6e12a8ad7e4c7083218ddbe4fca3e995
 SHA1: a77cad67e302ce69fc4ea68c66d7bfd38a383999
 SHA256: d25bd3952231336f2f52b92b40dd5d5346a85de228d3d7fb55d0afea3e44592d
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: lsphp82-relay
+Version: 0.22.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 4196
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), lsphp82-common, lsphp82-igbinary, lsphp82-msgpack
+Filename: pools/bullseye/v0.22.0/lsphp82-relay-0.22.0-php8.2-bullseye_arm64.deb
+Size: 1327972
+MD5sum: bde5ac14ecbaaf0d8ae09f8ad5a577d5
+SHA1: 9779322ab8b66eeb28a2d5fbfbef6096252e2cd1
+SHA256: df03b3e2c6ab575c6f3ae8345e8988563102cbc0d57fff74ff04cb3ce24a3a92
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -791,6 +863,24 @@ License: Proprietary
 Vendor: CacheWerk, Inc.
 
 Package: lsphp83-relay
+Version: 0.22.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 4197
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), lsphp83-common, lsphp83-igbinary, lsphp83-msgpack
+Filename: pools/bullseye/v0.22.0/lsphp83-relay-0.22.0-php8.3-bullseye_arm64.deb
+Size: 1328840
+MD5sum: dba649ade6bdc4b366e75e87ce262a12
+SHA1: 68a87bfd888838941da0862ae0bebd906fbc4578
+SHA256: c21eef4329e05987a0df043ea5e2f288593815f73da8ce34c1f0839c17d7934c
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: lsphp83-relay
 Version: 0.9.1
 Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
@@ -953,6 +1043,24 @@ License: Proprietary
 Vendor: CacheWerk, Inc.
 
 Package: lsphp84-relay
+Version: 0.22.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 4210
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), lsphp84-common, lsphp84-igbinary, lsphp84-msgpack
+Filename: pools/bullseye/v0.22.0/lsphp84-relay-0.22.0-php8.4-bullseye_arm64.deb
+Size: 1328784
+MD5sum: 497eb7623dad8b1093e8b548cfecd0de
+SHA1: 08e533504f98b2866e9f5193b7420407696baafb
+SHA256: ebce354ed206fc797bab2740c2cedf8e771e9067b565c6fa1caba39e5e29d07d
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: lsphp84-relay
 Version: 0.9.1
 Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
@@ -999,6 +1107,24 @@ Size: 1295456
 MD5sum: 08ed909e9e1d64e4f4daec87b8316fe1
 SHA1: 31b66e4ed44949769a29ab9f2b80c1304aaaf1ae
 SHA256: a1b12fba3cdfe7688079800869065aa95064ba2ae20a1df57a7f8a0ac673d8ec
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: lsphp85-relay
+Version: 0.22.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 4210
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), lsphp85-common, lsphp85-igbinary, lsphp85-msgpack
+Filename: pools/bullseye/v0.22.0/lsphp85-relay-0.22.0-php8.5-bullseye_arm64.deb
+Size: 1329296
+MD5sum: f1b963b4634fec4b08db3be5fc79b6b0
+SHA1: ba72f028f623793bb2c5d9222f7f358d1349012c
+SHA256: e2082c46b23dada5ed01a30e4bb784a2fc48dac9215f5b335e4d7c12d0ea1d01
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -1111,12 +1237,12 @@ Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 0
 Pre-Depends: php-common
-Depends: php8.4-relay, php8.4-igbinary, php8.4-msgpack
-Filename: pools/bullseye/v0.10.1/php-relay-0.10.1-php8.4-debian_arm64.deb
+Depends: php8.3-relay, php8.3-igbinary, php8.3-msgpack
+Filename: pools/bullseye/v0.10.1/php-relay-0.10.1-php8.3-debian_arm64.deb
 Size: 1086
-MD5sum: 11eb5edd27af2fbdb16736b55083193b
-SHA1: e478455caac25e83f28571d56560eb108302f540
-SHA256: bc486ea1301ed9af2f5dfb675385f8cfaad9287f7261a0e9baa2673b2e4fe29d
+MD5sum: 1d381e9f2d7169bf807ce9d6f0d50330
+SHA1: b3bc6516894678a34308306720a1dc7cb1b84095
+SHA256: f37b38254d1fe6e1fd14088e170f6d89c1d06d782eff186268cf2be93ca90cd9
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -1130,12 +1256,12 @@ Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 0
 Pre-Depends: php-common
-Depends: php8.3-relay, php8.3-igbinary, php8.3-msgpack
-Filename: pools/bullseye/v0.10.1/php-relay-0.10.1-php8.3-debian_arm64.deb
+Depends: php8.4-relay, php8.4-igbinary, php8.4-msgpack
+Filename: pools/bullseye/v0.10.1/php-relay-0.10.1-php8.4-debian_arm64.deb
 Size: 1086
-MD5sum: 1d381e9f2d7169bf807ce9d6f0d50330
-SHA1: b3bc6516894678a34308306720a1dc7cb1b84095
-SHA256: f37b38254d1fe6e1fd14088e170f6d89c1d06d782eff186268cf2be93ca90cd9
+MD5sum: 11eb5edd27af2fbdb16736b55083193b
+SHA1: e478455caac25e83f28571d56560eb108302f540
+SHA256: bc486ea1301ed9af2f5dfb675385f8cfaad9287f7261a0e9baa2673b2e4fe29d
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -1338,6 +1464,25 @@ License: Proprietary
 Vendor: CacheWerk, Inc.
 
 Package: php-relay
+Version: 0.22.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 0
+Pre-Depends: php-common
+Depends: php8.4-relay, php8.4-igbinary, php8.4-msgpack
+Filename: pools/bullseye/v0.22.0/php-relay-0.22.0-php8.4-bullseye_arm64.deb
+Size: 1090
+MD5sum: 30d1bc7900e712e2fb8190d9b62d4843
+SHA1: a88244680f037961adccf1bd9ad588dd05e7a79e
+SHA256: ce413b4b08bac9abd3cb0bd27bb693d5ecef2fc0ec8dac81487723ae32e2adfc
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php-relay
 Version: 0.3.0
 Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
@@ -1381,15 +1526,15 @@ Package: php-relay
 Version: 0.3.2
 Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 2049
+Installed-Size: 2061
 Pre-Depends: php-common
-Depends: php8.0-relay, php8.0-igbinary, php8.0-msgpack
+Depends: php8.1-relay, php8.1-igbinary, php8.1-msgpack
 Provides: php-relay
-Filename: pools/bullseye/v0.3.2/php-relay-0.3.2-php8.0-debian_arm64.deb
-Size: 749282
-MD5sum: efa17d9800177860147fe75227d24cc3
-SHA1: 4c0be4c320dc7a5d467a1bc34137f36b95947c69
-SHA256: ed6c25f79e10d1af8166402370805b270832204ccc4e33611446601470edf092
+Filename: pools/bullseye/v0.3.2/php-relay-0.3.2-php8.1-debian_arm64.deb
+Size: 753516
+MD5sum: 58ec4cf7a26fbfa5f30d7f1a576bc615
+SHA1: 8d90e46386bb39d8d8d72969f551e5f78351e0bc
+SHA256: 47f2dd78ed9c3e9c41f5cef2da328b1f2509fc5e6cb7e57b31861b9e5c6e76ef
 Section: php
 Priority: optional
 Homepage: https://relaycache.com
@@ -1401,15 +1546,15 @@ Package: php-relay
 Version: 0.3.2
 Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 2061
+Installed-Size: 2049
 Pre-Depends: php-common
-Depends: php8.1-relay, php8.1-igbinary, php8.1-msgpack
+Depends: php8.0-relay, php8.0-igbinary, php8.0-msgpack
 Provides: php-relay
-Filename: pools/bullseye/v0.3.2/php-relay-0.3.2-php8.1-debian_arm64.deb
-Size: 753516
-MD5sum: 58ec4cf7a26fbfa5f30d7f1a576bc615
-SHA1: 8d90e46386bb39d8d8d72969f551e5f78351e0bc
-SHA256: 47f2dd78ed9c3e9c41f5cef2da328b1f2509fc5e6cb7e57b31861b9e5c6e76ef
+Filename: pools/bullseye/v0.3.2/php-relay-0.3.2-php8.0-debian_arm64.deb
+Size: 749282
+MD5sum: efa17d9800177860147fe75227d24cc3
+SHA1: 4c0be4c320dc7a5d467a1bc34137f36b95947c69
+SHA256: ed6c25f79e10d1af8166402370805b270832204ccc4e33611446601470edf092
 Section: php
 Priority: optional
 Homepage: https://relaycache.com
@@ -1583,13 +1728,13 @@ Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 3298
 Pre-Depends: php-common
-Depends: php8.1-relay, php8.1-igbinary, php8.1-msgpack
+Depends: php8.2-relay, php8.2-igbinary, php8.2-msgpack
 Provides: php-relay
-Filename: pools/bullseye/v0.5.1/php-relay-0.5.1-php8.1-debian_arm64.deb
+Filename: pools/bullseye/v0.5.1/php-relay-0.5.1-php8.2-debian_arm64.deb
 Size: 1078190
-MD5sum: d7f508eca941f4b581e74f448c194abb
-SHA1: 7a4c00d6cebdac2d0d0c3ffd4fae1cc34126a345
-SHA256: 42f127a1fba8055bf5573aba98a892aa0791c20a7c54af142afef2f9793c80c7
+MD5sum: bb26f5c1e19991d354e28cc5c5de5fb7
+SHA1: acf579eb0db1d44d28e47f882a2b96a1e71e848a
+SHA256: b8036343a2a44ae81fc0d205869c7e2347b24551de9e43d1f2a63827ea66a4f0
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -1603,13 +1748,13 @@ Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 3298
 Pre-Depends: php-common
-Depends: php8.2-relay, php8.2-igbinary, php8.2-msgpack
+Depends: php8.1-relay, php8.1-igbinary, php8.1-msgpack
 Provides: php-relay
-Filename: pools/bullseye/v0.5.1/php-relay-0.5.1-php8.2-debian_arm64.deb
+Filename: pools/bullseye/v0.5.1/php-relay-0.5.1-php8.1-debian_arm64.deb
 Size: 1078190
-MD5sum: bb26f5c1e19991d354e28cc5c5de5fb7
-SHA1: acf579eb0db1d44d28e47f882a2b96a1e71e848a
-SHA256: b8036343a2a44ae81fc0d205869c7e2347b24551de9e43d1f2a63827ea66a4f0
+MD5sum: d7f508eca941f4b581e74f448c194abb
+SHA1: 7a4c00d6cebdac2d0d0c3ffd4fae1cc34126a345
+SHA256: 42f127a1fba8055bf5573aba98a892aa0791c20a7c54af142afef2f9793c80c7
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -1801,15 +1946,15 @@ Package: php-relay
 Version: 0.7.0
 Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 2626
+Installed-Size: 2627
 Pre-Depends: php-common
-Depends: php8.2-relay, php8.2-igbinary, php8.2-msgpack
+Depends: php8.3-relay, php8.3-igbinary, php8.3-msgpack
 Provides: php-relay
-Filename: pools/bullseye/v0.7.0/php-relay-0.7.0-php8.2-debian_arm64.deb
-Size: 887686
-MD5sum: dcc772c37eaaa419514b9d70b574c486
-SHA1: 7d8baec94c5e0d2f1ca0391928d0afff9b1f6d88
-SHA256: a55c0162a0ef7f454a2bfa2f3d0c21560424cd8ab3023ece08a958dad16c2f3a
+Filename: pools/bullseye/v0.7.0/php-relay-0.7.0-php8.3-debian_arm64.deb
+Size: 888194
+MD5sum: f2e52d46af7bec946555567e21a29fcf
+SHA1: 9b02ee13a2b05404120348902f868e51e1099a9a
+SHA256: 45cbddb63a99e5fd8cad3035d02156e00269b762c4d6db54bb3a06b84f4369d8
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -1821,15 +1966,15 @@ Package: php-relay
 Version: 0.7.0
 Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 2627
+Installed-Size: 2626
 Pre-Depends: php-common
-Depends: php8.3-relay, php8.3-igbinary, php8.3-msgpack
+Depends: php8.2-relay, php8.2-igbinary, php8.2-msgpack
 Provides: php-relay
-Filename: pools/bullseye/v0.7.0/php-relay-0.7.0-php8.3-debian_arm64.deb
-Size: 888194
-MD5sum: f2e52d46af7bec946555567e21a29fcf
-SHA1: 9b02ee13a2b05404120348902f868e51e1099a9a
-SHA256: 45cbddb63a99e5fd8cad3035d02156e00269b762c4d6db54bb3a06b84f4369d8
+Filename: pools/bullseye/v0.7.0/php-relay-0.7.0-php8.2-debian_arm64.deb
+Size: 887686
+MD5sum: dcc772c37eaaa419514b9d70b574c486
+SHA1: 7d8baec94c5e0d2f1ca0391928d0afff9b1f6d88
+SHA256: a55c0162a0ef7f454a2bfa2f3d0c21560424cd8ab3023ece08a958dad16c2f3a
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -2261,6 +2406,28 @@ Size: 1026108
 MD5sum: 951357f637c33dfa7018fada041fde2f
 SHA1: 5c4a3c771ae256e01546553db0cb5a454773e83c
 SHA256: 1958ed43cf0759d96b87a73ceac0f6ffef62c6e038aa6f0c6b8ce3dd38a536ef
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php7.4-relay
+Source: php-relay
+Version: 0.22.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 3113
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
+Replaces: php-relay (<< 0.22.0)
+Provides: php-relay
+Filename: pools/bullseye/v0.22.0/php7.4-relay-0.22.0-php7.4-bullseye_arm64.deb
+Size: 1063800
+MD5sum: e1e3489e7e548ae0173436a95d2c7f9e
+SHA1: c548e2a7d2f4a081705146e9ddb0a54ab60b8df9
+SHA256: 5e679dbd1cbe8a885325bc0ce6d3936ae3983f8e9a4ba0448861dd0e653f63d4
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -3194,6 +3361,28 @@ Vendor: CacheWerk, Inc.
 
 Package: php8.0-relay
 Source: php-relay
+Version: 0.22.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 4190
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
+Replaces: php-relay (<< 0.22.0)
+Provides: php-relay
+Filename: pools/bullseye/v0.22.0/php8.0-relay-0.22.0-php8.0-bullseye_arm64.deb
+Size: 1322914
+MD5sum: 0a0b082467a748dae958f0dbb26187b4
+SHA1: d436d49f8d84e9073c5a2e749e9ee2138abbcf18
+SHA256: 151d9111f1f3e936df10b1752f761e33e91268a5b8de87fe45a6037bc14f9542
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php8.0-relay
+Source: php-relay
 Version: 0.3.0
 Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
@@ -3986,6 +4175,28 @@ Vendor: CacheWerk, Inc.
 
 Package: php8.1-relay
 Source: php-relay
+Version: 0.22.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 4194
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
+Replaces: php-relay (<< 0.22.0)
+Provides: php-relay
+Filename: pools/bullseye/v0.22.0/php8.1-relay-0.22.0-php8.1-bullseye_arm64.deb
+Size: 1323836
+MD5sum: dfdb169cb55bcd447613151d71db8cd8
+SHA1: f7098b2e81bae8f3c6f9c5104a8bbfe6f11bbe9e
+SHA256: e0e5ed837ce0cd855d6376128170ced5d8c793387b9b8880c01590d6f0dcc5d0
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php8.1-relay
+Source: php-relay
 Version: 0.3.0
 Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
@@ -4734,6 +4945,28 @@ Vendor: CacheWerk, Inc.
 
 Package: php8.2-relay
 Source: php-relay
+Version: 0.22.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 4196
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.2-common, php8.2-igbinary, php8.2-msgpack
+Replaces: php-relay (<< 0.22.0)
+Provides: php-relay
+Filename: pools/bullseye/v0.22.0/php8.2-relay-0.22.0-php8.2-bullseye_arm64.deb
+Size: 1328098
+MD5sum: 6f92d133e376f0c18b7f21cd4b72a7fb
+SHA1: cf4d252c33bd0bf73048c43adf9345344afde8e3
+SHA256: f45edcbe5cfcdd747110a4f24b7d130f6b8b61236021f0db2a03a089309cf7c6
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php8.2-relay
+Source: php-relay
 Version: 0.5.1
 Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
@@ -5240,6 +5473,28 @@ Vendor: CacheWerk, Inc.
 
 Package: php8.3-relay
 Source: php-relay
+Version: 0.22.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 4197
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.3-common, php8.3-igbinary, php8.3-msgpack
+Replaces: php-relay (<< 0.22.0)
+Provides: php-relay
+Filename: pools/bullseye/v0.22.0/php8.3-relay-0.22.0-php8.3-bullseye_arm64.deb
+Size: 1328956
+MD5sum: 566e41616088197d33c53520193fe896
+SHA1: 102e17c2faccb2844143065c192faf404c04eda0
+SHA256: 372f98db3ebe439e7ab17e38a880ba9c254771754e2b1cd205d0fa29caa7ba80
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php8.3-relay
+Source: php-relay
 Version: 0.6.8
 Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
@@ -5548,6 +5803,28 @@ Vendor: CacheWerk, Inc.
 
 Package: php8.4-relay
 Source: php-relay
+Version: 0.22.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 4210
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.4-common, php8.4-igbinary, php8.4-msgpack
+Replaces: php-relay (<< 0.22.0)
+Provides: php-relay
+Filename: pools/bullseye/v0.22.0/php8.4-relay-0.22.0-php8.4-bullseye_arm64.deb
+Size: 1328764
+MD5sum: 19366cbd8085518d460232b89ca8afdd
+SHA1: 977fbb72202f787a417daea97e8ea5b6db61864d
+SHA256: 614cb2852941eec038fa5df7aa6e8a0e2e7229df1c9520a2a0f27686b3c2d9a9
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php8.4-relay
+Source: php-relay
 Version: 0.9.1
 Architecture: arm64
 Maintainer: Relay Team <hello@cachewerk.com>
@@ -5605,6 +5882,28 @@ Size: 1295242
 MD5sum: fcebdb96177dd2a86ee042257bee6c7b
 SHA1: 5da8e3e2f5ecc188664f86508fb5e35bb9eedfe5
 SHA256: 353cb6db91b8feca1815667203e70af560bde73deb1b8b94931a5f7babf87b19
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php8.5-relay
+Source: php-relay
+Version: 0.22.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 4210
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.5-common, php8.5-igbinary, php8.5-msgpack
+Replaces: php-relay (<< 0.22.0)
+Provides: php-relay
+Filename: pools/bullseye/v0.22.0/php8.5-relay-0.22.0-php8.5-bullseye_arm64.deb
+Size: 1329320
+MD5sum: 0375a4d3bef0316ac5e134f74663ca21
+SHA1: 66f42acc3b76eab99750a21a2ab1812adde951b5
+SHA256: 1889a41d525e7f1c1a79f5cec869dab1224f9a7a0e4078cc95111b01d4097970
 Section: php
 Priority: optional
 Homepage: https://relay.so
