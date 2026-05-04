@@ -20,10 +20,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v6
 
-      - name: Build the Docker image
+      - name: Pull the Docker image
         run: |
-          cd build
-          docker build . --tag fpm --file fpm.Dockerfile
+          docker pull ghcr.io/${{ github.repository_owner }}/fpm:latest
+          docker tag ghcr.io/${{ github.repository_owner }}/fpm:latest fpm
 
       - name: Bundle packages
         run: |
