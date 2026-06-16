@@ -20,6 +20,7 @@ jobs:
         with:
           lfs: true
 
+      # Uses AWS CLI preinstalled on ubuntu-latest runners.
       - name: Sync repo with R2
         env:
           R2_ENDPOINT: https://a1220fd38ad4771f7b7b38f5f3c2b00d.r2.cloudflarestorage.com
@@ -55,6 +56,7 @@ jobs:
         with:
           lfs: true
 
+      # Uses AWS CLI preinstalled on ubuntu-latest runners.
       - name: Sync repo with R2
         env:
           R2_ENDPOINT: https://a1220fd38ad4771f7b7b38f5f3c2b00d.r2.cloudflarestorage.com

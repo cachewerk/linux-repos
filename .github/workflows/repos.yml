@@ -26,13 +26,20 @@ jobs:
         with:
           lfs: true
 
+      # Uses AWS CLI preinstalled on ubuntu-latest runners.
       - name: Download artifacts
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh run download ${{ github.event.workflow_run.id }} --dir artifacts
 
       - name: Get build tag
-        run: echo "TAG=$(find artifacts -name 'TAG' | head -n 1 | xargs cat)" >> $GITHUB_ENV
+        run: |
+          TAG_FILE=$(find artifacts -name 'TAG' | head -n 1)
+          if [ -z "$TAG_FILE" ]; then
+            echo "No TAG file found in downloaded artifacts" >&2
+            exit 1
+          fi
+          echo "TAG=$(cat "$TAG_FILE")" >> $GITHUB_ENV
 
       - name: Copy packages
         run: |
@@ -111,13 +118,20 @@ jobs:
         with:
           lfs: true
 
+      # Uses AWS CLI preinstalled on ubuntu-latest runners.
       - name: Download artifacts
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh run download ${{ github.event.workflow_run.id }} --dir artifacts
 
       - name: Get build tag
-        run: echo "TAG=$(find artifacts -name 'TAG' | head -n 1 | xargs cat)" >> $GITHUB_ENV
+        run: |
+          TAG_FILE=$(find artifacts -name 'TAG' | head -n 1)
+          if [ -z "$TAG_FILE" ]; then
+            echo "No TAG file found in downloaded artifacts" >&2
+            exit 1
+          fi
+          echo "TAG=$(cat "$TAG_FILE")" >> $GITHUB_ENV
 
       - name: Copy packages
         run: |
