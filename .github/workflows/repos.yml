@@ -39,7 +39,12 @@ jobs:
             echo "No TAG file found in downloaded artifacts" >&2
             exit 1
           fi
-          echo "TAG=$(cat "$TAG_FILE")" >> $GITHUB_ENV
+          TAG=$(tr -d '[:space:]' < "$TAG_FILE")
+          if [ -z "$TAG" ]; then
+            echo "TAG file is empty in downloaded artifacts" >&2
+            exit 1
+          fi
+          echo "TAG=$TAG" >> $GITHUB_ENV
 
       - name: Copy packages
         run: |
@@ -131,7 +136,12 @@ jobs:
             echo "No TAG file found in downloaded artifacts" >&2
             exit 1
           fi
-          echo "TAG=$(cat "$TAG_FILE")" >> $GITHUB_ENV
+          TAG=$(tr -d '[:space:]' < "$TAG_FILE")
+          if [ -z "$TAG" ]; then
+            echo "TAG file is empty in downloaded artifacts" >&2
+            exit 1
+          fi
+          echo "TAG=$TAG" >> $GITHUB_ENV
 
       - name: Copy packages
         run: |
