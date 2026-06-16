@@ -42,3 +42,5 @@ jobs:
           file: build/fpm.Dockerfile
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/fpm:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
