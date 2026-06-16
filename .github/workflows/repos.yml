@@ -15,6 +15,10 @@ jobs:
 
     if: github.event.workflow_run.conclusion == 'success'
 
+    permissions:
+      contents: write
+      actions: read
+
     steps:
 
       - name: Checkout code
@@ -22,22 +26,25 @@ jobs:
         with:
           lfs: true
 
-      # Install `2.22.35` until AWS S3 SDK compatibility inconsistencies
-      # with R2 are resolved: https://www.cloudflarestatus.com/
-      - name: Install AWS CLI
-        uses: unfor19/install-aws-cli-action@v1
-        with:
-          version: 2.22.35
-
+      # Uses AWS CLI preinstalled on ubuntu-latest runners.
       - name: Download artifacts
-        uses: dawidd6/action-download-artifact@v21
-        with:
-          workflow: ${{ github.event.workflow.id }}
-          run_id: ${{ github.event.workflow_run.id }}
-          path: artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download ${{ github.event.workflow_run.id }} --dir artifacts
 
       - name: Get build tag
-        run: echo "TAG=$(find artifacts -name 'TAG' | head -n 1 | xargs cat)" >> $GITHUB_ENV
+        run: |
+          TAG_FILE=$(find artifacts -name 'TAG' | head -n 1)
+          if [ -z "$TAG_FILE" ]; then
+            echo "No TAG file found in downloaded artifacts" >&2
+            exit 1
+          fi
+          TAG=$(tr -d '[:space:]' < "$TAG_FILE")
+          if [ -z "$TAG" ]; then
+            echo "TAG file is empty in downloaded artifacts" >&2
+            exit 1
+          fi
+          echo "TAG=$TAG" >> $GITHUB_ENV
 
       - name: Copy packages
         run: |
@@ -105,6 +112,10 @@ jobs:
 
     if: github.event.workflow_run.conclusion == 'success'
 
+    permissions:
+      contents: write
+      actions: read
+
     steps:
 
       - name: Checkout code
@@ -112,22 +123,25 @@ jobs:
         with:
           lfs: true
 
-      # Install `2.22.35` until AWS S3 SDK compatibility inconsistencies
-      # with R2 are resolved: https://www.cloudflarestatus.com/
-      - name: Install AWS CLI
-        uses: unfor19/install-aws-cli-action@v1
-        with:
-          version: 2.22.35
-
+      # Uses AWS CLI preinstalled on ubuntu-latest runners.
       - name: Download artifacts
-        uses: dawidd6/action-download-artifact@v21
-        with:
-          workflow: ${{ github.event.workflow.id }}
-          run_id: ${{ github.event.workflow_run.id }}
-          path: artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download ${{ github.event.workflow_run.id }} --dir artifacts
 
       - name: Get build tag
-        run: echo "TAG=$(find artifacts -name 'TAG' | head -n 1 | xargs cat)" >> $GITHUB_ENV
+        run: |
+          TAG_FILE=$(find artifacts -name 'TAG' | head -n 1)
+          if [ -z "$TAG_FILE" ]; then
+            echo "No TAG file found in downloaded artifacts" >&2
+            exit 1
+          fi
+          TAG=$(tr -d '[:space:]' < "$TAG_FILE")
+          if [ -z "$TAG" ]; then
+            echo "TAG file is empty in downloaded artifacts" >&2
+            exit 1
+          fi
+          echo "TAG=$TAG" >> $GITHUB_ENV
 
       - name: Copy packages
         run: |
