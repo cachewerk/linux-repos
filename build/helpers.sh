@@ -77,6 +77,26 @@ fpm_build()
     echo "Agreement reproduced below."
     echo
     cat $src_path/LICENSE
+
+    # relay-pkg.so statically links hiredis and ck, so their notices have to
+    # ship with it. The plain relay.so links both dynamically and is covered by
+    # the distribution's own packages. lz4 and zstd are dlopen'd either way.
+    if [[ "$pkg_binary" == *-pkg* ]]; then
+      for bundled in hiredis ck; do
+        echo
+        echo "------------------------------------------------------------------------------"
+        echo
+        echo "This build statically links $bundled, distributed under the following terms:"
+        echo
+        cat /root/build/licenses/$bundled.txt
+      done
+
+      # ck carries an Apache-2.0 notice for src/ck_hp.c. Debian policy wants the
+      # shipped copy referenced rather than the notice standing alone.
+      echo
+      echo "On Debian systems the complete text of the Apache License, Version 2.0"
+      echo "can be found in /usr/share/common-licenses/Apache-2.0."
+    fi
   } > $dest_path/usr/share/doc/$pkg_name/copyright
 
   pkg_version=${version#v}
