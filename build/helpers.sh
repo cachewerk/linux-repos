@@ -1,11 +1,10 @@
 
 # must not be named pkg_*, main() unsets those before every build
 read -r -d '' relay_description <<'DESCRIPTION' || true
-Next-generation caching layer for PHP
-Relay is a fast, persistent, in-memory cache for PHP that serves as a drop-in
-replacement for PhpRedis. It keeps a partial replica of the Redis or Valkey
-data set inside the PHP process, avoiding network round trips and decoding
-costs for cached keys.
+The Fastest Redis client for PHP.
+100x faster cache reads, near-zero bandwidth, no code changes required.
+Relay keeps a partial replica of the Redis or Valkey data set inside the
+PHP process, avoiding network round trips.
 DESCRIPTION
 
 main()
@@ -68,7 +67,7 @@ fpm_build()
 
   mkdir -p $dest_path/usr/share/doc/$pkg_name
   {
-    echo "Copyright (C) 2021-$(date -u -d @$(cat /root/build/changelog.epoch) +%Y) CacheWerk, Inc."
+    echo "Copyright (C) 2021-$(date -u -d @$(cat /root/build/changelog/epoch) +%Y) CacheWerk, Inc."
     echo "All rights reserved."
     echo
     echo "Relay is proprietary software, licensed under the End-User License"
@@ -118,7 +117,7 @@ fpm_build()
     "--architecture $pkg_arch"
 
     "--package dist/$pkg_filename"
-    "--source-date-epoch-default $(cat /root/build/changelog.epoch)"
+    "--source-date-epoch-default $(cat /root/build/changelog/epoch)"
 
     "--template-value binary_paths='$pkg_binary_dest'"
     "--template-value php_version='$php_version'"
@@ -137,10 +136,10 @@ fpm_build()
 
   # deb changelog entries embed the package name, rpm ones don't
   if [[ "$type" == "deb" ]]; then
-    sed "s/@PKG@/$pkg_name/g" /root/build/changelog.deb.tpl > /tmp/changelog-$pkg_name.deb
+    sed "s/@PKG@/$pkg_name/g" /root/build/changelog/deb.tpl > /tmp/changelog-$pkg_name.deb
     args+=("--deb-changelog /tmp/changelog-$pkg_name.deb")
   else
-    args+=("--rpm-changelog /root/build/changelog.rpm")
+    args+=("--rpm-changelog /root/build/changelog/rpm")
   fi
 
   if [ ! -z "$pkg_provides" ]; then
