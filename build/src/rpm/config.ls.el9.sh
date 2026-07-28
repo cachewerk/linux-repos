@@ -24,8 +24,8 @@ pkg_depends=(
 )
 
 fpm_args=(
-  # dlopen'd at startup, not linked; el7 keeps them as requires, rpm 4.11
-  # predates weak dependencies
+  # dlopen'd at startup since Relay v0.40.0, not linked; el7 keeps them as
+  # requires, rpm 4.11 predates weak dependencies
   "--rpm-tag 'Recommends: libzstd'"
   "--rpm-tag 'Recommends: lz4'"
   "--after-install /root/build/src/rpm/after-install.sh"

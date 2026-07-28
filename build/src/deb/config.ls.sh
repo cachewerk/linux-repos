@@ -41,7 +41,7 @@ pkg_lintian_overrides=(
 )
 
 fpm_args=(
-  # dlopen'd at startup, not linked
+  # dlopen'd at startup since Relay v0.40.0, not linked
   "--deb-recommends 'liblz4-1 (>= 0.0~r130)'"
   "--deb-recommends 'libzstd1 (>= 1.3.2)'"
   "--after-install /root/build/src/deb/after-install.sh"
