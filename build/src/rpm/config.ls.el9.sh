@@ -16,8 +16,6 @@ pkg_depends=(
     "openssl"
     # "hiredis >= 1.1.0"
     # "ck >= 0.7.0"
-    "libzstd"
-    "lz4"
     "lsphp$php_version_short(api) = $php_api"
     "lsphp$php_version_short-json"
     "lsphp$php_version_short-session"
@@ -26,5 +24,10 @@ pkg_depends=(
 )
 
 fpm_args=(
+  # Relay dlopens these at startup rather than linking them, so they are
+  # wanted but not required. el7 keeps them as hard requires: rpm 4.11
+  # predates weak dependencies and would drop them silently.
+  "--rpm-tag 'Recommends: libzstd'"
+  "--rpm-tag 'Recommends: lz4'"
   "--after-install /root/build/src/rpm/after-install.sh"
 )

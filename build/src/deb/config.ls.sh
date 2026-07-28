@@ -20,8 +20,6 @@ pkg_config_dest=(
 
 pkg_depends=(
     "libc6 >= 2.17"
-    "liblz4-1 >= 0.0~r130"
-    "libzstd1 >= 1.3.2"
     "lsphp$php_version_short-common"
     "lsphp$php_version_short-igbinary"
     "lsphp$php_version_short-msgpack"
@@ -45,5 +43,9 @@ pkg_lintian_overrides=(
 )
 
 fpm_args=(
+  # Relay dlopens these at startup rather than linking them, so they are
+  # wanted but not required.
+  "--deb-recommends 'liblz4-1 (>= 0.0~r130)'"
+  "--deb-recommends 'libzstd1 (>= 1.3.2)'"
   "--after-install /root/build/src/deb/after-install.sh"
 )
