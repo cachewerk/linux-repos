@@ -1,7 +1,4 @@
 /build/dist
-/build/src/deb/*-php*
-/build/src/rpm/*-php*
+/build/src/*/*-php*
+/build/changelog/
 key-private.asc
-/build/changelog.deb.tpl
-/build/changelog.rpm
-/build/changelog.epoch

@@ -42,7 +42,7 @@ jobs:
         run: |
           gh api --paginate 'repos/${{ github.repository_owner }}/relay/releases?per_page=100' \
             | jq -s 'add' > /tmp/releases.json
-          ./build/changelog.sh /tmp/releases.json '${{ github.event.inputs.tag }}' build
+          ./build/changelog.sh /tmp/releases.json '${{ github.event.inputs.tag }}' build/changelog
 
       - name: Bundle packages
         run: |

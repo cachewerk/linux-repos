@@ -4,14 +4,16 @@
 #
 #   changelog.sh <releases.json> <version> <out_dir>
 #
-# Writes changelog.deb.tpl (@PKG@ is substituted per package by fpm_build),
-# changelog.rpm, and changelog.epoch.
+# Writes deb.tpl (@PKG@ is substituted per package by fpm_build), rpm and
+# epoch into <out_dir>.
 
 set -e
 
 releases=$1
 version=${2#v}
 out=$3
+
+mkdir -p "$out"
 
 maintainer="Relay Team <hello@cachewerk.com>"
 
@@ -68,7 +70,7 @@ echo "$filtered" | jq -r --arg m "$maintainer" "
     + \"\n\n -- \" + \$m + \"  \"
     + (.published_at | fromdateiso8601 | strftime(\"%a, %d %b %Y %H:%M:%S +0000\"))
     + \"\n\"
-" | wrap_bullets "  * " "    " > "$out/changelog.deb.tpl"
+" | wrap_bullets "  * " "    " > "$out/deb.tpl"
 
 echo "$filtered" | jq -r --arg m "$maintainer" "
   .[]
@@ -78,9 +80,9 @@ echo "$filtered" | jq -r --arg m "$maintainer" "
     + \" \" + \$m + \" - \" + .ver + \"-1\n\"
     + (\$b | map(\"- \" + .) | join(\"\n\"))
     + \"\n\"
-" | wrap_bullets "- " "  " > "$out/changelog.rpm"
+" | wrap_bullets "- " "  " > "$out/rpm"
 
 # the source date epoch must not be newer than the newest changelog entry
-echo "$filtered" | jq -r '.[0].published_at | fromdateiso8601' > "$out/changelog.epoch"
+echo "$filtered" | jq -r '.[0].published_at | fromdateiso8601' > "$out/epoch"
 
-echo "Wrote $(grep -c '^@PKG@' "$out/changelog.deb.tpl") deb entries, $(grep -c '^\* ' "$out/changelog.rpm") rpm entries"
+echo "Wrote $(grep -c '^@PKG@' "$out/deb.tpl") deb entries, $(grep -c '^\* ' "$out/rpm") rpm entries"
