@@ -36,7 +36,6 @@ jobs:
           docker pull ghcr.io/${{ github.repository_owner }}/fpm:latest
           docker tag ghcr.io/${{ github.repository_owner }}/fpm:latest fpm
 
-      # Rendered on the runner rather than inside the container, which has no jq
       - name: Render changelogs
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
