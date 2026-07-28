@@ -70,6 +70,24 @@ Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
 
+Package: lsphp74-relay
+Version: 0.40.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1320
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), lsphp74-common, lsphp74-igbinary, lsphp74-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Filename: pools/trixie/v0.40.0/lsphp74-relay-0.40.0-php7.4-trixie_arm64.deb
+Size: 501788
+MD5sum: d894b855809ced588e378f4519128518
+SHA1: 63dc6110cb6b6800a2b2af48e710ff133598e8f1
+SHA256: e2558019f0e71bcfd221cdacff2b7d14d900c8c78f6d5da56177eefdb2a1f6a5
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
 Package: lsphp80-relay
 Version: 0.20.0
 Architecture: arm64
@@ -135,6 +153,24 @@ Size: 516716
 MD5sum: 62b084c7e51a849a8bd506ed2f2e5355
 SHA1: 5193dc5d378d1c5229c686f618a086ddea680c69
 SHA256: 3010c11c73632010eb03b83fe09ef1629761d6a665ca0a60bd978b02bb1a1133
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: lsphp80-relay
+Version: 0.40.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1623
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), lsphp80-common, lsphp80-igbinary, lsphp80-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Filename: pools/trixie/v0.40.0/lsphp80-relay-0.40.0-php8.0-trixie_arm64.deb
+Size: 580736
+MD5sum: 75cf35ca3271551e2a1a447d0234f810
+SHA1: 52eb3a6fcbd61fb863ae070a9273c2a75c760f28
+SHA256: dc4d1c2353327c20bc5c7b55965bafb4a6fcd6e0453e72f953798a7f77d9c17f
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -214,6 +250,24 @@ Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
 
+Package: lsphp81-relay
+Version: 0.40.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1628
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), lsphp81-common, lsphp81-igbinary, lsphp81-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Filename: pools/trixie/v0.40.0/lsphp81-relay-0.40.0-php8.1-trixie_arm64.deb
+Size: 582196
+MD5sum: a39dd18614cc44f9d3311009e20c4f4d
+SHA1: 637ceb4d616d5964b8da8f5bf0307cd5a1fa9cf9
+SHA256: 07d10150a7fa7e13b7c125265cfddd1c195ad4e125f15e2fa313aeac1a17e34c
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
 Package: lsphp82-relay
 Version: 0.20.0
 Architecture: arm64
@@ -279,6 +333,24 @@ Size: 524890
 MD5sum: a5e7b8baecd5ab03c7714ba28ec1bbfa
 SHA1: 03e9759091ad294f2130f6cd89ab7a11cf74cd66
 SHA256: 036b59dc3ee28c7096bd74bbee700c5242fb6ab0a359ab008962a3485ceb0d24
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: lsphp82-relay
+Version: 0.40.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1640
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), lsphp82-common, lsphp82-igbinary, lsphp82-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Filename: pools/trixie/v0.40.0/lsphp82-relay-0.40.0-php8.2-trixie_arm64.deb
+Size: 589282
+MD5sum: bde5cc58596c2373db97bcad0c873158
+SHA1: d79005f1442f6a8275f8040b8ac1e19de06344e9
+SHA256: 028f4437ada3e839e3786cda482873e85857d010e5b0fc0093273972889b8d7f
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -358,6 +430,24 @@ Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
 
+Package: lsphp83-relay
+Version: 0.40.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1644
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), lsphp83-common, lsphp83-igbinary, lsphp83-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Filename: pools/trixie/v0.40.0/lsphp83-relay-0.40.0-php8.3-trixie_arm64.deb
+Size: 589292
+MD5sum: e40d5c2f9db852b45db14bff923d2c5a
+SHA1: 41ee2912cc26f263acce5e0fcf763e90edbda091
+SHA256: 0345993dcb521f5a40caf8fd9fcea1d2cce635bf585e5f6f5469adb71ce56fed
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
 Package: lsphp84-relay
 Version: 0.20.0
 Architecture: arm64
@@ -423,6 +513,24 @@ Size: 525654
 MD5sum: 8c133ffaea738a4c8e8956164b0e0b97
 SHA1: 77cc9cf2d6c336f013120263552ef88630e3baa5
 SHA256: d6de26ad76068959b3b119dea50af80d4e0c348394a204aa26f9652f43d67ae9
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: lsphp84-relay
+Version: 0.40.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1652
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), lsphp84-common, lsphp84-igbinary, lsphp84-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Filename: pools/trixie/v0.40.0/lsphp84-relay-0.40.0-php8.4-trixie_arm64.deb
+Size: 588816
+MD5sum: 6e42f4f420a5785957fe3d1c9cab352e
+SHA1: 4f36e3796c0bcc785950b20d07201b1afa98169e
+SHA256: c6574b09c63d2ebed97c36979b8e5a96086f82a3581dbdfc04bfdf74500f0a59
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -502,6 +610,24 @@ Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
 
+Package: lsphp85-relay
+Version: 0.40.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1652
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), lsphp85-common, lsphp85-igbinary, lsphp85-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Filename: pools/trixie/v0.40.0/lsphp85-relay-0.40.0-php8.5-trixie_arm64.deb
+Size: 588834
+MD5sum: ec576dd0a258867394d4de27e64fdc46
+SHA1: 05754814f1edd595b7302f778be4fb6b6087b30c
+SHA256: 052e5e37052962906a61b175da644d67e1e0a6453191970d9db99156c5471936
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
 Package: php-relay
 Version: 0.20.0
 Architecture: arm64
@@ -571,6 +697,25 @@ Size: 1120
 MD5sum: ee40f4249f2842858e7df9ff1a0f9eee
 SHA1: 6f4ff2de819cef535e8582d22b4e58a5e2076893
 SHA256: ff9d5248b5144b02f6c318247d209a49c1f21b6ddb10261a083737b45c8f9e0c
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php-relay
+Version: 0.40.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 0
+Pre-Depends: php-common
+Depends: php8.4-relay, php8.4-igbinary, php8.4-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Filename: pools/trixie/v0.40.0/php-relay-0.40.0-php8.4-trixie_arm64.deb
+Size: 1124
+MD5sum: 16866ef94541efe6bd432fe349026d98
+SHA1: 90b6a08862fd5a650d8da24dcd41bb3a5032362f
+SHA256: 7d7b7d059e9c1cc1cfcc3da2a8208c73c53db41ef8b9340b6875329247728bfe
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -666,6 +811,28 @@ Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
 
+Package: php7.4-relay
+Source: php-relay
+Version: 0.40.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1320
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Replaces: php-relay (<< 0.40.0)
+Provides: php-relay
+Filename: pools/trixie/v0.40.0/php7.4-relay-0.40.0-php7.4-trixie_arm64.deb
+Size: 501266
+MD5sum: 12fed8cc86577f2a6a38933acf308982
+SHA1: 348b60b49fcfc5335b74d208dbe9cea9d74a6bf0
+SHA256: 426654bc70882029fc34216126fdd5b992d2e5d944bcb8b41e512d277cf2103e
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
 Package: php8.0-relay
 Source: php-relay
 Version: 0.20.0
@@ -747,6 +914,28 @@ Size: 516810
 MD5sum: d995b2a48bc3043a7343b0bd3b8076c3
 SHA1: 87fc89caf4283573465ef6c74a8c63f460e4db36
 SHA256: 6701ca78fd31e8b301a6558ae5d80cf7ad511b88d6c30b61828583b4a29537d9
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php8.0-relay
+Source: php-relay
+Version: 0.40.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1623
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Replaces: php-relay (<< 0.40.0)
+Provides: php-relay
+Filename: pools/trixie/v0.40.0/php8.0-relay-0.40.0-php8.0-trixie_arm64.deb
+Size: 580860
+MD5sum: 1a6fdbf805d0cf33575d8b28992d776f
+SHA1: 2e1442c116113c45f516e90522c9dc143d148961
+SHA256: 3d024a83fe0f99a319942adf7288207c06e73d46efc569dba7557a621aa1a01e
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -842,6 +1031,28 @@ Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
 
+Package: php8.1-relay
+Source: php-relay
+Version: 0.40.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1628
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Replaces: php-relay (<< 0.40.0)
+Provides: php-relay
+Filename: pools/trixie/v0.40.0/php8.1-relay-0.40.0-php8.1-trixie_arm64.deb
+Size: 582444
+MD5sum: ecda5bedf1549e9f8ab10fdf6d3f4364
+SHA1: 964c16211de0d2da9c3fc9fef18095ca8d754b9a
+SHA256: f5cbb8b7b85e85ee3ea56515bbadc258bb4598005ee157776c18249d3ddf6a0b
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
 Package: php8.2-relay
 Source: php-relay
 Version: 0.20.0
@@ -923,6 +1134,28 @@ Size: 525024
 MD5sum: d9e990b9f3d5da233aa4b83ec4ec04fc
 SHA1: 06ccce38f048b7d21750ed7408a19531ea432713
 SHA256: 3c2b2de863484ff5f3b613e9075c68437c1f663a056103b055c3d65034cea27f
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php8.2-relay
+Source: php-relay
+Version: 0.40.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1640
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.2-common, php8.2-igbinary, php8.2-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Replaces: php-relay (<< 0.40.0)
+Provides: php-relay
+Filename: pools/trixie/v0.40.0/php8.2-relay-0.40.0-php8.2-trixie_arm64.deb
+Size: 589312
+MD5sum: c3afb240c50d57b5e89b75de8f01d90d
+SHA1: 4d5a617363a440ac1629b1cc02bce38008335342
+SHA256: 0c77cf31f435149cfab4fc809a520d512a4752aabe973df748b39734cc77c844
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -1018,6 +1251,28 @@ Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
 
+Package: php8.3-relay
+Source: php-relay
+Version: 0.40.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1644
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.3-common, php8.3-igbinary, php8.3-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Replaces: php-relay (<< 0.40.0)
+Provides: php-relay
+Filename: pools/trixie/v0.40.0/php8.3-relay-0.40.0-php8.3-trixie_arm64.deb
+Size: 589578
+MD5sum: a2fbff0b47e5e16c48bf03a301456daa
+SHA1: aa9569102dd192fa93ca2400aacd75edbf35f94f
+SHA256: dd9e928cfc722b52d75ba121f02ee5789895057e493988018a084dce6b41054d
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
 Package: php8.4-relay
 Source: php-relay
 Version: 0.20.0
@@ -1106,6 +1361,28 @@ Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
 
+Package: php8.4-relay
+Source: php-relay
+Version: 0.40.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1652
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.4-common, php8.4-igbinary, php8.4-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Replaces: php-relay (<< 0.40.0)
+Provides: php-relay
+Filename: pools/trixie/v0.40.0/php8.4-relay-0.40.0-php8.4-trixie_arm64.deb
+Size: 588914
+MD5sum: 4ac50cb3c4e4bb303a5987299edb6ffe
+SHA1: e3f57cdac1196cb7d85f5689c59a81bf700b7370
+SHA256: c7c50efebd5f08e5017931b63ba6bf453e8815c5ec7b4dde83fc65c19264d7c0
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
 Package: php8.5-relay
 Source: php-relay
 Version: 0.20.0
@@ -1187,6 +1464,28 @@ Size: 526146
 MD5sum: 6ad2d6a31ce939c372f4ec1734054fea
 SHA1: f92fdb6c95b4a4e9849d9253b45ec51054649050
 SHA256: 0205fa1fb84c6cd513eb950708ea2b39f8b9af2f156857ce86e5cb8f08906724
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php8.5-relay
+Source: php-relay
+Version: 0.40.0
+Architecture: arm64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1652
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.5-common, php8.5-igbinary, php8.5-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Replaces: php-relay (<< 0.40.0)
+Provides: php-relay
+Filename: pools/trixie/v0.40.0/php8.5-relay-0.40.0-php8.5-trixie_arm64.deb
+Size: 588930
+MD5sum: 60ce8e8b12c39d1bd7fe757c26d59359
+SHA1: d03d8e853f90b2ab3cdff603602299b35cd5097f
+SHA256: b4c2fb08214e3e845c6446a6c174e1f39bc1465a7f13894b87529b9051de91fc
 Section: php
 Priority: optional
 Homepage: https://relay.so

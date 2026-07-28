@@ -179,6 +179,24 @@ License: Proprietary
 Vendor: CacheWerk, Inc.
 
 Package: lsphp74-relay
+Version: 0.40.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 2022
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), lsphp74-common, lsphp74-igbinary, lsphp74-msgpack
+Filename: pools/bookworm/v0.40.0/lsphp74-relay-0.40.0-php7.4-bookworm_amd64.deb
+Size: 799672
+MD5sum: 8a76487fc76967e37e448ca5191bdf61
+SHA1: b1eafa64ce72857e5a77adddb14fd2e9b7342462
+SHA256: d33f6eaa0fb5af9cea3a34290519c961eaf72ed670b60be2e5ae9cb347ea182b
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: lsphp74-relay
 Version: 0.9.1
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
@@ -369,6 +387,24 @@ Size: 693300
 MD5sum: 9d3d260af3bcb09c606b11d6ff45c7cc
 SHA1: de882032f3bf7b56ffe69fa17cc7be59496194c7
 SHA256: f1f5af4ff8c0c2f1e916a81171c62970b9cf70cc10bc126c5f62532265642562
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: lsphp80-relay
+Version: 0.40.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 2348
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), lsphp80-common, lsphp80-igbinary, lsphp80-msgpack
+Filename: pools/bookworm/v0.40.0/lsphp80-relay-0.40.0-php8.0-bookworm_amd64.deb
+Size: 883604
+MD5sum: ae31cf6e298ff3c017424d536c574bcf
+SHA1: c0576e95e4d4710e5f1f6b36d8762e6a2c4aebf1
+SHA256: 40358609fcdd0ad503b7a2c35d454dcc5a9c7481ae0dcee62e9cfe88954e5f15
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -575,6 +611,24 @@ License: Proprietary
 Vendor: CacheWerk, Inc.
 
 Package: lsphp81-relay
+Version: 0.40.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 2352
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), lsphp81-common, lsphp81-igbinary, lsphp81-msgpack
+Filename: pools/bookworm/v0.40.0/lsphp81-relay-0.40.0-php8.1-bookworm_amd64.deb
+Size: 885994
+MD5sum: 47a909d2d6840c59fdbc84f1cab2c10d
+SHA1: fc16f2e5958b3dcde62f7de9db18a053acf57f35
+SHA256: 32fb0a77ae2f90904c695c63df2b3502e8695832a174ce888007d0284037060c
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: lsphp81-relay
 Version: 0.9.1
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
@@ -765,6 +819,24 @@ Size: 700488
 MD5sum: b7f6d654a61b04de30369c3a14e511d3
 SHA1: a74e9af9791970cb9a2bf7db4755bf56e01b598d
 SHA256: ff5707eb67c043baac1eebac1ce1ff2a35cba68984a50dee3f83939bd6bb8e3f
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: lsphp82-relay
+Version: 0.40.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 2364
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), lsphp82-common, lsphp82-igbinary, lsphp82-msgpack
+Filename: pools/bookworm/v0.40.0/lsphp82-relay-0.40.0-php8.2-bookworm_amd64.deb
+Size: 893502
+MD5sum: b5394265e010a1e262020b0cf105751d
+SHA1: 4962f2b9e3032546e433196f877a399067915f00
+SHA256: 0984182710e0ee4d663243a6f162d967845af9f9aa59ebb08c1350ec55c78447
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -971,6 +1043,24 @@ License: Proprietary
 Vendor: CacheWerk, Inc.
 
 Package: lsphp83-relay
+Version: 0.40.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 2364
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), lsphp83-common, lsphp83-igbinary, lsphp83-msgpack
+Filename: pools/bookworm/v0.40.0/lsphp83-relay-0.40.0-php8.3-bookworm_amd64.deb
+Size: 893904
+MD5sum: d7a86c3f63c81b234bd4ac99f3504618
+SHA1: 8897102cf66348a8f109ea5a9787cd5700e07c84
+SHA256: 535396af8975f2b740839b982c3d855909b19394d236994f61d5d4c66f445438
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: lsphp83-relay
 Version: 0.9.1
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
@@ -1169,6 +1259,24 @@ License: Proprietary
 Vendor: CacheWerk, Inc.
 
 Package: lsphp84-relay
+Version: 0.40.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 2376
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), lsphp84-common, lsphp84-igbinary, lsphp84-msgpack
+Filename: pools/bookworm/v0.40.0/lsphp84-relay-0.40.0-php8.4-bookworm_amd64.deb
+Size: 894384
+MD5sum: 95fb5235bc0de4dd8c5ec842f1acf6a1
+SHA1: 2794fe6adf2bb6dfa003df880150837760e0fc6c
+SHA256: a7ce9dfdff299c523c7fff80f5d2ecd1f9f883cfd5d310e8fea7ab44eeb4c27a
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: lsphp84-relay
 Version: 0.9.1
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
@@ -1251,6 +1359,24 @@ Size: 701352
 MD5sum: 240fc74724dda154fc91a60d2c292906
 SHA1: c439c6619bb566a12b65f15f3dce0b54151de21c
 SHA256: ee2e185a72c449f488d11e419fc7a99fb62cd2a9615786b7dd1592bbdd2c40ca
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: lsphp85-relay
+Version: 0.40.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 2376
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), lsphp85-common, lsphp85-igbinary, lsphp85-msgpack
+Filename: pools/bookworm/v0.40.0/lsphp85-relay-0.40.0-php8.5-bookworm_amd64.deb
+Size: 894132
+MD5sum: 5b1eb2c0ab08d0e326a5637ea5f4b6ef
+SHA1: e25355720a45a2f0d1bec3c31e8db1898b18e851
+SHA256: 5decb8194700d1715b89c7d0b7bcf1ff216f7dc4eb53f9db2a6e15b200bdc3d7
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -1644,12 +1770,12 @@ Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 0
 Pre-Depends: php-common
-Depends: php8.0-relay, php8.0-igbinary, php8.0-msgpack
-Filename: pools/bookworm/v0.3.2/php-relay-0.3.2-php8.0-debian_amd64.deb
-Size: 1018
-MD5sum: c0f15c0203d15bf3550249e75decc5e5
-SHA1: 1eedea17d7dfffd5150e2b4f229d8364cfef575e
-SHA256: e681d6fe894ca52c06577c87d0b6815b8971e22da44cabf05f923abcf684a6b2
+Depends: php8.1-relay, php8.1-igbinary, php8.1-msgpack
+Filename: pools/bookworm/v0.3.2/php-relay-0.3.2-php8.1-debian_amd64.deb
+Size: 1020
+MD5sum: 47756f18a19b67874b1b34a40e2d3f2a
+SHA1: 73a2698ec87f6e5e26500805c125567e562055a9
+SHA256: 6722bbdafed5f610f3a7410d18889a97b6cd5bd76a0934ef5ab78522afe1926c
 Section: php
 Priority: optional
 Homepage: https://relaycache.com
@@ -1663,12 +1789,12 @@ Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 0
 Pre-Depends: php-common
-Depends: php8.1-relay, php8.1-igbinary, php8.1-msgpack
-Filename: pools/bookworm/v0.3.2/php-relay-0.3.2-php8.1-debian_amd64.deb
-Size: 1020
-MD5sum: 47756f18a19b67874b1b34a40e2d3f2a
-SHA1: 73a2698ec87f6e5e26500805c125567e562055a9
-SHA256: 6722bbdafed5f610f3a7410d18889a97b6cd5bd76a0934ef5ab78522afe1926c
+Depends: php8.0-relay, php8.0-igbinary, php8.0-msgpack
+Filename: pools/bookworm/v0.3.2/php-relay-0.3.2-php8.0-debian_amd64.deb
+Size: 1018
+MD5sum: c0f15c0203d15bf3550249e75decc5e5
+SHA1: 1eedea17d7dfffd5150e2b4f229d8364cfef575e
+SHA256: e681d6fe894ca52c06577c87d0b6815b8971e22da44cabf05f923abcf684a6b2
 Section: php
 Priority: optional
 Homepage: https://relaycache.com
@@ -1929,17 +2055,17 @@ License: Proprietary
 Vendor: CacheWerk, Inc.
 
 Package: php-relay
-Version: 0.5.0
+Version: 0.40.0
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 0
 Pre-Depends: php-common
-Depends: php8.1-relay, php8.1-igbinary, php8.1-msgpack
-Filename: pools/bookworm/v0.5.0/php-relay-0.5.0-php8.1-debian_amd64.deb
-Size: 1016
-MD5sum: f8434f635857df58e862bb0e9ce6cfe4
-SHA1: 0cf2faf27b7f8e86a4344554e41de733842efa28
-SHA256: c7d1674b7dd9a6683b34eeab5979fc58b3b07f2245d13d508790880c0418b40b
+Depends: php8.4-relay, php8.4-igbinary, php8.4-msgpack
+Filename: pools/bookworm/v0.40.0/php-relay-0.40.0-php8.4-bookworm_amd64.deb
+Size: 1094
+MD5sum: e96f10783a17683fc1603afb0c197148
+SHA1: e476c57d674f3fb9285490cfb901e66992a0afa2
+SHA256: 50d005179fc5e66db1712fcc5388a14c90b9322b3d4a1f144d4aba9282d198da
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -1968,17 +2094,56 @@ License: Proprietary
 Vendor: CacheWerk, Inc.
 
 Package: php-relay
-Version: 0.5.1
+Version: 0.5.0
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 0
 Pre-Depends: php-common
 Depends: php8.1-relay, php8.1-igbinary, php8.1-msgpack
-Filename: pools/bookworm/v0.5.1/php-relay-0.5.1-php8.1-debian_amd64.deb
+Filename: pools/bookworm/v0.5.0/php-relay-0.5.0-php8.1-debian_amd64.deb
 Size: 1016
-MD5sum: ecc30f281611edf01cc64dc66dc66dfe
-SHA1: c61eb58086fff59272013da672473ac6f6a4a048
-SHA256: 4968e208b13fed7a2811960e129e831bc56ea14a5111223170aae720ea3c08de
+MD5sum: f8434f635857df58e862bb0e9ce6cfe4
+SHA1: 0cf2faf27b7f8e86a4344554e41de733842efa28
+SHA256: c7d1674b7dd9a6683b34eeab5979fc58b3b07f2245d13d508790880c0418b40b
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php-relay
+Version: 0.5.1
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 3269
+Pre-Depends: php-common
+Depends: php8.2-relay, php8.2-igbinary, php8.2-msgpack
+Provides: php-relay
+Filename: pools/bookworm/v0.5.1/php-relay-0.5.1-php8.2-debian+libssl3_amd64.deb
+Size: 1307462
+MD5sum: bd33f421bf674bf4bea2fe4ade2cfa69
+SHA1: 5cacc6cf61d60b5a811a8f41dbd9dee02761d731
+SHA256: 971b64860d82fef13df51ffd5f04b5bb124e6a50214fa296f84c752084cbe424
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php-relay
+Version: 0.5.1
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 0
+Pre-Depends: php-common
+Depends: php8.2-relay, php8.2-igbinary, php8.2-msgpack
+Filename: pools/bookworm/v0.5.1/php-relay-0.5.1-php8.2-debian_amd64.deb
+Size: 1016
+MD5sum: 7da565b9ea0301bfdbe9d48b273056ed
+SHA1: f187b41544194e55803a268c8b6bdb386271baf6
+SHA256: e9d75a7729a34ba8c14dc961f0329a7820d87fe541a02619874f2c01cc6f4417
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -2012,32 +2177,12 @@ Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 0
 Pre-Depends: php-common
-Depends: php8.2-relay, php8.2-igbinary, php8.2-msgpack
-Filename: pools/bookworm/v0.5.1/php-relay-0.5.1-php8.2-debian_amd64.deb
+Depends: php8.1-relay, php8.1-igbinary, php8.1-msgpack
+Filename: pools/bookworm/v0.5.1/php-relay-0.5.1-php8.1-debian_amd64.deb
 Size: 1016
-MD5sum: 7da565b9ea0301bfdbe9d48b273056ed
-SHA1: f187b41544194e55803a268c8b6bdb386271baf6
-SHA256: e9d75a7729a34ba8c14dc961f0329a7820d87fe541a02619874f2c01cc6f4417
-Section: php
-Priority: optional
-Homepage: https://relay.so
-Description: The next-generation caching layer for PHP.
-License: Proprietary
-Vendor: CacheWerk, Inc.
-
-Package: php-relay
-Version: 0.5.1
-Architecture: amd64
-Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3269
-Pre-Depends: php-common
-Depends: php8.2-relay, php8.2-igbinary, php8.2-msgpack
-Provides: php-relay
-Filename: pools/bookworm/v0.5.1/php-relay-0.5.1-php8.2-debian+libssl3_amd64.deb
-Size: 1307462
-MD5sum: bd33f421bf674bf4bea2fe4ade2cfa69
-SHA1: 5cacc6cf61d60b5a811a8f41dbd9dee02761d731
-SHA256: 971b64860d82fef13df51ffd5f04b5bb124e6a50214fa296f84c752084cbe424
+MD5sum: ecc30f281611edf01cc64dc66dc66dfe
+SHA1: c61eb58086fff59272013da672473ac6f6a4a048
+SHA256: 4968e208b13fed7a2811960e129e831bc56ea14a5111223170aae720ea3c08de
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -2127,26 +2272,6 @@ Package: php-relay
 Version: 0.6.2
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3887
-Pre-Depends: php-common
-Depends: php8.2-relay, php8.2-igbinary, php8.2-msgpack
-Provides: php-relay
-Filename: pools/bookworm/v0.6.2/php-relay-0.6.2-php8.2-debian+libssl3_amd64.deb
-Size: 1547134
-MD5sum: 92e813b298e58b1f089c1b7e36ea977c
-SHA1: ed54893795e8f873862ce56a31e6661682f7e1c2
-SHA256: bb0ae0ac77fb28e849e2f5263ef108a7c8c8bb32752ef042b631c17d93209722
-Section: php
-Priority: optional
-Homepage: https://relay.so
-Description: The next-generation caching layer for PHP.
-License: Proprietary
-Vendor: CacheWerk, Inc.
-
-Package: php-relay
-Version: 0.6.2
-Architecture: amd64
-Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 0
 Pre-Depends: php-common
 Depends: php8.2-relay, php8.2-igbinary, php8.2-msgpack
@@ -2163,17 +2288,18 @@ License: Proprietary
 Vendor: CacheWerk, Inc.
 
 Package: php-relay
-Version: 0.6.3
+Version: 0.6.2
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 0
+Installed-Size: 3887
 Pre-Depends: php-common
 Depends: php8.2-relay, php8.2-igbinary, php8.2-msgpack
-Filename: pools/bookworm/v0.6.3/php-relay-0.6.3-php8.2-debian_amd64.deb
-Size: 1014
-MD5sum: 24bf399963ad5efce02528ab0a19cb3c
-SHA1: 61c91db2286f68b44a06e1a6eddff9539dd0bb86
-SHA256: 4353bd2880672e5cb9abbfef3a019f150fb4ce9029b0617f050976be6adb007b
+Provides: php-relay
+Filename: pools/bookworm/v0.6.2/php-relay-0.6.2-php8.2-debian+libssl3_amd64.deb
+Size: 1547134
+MD5sum: 92e813b298e58b1f089c1b7e36ea977c
+SHA1: ed54893795e8f873862ce56a31e6661682f7e1c2
+SHA256: bb0ae0ac77fb28e849e2f5263ef108a7c8c8bb32752ef042b631c17d93209722
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -2194,6 +2320,25 @@ Size: 1549738
 MD5sum: 4f4c0d1cadaf6731e2b2bf43aaf1a526
 SHA1: c2ed16782fef0e408a8f5247fe60086cbc86a71b
 SHA256: 1427c37bd5d3c030edc58737b1d232e85d1741a0d5accc53c6b9d1e1a5e18525
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php-relay
+Version: 0.6.3
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 0
+Pre-Depends: php-common
+Depends: php8.2-relay, php8.2-igbinary, php8.2-msgpack
+Filename: pools/bookworm/v0.6.3/php-relay-0.6.3-php8.2-debian_amd64.deb
+Size: 1014
+MD5sum: 24bf399963ad5efce02528ab0a19cb3c
+SHA1: 61c91db2286f68b44a06e1a6eddff9539dd0bb86
+SHA256: 4353bd2880672e5cb9abbfef3a019f150fb4ce9029b0617f050976be6adb007b
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -2361,15 +2506,14 @@ Package: php-relay
 Version: 0.6.8
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 4090
+Installed-Size: 0
 Pre-Depends: php-common
 Depends: php8.2-relay, php8.2-igbinary, php8.2-msgpack
-Provides: php-relay
-Filename: pools/bookworm/v0.6.8/php-relay-0.6.8-php8.2-debian+libssl3_amd64.deb
-Size: 1634842
-MD5sum: 51cfbd3685dbe8590085e0341c1bf718
-SHA1: f1662bb0c67890d9c0136f08209e84d810231fa5
-SHA256: df8d9c203d31a076ebedcce608e055c98969a1f3d0f132161327b04c30c98a14
+Filename: pools/bookworm/v0.6.8/php-relay-0.6.8-php8.2-debian_amd64.deb
+Size: 1014
+MD5sum: e0ee715dece54e9c7f1e78ce8a99c4e6
+SHA1: 7d7dec9de0f4d87074b095c22d312f92a3b3f369
+SHA256: 1dc3ea046dad9230f8e63dc5ba14c72736203a47a08c6f8636bcdf7dfbe4d2cb
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -2381,14 +2525,15 @@ Package: php-relay
 Version: 0.6.8
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 0
+Installed-Size: 4090
 Pre-Depends: php-common
 Depends: php8.2-relay, php8.2-igbinary, php8.2-msgpack
-Filename: pools/bookworm/v0.6.8/php-relay-0.6.8-php8.2-debian_amd64.deb
-Size: 1014
-MD5sum: e0ee715dece54e9c7f1e78ce8a99c4e6
-SHA1: 7d7dec9de0f4d87074b095c22d312f92a3b3f369
-SHA256: 1dc3ea046dad9230f8e63dc5ba14c72736203a47a08c6f8636bcdf7dfbe4d2cb
+Provides: php-relay
+Filename: pools/bookworm/v0.6.8/php-relay-0.6.8-php8.2-debian+libssl3_amd64.deb
+Size: 1634842
+MD5sum: 51cfbd3685dbe8590085e0341c1bf718
+SHA1: f1662bb0c67890d9c0136f08209e84d810231fa5
+SHA256: df8d9c203d31a076ebedcce608e055c98969a1f3d0f132161327b04c30c98a14
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -3070,28 +3215,6 @@ Source: php-relay
 Version: 0.4.3
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 2155
-Pre-Depends: php-common
-Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
-Replaces: php-relay (<< 0.4.3)
-Provides: php-relay
-Filename: pools/bookworm/v0.4.3/php7.4-relay-0.4.3-php7.4-debian_amd64.deb
-Size: 745286
-MD5sum: f038efd30097139b0e984f8b1a4125a4
-SHA1: 3ed7a672e1ce017c95bb22b56bf6264120969cd1
-SHA256: 198fb2da22bae5ef3d6338e1aecdee5c268c3ba1d9d7764b06a73b938e153a1f
-Section: php
-Priority: optional
-Homepage: https://relay.so
-Description: The next-generation caching layer for PHP.
-License: Proprietary
-Vendor: CacheWerk, Inc.
-
-Package: php7.4-relay
-Source: php-relay
-Version: 0.4.3
-Architecture: amd64
-Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 2115
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
@@ -3111,19 +3234,19 @@ Vendor: CacheWerk, Inc.
 
 Package: php7.4-relay
 Source: php-relay
-Version: 0.4.4
+Version: 0.4.3
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 2120
+Installed-Size: 2155
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
-Replaces: php-relay (<< 0.4.4)
+Replaces: php-relay (<< 0.4.3)
 Provides: php-relay
-Filename: pools/bookworm/v0.4.4/php7.4-relay-0.4.4-php7.4-debian+libssl3_amd64.deb
-Size: 910068
-MD5sum: cd926cfd1d5cd4e1e72313161422f2d6
-SHA1: 3393d31aad35b9b16b26dcabfe2bde2e2c9e933e
-SHA256: aab86c71b2f2fc458fa897021691ef6777e67f79908bc6449dfec860661d6ae6
+Filename: pools/bookworm/v0.4.3/php7.4-relay-0.4.3-php7.4-debian_amd64.deb
+Size: 745286
+MD5sum: f038efd30097139b0e984f8b1a4125a4
+SHA1: 3ed7a672e1ce017c95bb22b56bf6264120969cd1
+SHA256: 198fb2da22bae5ef3d6338e1aecdee5c268c3ba1d9d7764b06a73b938e153a1f
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -3146,6 +3269,28 @@ Size: 746132
 MD5sum: b5cf4b23e678f4d4d124db2a19999dbf
 SHA1: 5c3885fbe3dfba0a324eb3fa31870b0e340afa8e
 SHA256: 869be8cb20372e465a1129aac06bc63fc61ac44a8e47199ad98f03418ade6154
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php7.4-relay
+Source: php-relay
+Version: 0.4.4
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 2120
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
+Replaces: php-relay (<< 0.4.4)
+Provides: php-relay
+Filename: pools/bookworm/v0.4.4/php7.4-relay-0.4.4-php7.4-debian+libssl3_amd64.deb
+Size: 910068
+MD5sum: cd926cfd1d5cd4e1e72313161422f2d6
+SHA1: 3393d31aad35b9b16b26dcabfe2bde2e2c9e933e
+SHA256: aab86c71b2f2fc458fa897021691ef6777e67f79908bc6449dfec860661d6ae6
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -3202,28 +3347,6 @@ Source: php-relay
 Version: 0.4.6
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 2404
-Pre-Depends: php-common
-Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
-Replaces: php-relay (<< 0.4.6)
-Provides: php-relay
-Filename: pools/bookworm/v0.4.6/php7.4-relay-0.4.6-php7.4-debian_amd64.deb
-Size: 858340
-MD5sum: 6c9cbb4f83612a83d243bb810b4ea6ae
-SHA1: af7afe23b0c91674debd29c892a5378625838a58
-SHA256: e0bcd65752a4092058c12717c83699b05a92b88bdc8ee820e687a4e93c288076
-Section: php
-Priority: optional
-Homepage: https://relay.so
-Description: The next-generation caching layer for PHP.
-License: Proprietary
-Vendor: CacheWerk, Inc.
-
-Package: php7.4-relay
-Source: php-relay
-Version: 0.4.6
-Architecture: amd64
-Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 2184
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
@@ -3243,19 +3366,41 @@ Vendor: CacheWerk, Inc.
 
 Package: php7.4-relay
 Source: php-relay
-Version: 0.5.0
+Version: 0.4.6
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 2401
+Installed-Size: 2404
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
-Replaces: php-relay (<< 0.5.0)
+Replaces: php-relay (<< 0.4.6)
 Provides: php-relay
-Filename: pools/bookworm/v0.5.0/php7.4-relay-0.5.0-php7.4-debian+libssl3_amd64.deb
-Size: 1018266
-MD5sum: dfd4be2336ae7e213e80ec59145545f5
-SHA1: c572522da05813ad4fc2e51be5dfa47866381dcc
-SHA256: 15c02a6a4716388677ddb3f4befd2c2617431500492b06fa04dc307b9db9519c
+Filename: pools/bookworm/v0.4.6/php7.4-relay-0.4.6-php7.4-debian_amd64.deb
+Size: 858340
+MD5sum: 6c9cbb4f83612a83d243bb810b4ea6ae
+SHA1: af7afe23b0c91674debd29c892a5378625838a58
+SHA256: e0bcd65752a4092058c12717c83699b05a92b88bdc8ee820e687a4e93c288076
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php7.4-relay
+Source: php-relay
+Version: 0.40.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 2022
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
+Replaces: php-relay (<< 0.40.0)
+Provides: php-relay
+Filename: pools/bookworm/v0.40.0/php7.4-relay-0.40.0-php7.4-bookworm_amd64.deb
+Size: 799732
+MD5sum: fe188ea4beb6d3d0c50599adaa88c4a5
+SHA1: f2e634a50a531003505d13e172fbb2ab0f4ea75e
+SHA256: 87f8bf95b6a95ddea25f591f2b7ead15c8a90b4e24109bca0b5361c4b450ca7f
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -3278,6 +3423,28 @@ Size: 1027190
 MD5sum: 6c861cdce9473ef25a950c3b91280fe3
 SHA1: d98a334bca2c53ac2bb958a247f05a651b776cf6
 SHA256: f68d0827c2c0add1ab70aff35d6c43065558c27a0a140d1f33adca6c703a5d00
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php7.4-relay
+Source: php-relay
+Version: 0.5.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 2401
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
+Replaces: php-relay (<< 0.5.0)
+Provides: php-relay
+Filename: pools/bookworm/v0.5.0/php7.4-relay-0.5.0-php7.4-debian+libssl3_amd64.deb
+Size: 1018266
+MD5sum: dfd4be2336ae7e213e80ec59145545f5
+SHA1: c572522da05813ad4fc2e51be5dfa47866381dcc
+SHA256: 15c02a6a4716388677ddb3f4befd2c2617431500492b06fa04dc307b9db9519c
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -3334,16 +3501,16 @@ Source: php-relay
 Version: 0.6.0
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 2660
+Installed-Size: 3482
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
 Replaces: php-relay (<< 0.6.0)
 Provides: php-relay
-Filename: pools/bookworm/v0.6.0/php7.4-relay-0.6.0-php7.4-debian+libssl3_amd64.deb
-Size: 1113224
-MD5sum: c686b192008edcd0574a2bdc81251306
-SHA1: bff9777dc7d7ba592010aa9be162d12d7584a314
-SHA256: 73d9066479c4cf1a0edebfdf2dd91511c622e896abd3ba9d01d50216fd05846b
+Filename: pools/bookworm/v0.6.0/php7.4-relay-0.6.0-php7.4-debian_amd64.deb
+Size: 1166698
+MD5sum: 4977933c5435d5ff3c7136c732674bc8
+SHA1: 79df63e6b909cbed357c67b9a2136793ef6dfa35
+SHA256: 2f6debc15b8577c4fb224440c1b0a99b68454e7f5f14a29f01f26bdfb6f4b64e
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -3356,16 +3523,16 @@ Source: php-relay
 Version: 0.6.0
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3482
+Installed-Size: 2660
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
 Replaces: php-relay (<< 0.6.0)
 Provides: php-relay
-Filename: pools/bookworm/v0.6.0/php7.4-relay-0.6.0-php7.4-debian_amd64.deb
-Size: 1166698
-MD5sum: 4977933c5435d5ff3c7136c732674bc8
-SHA1: 79df63e6b909cbed357c67b9a2136793ef6dfa35
-SHA256: 2f6debc15b8577c4fb224440c1b0a99b68454e7f5f14a29f01f26bdfb6f4b64e
+Filename: pools/bookworm/v0.6.0/php7.4-relay-0.6.0-php7.4-debian+libssl3_amd64.deb
+Size: 1113224
+MD5sum: c686b192008edcd0574a2bdc81251306
+SHA1: bff9777dc7d7ba592010aa9be162d12d7584a314
+SHA256: 73d9066479c4cf1a0edebfdf2dd91511c622e896abd3ba9d01d50216fd05846b
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -3422,28 +3589,6 @@ Source: php-relay
 Version: 0.6.2
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3582
-Pre-Depends: php-common
-Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
-Replaces: php-relay (<< 0.6.2)
-Provides: php-relay
-Filename: pools/bookworm/v0.6.2/php7.4-relay-0.6.2-php7.4-debian_amd64.deb
-Size: 1199466
-MD5sum: ec9fef226cafc381344d4c9f5ace20f3
-SHA1: fb172a498a0fc05b3d152b24696be7b4d6d88771
-SHA256: a681bbe466c48203fc4853d9f955f0f1d247f24caf65889f659332f73b1b5cf4
-Section: php
-Priority: optional
-Homepage: https://relay.so
-Description: The next-generation caching layer for PHP.
-License: Proprietary
-Vendor: CacheWerk, Inc.
-
-Package: php7.4-relay
-Source: php-relay
-Version: 0.6.2
-Architecture: amd64
-Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 2720
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
@@ -3463,19 +3608,19 @@ Vendor: CacheWerk, Inc.
 
 Package: php7.4-relay
 Source: php-relay
-Version: 0.6.3
+Version: 0.6.2
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3590
+Installed-Size: 3582
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
-Replaces: php-relay (<< 0.6.3)
+Replaces: php-relay (<< 0.6.2)
 Provides: php-relay
-Filename: pools/bookworm/v0.6.3/php7.4-relay-0.6.3-php7.4-debian_amd64.deb
-Size: 1204076
-MD5sum: 2a7e1ab2ab22bbb8c0bfc71e0da7f02a
-SHA1: cd1d159f5f7a83784c274fbfc5357d034747c63b
-SHA256: 570d7befe90d23803188576d959f8b10b9911ea552ac7876b84e9c80e1c0b6f6
+Filename: pools/bookworm/v0.6.2/php7.4-relay-0.6.2-php7.4-debian_amd64.deb
+Size: 1199466
+MD5sum: ec9fef226cafc381344d4c9f5ace20f3
+SHA1: fb172a498a0fc05b3d152b24696be7b4d6d88771
+SHA256: a681bbe466c48203fc4853d9f955f0f1d247f24caf65889f659332f73b1b5cf4
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -3507,19 +3652,19 @@ Vendor: CacheWerk, Inc.
 
 Package: php7.4-relay
 Source: php-relay
-Version: 0.6.4
+Version: 0.6.3
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 2767
+Installed-Size: 3590
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
-Replaces: php-relay (<< 0.6.4)
+Replaces: php-relay (<< 0.6.3)
 Provides: php-relay
-Filename: pools/bookworm/v0.6.4/php7.4-relay-0.6.4-php7.4-debian+libssl3_amd64.deb
-Size: 1161666
-MD5sum: 8d8b80f6fc6e5b9e63ae9c3a31a87bf8
-SHA1: 3d1ebeeff483273ed7df996c9a80fd8d134c6e07
-SHA256: f7d13155cd5811082a6d13263ddf0b237e9918bfdd23f53f80f7ff9af72f5848
+Filename: pools/bookworm/v0.6.3/php7.4-relay-0.6.3-php7.4-debian_amd64.deb
+Size: 1204076
+MD5sum: 2a7e1ab2ab22bbb8c0bfc71e0da7f02a
+SHA1: cd1d159f5f7a83784c274fbfc5357d034747c63b
+SHA256: 570d7befe90d23803188576d959f8b10b9911ea552ac7876b84e9c80e1c0b6f6
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -3551,19 +3696,19 @@ Vendor: CacheWerk, Inc.
 
 Package: php7.4-relay
 Source: php-relay
-Version: 0.6.5
+Version: 0.6.4
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3673
+Installed-Size: 2767
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
-Replaces: php-relay (<< 0.6.5)
+Replaces: php-relay (<< 0.6.4)
 Provides: php-relay
-Filename: pools/bookworm/v0.6.5/php7.4-relay-0.6.5-php7.4-debian_amd64.deb
-Size: 1230212
-MD5sum: bab2169f23538cec1c74906cf4d617c0
-SHA1: 583086bb916c5a06b6b02fe9a8b0ea237c8a5972
-SHA256: a4f0c7e6803d8740e56fb236156d7d33653fcd0f58d89847011b0383c38c472f
+Filename: pools/bookworm/v0.6.4/php7.4-relay-0.6.4-php7.4-debian+libssl3_amd64.deb
+Size: 1161666
+MD5sum: 8d8b80f6fc6e5b9e63ae9c3a31a87bf8
+SHA1: 3d1ebeeff483273ed7df996c9a80fd8d134c6e07
+SHA256: f7d13155cd5811082a6d13263ddf0b237e9918bfdd23f53f80f7ff9af72f5848
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -3595,19 +3740,19 @@ Vendor: CacheWerk, Inc.
 
 Package: php7.4-relay
 Source: php-relay
-Version: 0.6.6
+Version: 0.6.5
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3678
+Installed-Size: 3673
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
-Replaces: php-relay (<< 0.6.6)
+Replaces: php-relay (<< 0.6.5)
 Provides: php-relay
-Filename: pools/bookworm/v0.6.6/php7.4-relay-0.6.6-php7.4-debian_amd64.deb
-Size: 1230676
-MD5sum: 058e3f2cf5c5715873408ca25cc5c81a
-SHA1: 35d2c36fd68f79f918cd5c39b6cfcefdbc04604d
-SHA256: 5b24337a4dadea36e70434eb7c1b906555316bcca928f8c1a3e59c49859172c2
+Filename: pools/bookworm/v0.6.5/php7.4-relay-0.6.5-php7.4-debian_amd64.deb
+Size: 1230212
+MD5sum: bab2169f23538cec1c74906cf4d617c0
+SHA1: 583086bb916c5a06b6b02fe9a8b0ea237c8a5972
+SHA256: a4f0c7e6803d8740e56fb236156d7d33653fcd0f58d89847011b0383c38c472f
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -3630,6 +3775,28 @@ Size: 1171980
 MD5sum: 7002d1fdbea60a8eb6afc7e866d27daf
 SHA1: dc636f4f822f043a57a1aa3de927cc9c48b1d42b
 SHA256: 85dbdb1bf270c001aecef71ef34cedc1fd072e9c42263b6430b4a31f10b4a1cc
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php7.4-relay
+Source: php-relay
+Version: 0.6.6
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 3678
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php7.4-common, php7.4-igbinary, php7.4-msgpack
+Replaces: php-relay (<< 0.6.6)
+Provides: php-relay
+Filename: pools/bookworm/v0.6.6/php7.4-relay-0.6.6-php7.4-debian_amd64.deb
+Size: 1230676
+MD5sum: 058e3f2cf5c5715873408ca25cc5c81a
+SHA1: 35d2c36fd68f79f918cd5c39b6cfcefdbc04604d
+SHA256: 5b24337a4dadea36e70434eb7c1b906555316bcca928f8c1a3e59c49859172c2
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -4522,6 +4689,28 @@ Source: php-relay
 Version: 0.4.6
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 2477
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
+Replaces: php-relay (<< 0.4.6)
+Provides: php-relay
+Filename: pools/bookworm/v0.4.6/php8.0-relay-0.4.6-php8.0-debian+libssl3_amd64.deb
+Size: 1021094
+MD5sum: 77cf23e7b1b060b27f37f5995a76c5cc
+SHA1: 6736811216242c8ff262141cfb549c286142ed50
+SHA256: 8de9deedef45cbf07f18075466e404cc4332692937852a60dd413ee8d4e7c891
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php8.0-relay
+Source: php-relay
+Version: 0.4.6
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 2743
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
@@ -4541,19 +4730,19 @@ Vendor: CacheWerk, Inc.
 
 Package: php8.0-relay
 Source: php-relay
-Version: 0.4.6
+Version: 0.40.0
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 2477
+Installed-Size: 2348
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
-Replaces: php-relay (<< 0.4.6)
+Replaces: php-relay (<< 0.40.0)
 Provides: php-relay
-Filename: pools/bookworm/v0.4.6/php8.0-relay-0.4.6-php8.0-debian+libssl3_amd64.deb
-Size: 1021094
-MD5sum: 77cf23e7b1b060b27f37f5995a76c5cc
-SHA1: 6736811216242c8ff262141cfb549c286142ed50
-SHA256: 8de9deedef45cbf07f18075466e404cc4332692937852a60dd413ee8d4e7c891
+Filename: pools/bookworm/v0.40.0/php8.0-relay-0.40.0-php8.0-bookworm_amd64.deb
+Size: 883688
+MD5sum: 2d265bd154f0ec64d751b84d8ac8bb85
+SHA1: e7fbf9950d378ac67989970f29adad849e59c404
+SHA256: 922c69ce7f898de640be643d89827dfeb3d8e9526346241bf6f31f25f5dfd01e
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -4698,28 +4887,6 @@ Source: php-relay
 Version: 0.6.1
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3568
-Pre-Depends: php-common
-Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
-Replaces: php-relay (<< 0.6.1)
-Provides: php-relay
-Filename: pools/bookworm/v0.6.1/php8.0-relay-0.6.1-php8.0-debian_amd64.deb
-Size: 1196660
-MD5sum: 58d373cdd597eb5210d7040967efd9cc
-SHA1: 3144f7912a256e75a42a3ee7076935c8e000b149
-SHA256: 95018900e17d8cbaa2620993d323d3e1529d87fc8de188c0201dec61959403cb
-Section: php
-Priority: optional
-Homepage: https://relay.so
-Description: The next-generation caching layer for PHP.
-License: Proprietary
-Vendor: CacheWerk, Inc.
-
-Package: php8.0-relay
-Source: php-relay
-Version: 0.6.1
-Architecture: amd64
-Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 3782
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
@@ -4739,19 +4906,19 @@ Vendor: CacheWerk, Inc.
 
 Package: php8.0-relay
 Source: php-relay
-Version: 0.6.2
+Version: 0.6.1
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3607
+Installed-Size: 3568
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
-Replaces: php-relay (<< 0.6.2)
+Replaces: php-relay (<< 0.6.1)
 Provides: php-relay
-Filename: pools/bookworm/v0.6.2/php8.0-relay-0.6.2-php8.0-debian_amd64.deb
-Size: 1214790
-MD5sum: 437cb76d9f68216a27e8075d1d371ed0
-SHA1: bc774238197008ac7c33de2af2c3ccbdd18e2ce0
-SHA256: 22f0a4fdcbef785de4b306b093c9fbdfa14f9983bf9d8ce26972e42e71b42a11
+Filename: pools/bookworm/v0.6.1/php8.0-relay-0.6.1-php8.0-debian_amd64.deb
+Size: 1196660
+MD5sum: 58d373cdd597eb5210d7040967efd9cc
+SHA1: 3144f7912a256e75a42a3ee7076935c8e000b149
+SHA256: 95018900e17d8cbaa2620993d323d3e1529d87fc8de188c0201dec61959403cb
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -4774,6 +4941,28 @@ Size: 1510206
 MD5sum: ac897e4023e7626806cff8332d9cd37d
 SHA1: a31091c90130fc1b8b0f2c44d78d7ae0e232775f
 SHA256: 84e76f3bb3159478fa171b32ea7445bc2cced171ed8fa0bd4d6dcb53bdd6c7fc
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php8.0-relay
+Source: php-relay
+Version: 0.6.2
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 3607
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
+Replaces: php-relay (<< 0.6.2)
+Provides: php-relay
+Filename: pools/bookworm/v0.6.2/php8.0-relay-0.6.2-php8.0-debian_amd64.deb
+Size: 1214790
+MD5sum: 437cb76d9f68216a27e8075d1d371ed0
+SHA1: bc774238197008ac7c33de2af2c3ccbdd18e2ce0
+SHA256: 22f0a4fdcbef785de4b306b093c9fbdfa14f9983bf9d8ce26972e42e71b42a11
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -4830,28 +5019,6 @@ Source: php-relay
 Version: 0.6.4
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3887
-Pre-Depends: php-common
-Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
-Replaces: php-relay (<< 0.6.4)
-Provides: php-relay
-Filename: pools/bookworm/v0.6.4/php8.0-relay-0.6.4-php8.0-debian+libssl3_amd64.deb
-Size: 1537082
-MD5sum: dea2d4cfb96700443d33ce297500bb8f
-SHA1: 08497a16bcd0604715d3a1599c2ba2bd0a49fa38
-SHA256: 566ba0df228b7304f9ee5eebd22128987c779650ae56cc966a94f81d8204b0f6
-Section: php
-Priority: optional
-Homepage: https://relay.so
-Description: The next-generation caching layer for PHP.
-License: Proprietary
-Vendor: CacheWerk, Inc.
-
-Package: php8.0-relay
-Source: php-relay
-Version: 0.6.4
-Architecture: amd64
-Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 3700
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
@@ -4871,19 +5038,19 @@ Vendor: CacheWerk, Inc.
 
 Package: php8.0-relay
 Source: php-relay
-Version: 0.6.5
+Version: 0.6.4
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3717
+Installed-Size: 3887
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
-Replaces: php-relay (<< 0.6.5)
+Replaces: php-relay (<< 0.6.4)
 Provides: php-relay
-Filename: pools/bookworm/v0.6.5/php8.0-relay-0.6.5-php8.0-debian_amd64.deb
-Size: 1256058
-MD5sum: 6c465e57808575cc2603fa6e0df4fc6e
-SHA1: 6c920e1edfd0839613232692951db91ee0bd6ba6
-SHA256: 7f976638417558b29a05fb33dfa414b9f0c9a43edc532a197a8ffb31aab54574
+Filename: pools/bookworm/v0.6.4/php8.0-relay-0.6.4-php8.0-debian+libssl3_amd64.deb
+Size: 1537082
+MD5sum: dea2d4cfb96700443d33ce297500bb8f
+SHA1: 08497a16bcd0604715d3a1599c2ba2bd0a49fa38
+SHA256: 566ba0df228b7304f9ee5eebd22128987c779650ae56cc966a94f81d8204b0f6
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -4906,6 +5073,28 @@ Size: 1545910
 MD5sum: 06220da658c0d423526ecdbcdc701b55
 SHA1: 1b13bc38bce4480f4ad4d017f92777dce5810990
 SHA256: b3f878fb6be68e3104dc250bd96d766de07876439b48ecfcefdf4cd6cb093933
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php8.0-relay
+Source: php-relay
+Version: 0.6.5
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 3717
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.0-common, php8.0-igbinary, php8.0-msgpack
+Replaces: php-relay (<< 0.6.5)
+Provides: php-relay
+Filename: pools/bookworm/v0.6.5/php8.0-relay-0.6.5-php8.0-debian_amd64.deb
+Size: 1256058
+MD5sum: 6c465e57808575cc2603fa6e0df4fc6e
+SHA1: 6c920e1edfd0839613232692951db91ee0bd6ba6
+SHA256: 7f976638417558b29a05fb33dfa414b9f0c9a43edc532a197a8ffb31aab54574
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -5578,16 +5767,16 @@ Source: php-relay
 Version: 0.4.3
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 2204
+Installed-Size: 2148
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
 Replaces: php-relay (<< 0.4.3)
 Provides: php-relay
-Filename: pools/bookworm/v0.4.3/php8.1-relay-0.4.3-php8.1-debian_amd64.deb
-Size: 763716
-MD5sum: 5d4ef4a35bd19d294f0bd800de67592b
-SHA1: b59b6dd55ac36b4159263890cde80389ef7840c9
-SHA256: 3a4e38ece8da3710e099b4a2db00ca915022370142bca88c1cd773f09a5d9781
+Filename: pools/bookworm/v0.4.3/php8.1-relay-0.4.3-php8.1-debian+libssl3_amd64.deb
+Size: 919018
+MD5sum: e0db150c2370c68b68420807788a99f0
+SHA1: 8a7c38b5210814f2878faf7c6e9c5915435c9ce4
+SHA256: 1b9293d759ad1006f798dc748b86c4f4eb0092d06d6f5222ff0fdcd0fde68a1c
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -5600,16 +5789,16 @@ Source: php-relay
 Version: 0.4.3
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 2148
+Installed-Size: 2204
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
 Replaces: php-relay (<< 0.4.3)
 Provides: php-relay
-Filename: pools/bookworm/v0.4.3/php8.1-relay-0.4.3-php8.1-debian+libssl3_amd64.deb
-Size: 919018
-MD5sum: e0db150c2370c68b68420807788a99f0
-SHA1: 8a7c38b5210814f2878faf7c6e9c5915435c9ce4
-SHA256: 1b9293d759ad1006f798dc748b86c4f4eb0092d06d6f5222ff0fdcd0fde68a1c
+Filename: pools/bookworm/v0.4.3/php8.1-relay-0.4.3-php8.1-debian_amd64.deb
+Size: 763716
+MD5sum: 5d4ef4a35bd19d294f0bd800de67592b
+SHA1: b59b6dd55ac36b4159263890cde80389ef7840c9
+SHA256: 3a4e38ece8da3710e099b4a2db00ca915022370142bca88c1cd773f09a5d9781
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -5710,28 +5899,6 @@ Source: php-relay
 Version: 0.4.6
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 2488
-Pre-Depends: php-common
-Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
-Replaces: php-relay (<< 0.4.6)
-Provides: php-relay
-Filename: pools/bookworm/v0.4.6/php8.1-relay-0.4.6-php8.1-debian+libssl3_amd64.deb
-Size: 1025414
-MD5sum: b769a99b2f9da53684a67e0125f66c5c
-SHA1: d53703f66dd8edbd86f36422633e493f059afc5b
-SHA256: a52271c10859db211352c8a8f8c0d96dec5484d17169cc5b111667967c3bd502
-Section: php
-Priority: optional
-Homepage: https://relay.so
-Description: The next-generation caching layer for PHP.
-License: Proprietary
-Vendor: CacheWerk, Inc.
-
-Package: php8.1-relay
-Source: php-relay
-Version: 0.4.6
-Architecture: amd64
-Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 2763
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
@@ -5751,19 +5918,41 @@ Vendor: CacheWerk, Inc.
 
 Package: php8.1-relay
 Source: php-relay
-Version: 0.5.0
+Version: 0.4.6
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3058
+Installed-Size: 2488
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
-Replaces: php-relay (<< 0.5.0)
+Replaces: php-relay (<< 0.4.6)
 Provides: php-relay
-Filename: pools/bookworm/v0.5.0/php8.1-relay-0.5.0-php8.1-debian+libssl3_amd64.deb
-Size: 1253378
-MD5sum: d5244f8f49c017f735c3677fc70865df
-SHA1: 201b3eb20be7726bb43c76facf29e2d6f44816e7
-SHA256: 4ea459e9493259f596595a854f16f9b3a49e9194be9f1a1531392e722a399840
+Filename: pools/bookworm/v0.4.6/php8.1-relay-0.4.6-php8.1-debian+libssl3_amd64.deb
+Size: 1025414
+MD5sum: b769a99b2f9da53684a67e0125f66c5c
+SHA1: d53703f66dd8edbd86f36422633e493f059afc5b
+SHA256: a52271c10859db211352c8a8f8c0d96dec5484d17169cc5b111667967c3bd502
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php8.1-relay
+Source: php-relay
+Version: 0.40.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 2352
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
+Replaces: php-relay (<< 0.40.0)
+Provides: php-relay
+Filename: pools/bookworm/v0.40.0/php8.1-relay-0.40.0-php8.1-bookworm_amd64.deb
+Size: 886042
+MD5sum: dd65f542f7355d6135bb7fea6d259e8c
+SHA1: 0e60d3d1ab7a3f46b7a27d831db0c8d13248cae4
+SHA256: 9d337849d23ff11ae8d4e0b217c1830e611c7d40b2231ebaf73b1f1b36441e0a
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -5795,19 +5984,19 @@ Vendor: CacheWerk, Inc.
 
 Package: php8.1-relay
 Source: php-relay
-Version: 0.5.1
+Version: 0.5.0
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3241
+Installed-Size: 3058
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
-Replaces: php-relay (<< 0.5.1)
+Replaces: php-relay (<< 0.5.0)
 Provides: php-relay
-Filename: pools/bookworm/v0.5.1/php8.1-relay-0.5.1-php8.1-debian_amd64.deb
-Size: 1092540
-MD5sum: 53928c5ffe28574fdc511348a12e4421
-SHA1: d640a5997aeeea949e718da5b1644d44d797af07
-SHA256: f86f3800e8ddee597956985296e1282a1ccee27e5f874116e8dfc21f1203e710
+Filename: pools/bookworm/v0.5.0/php8.1-relay-0.5.0-php8.1-debian+libssl3_amd64.deb
+Size: 1253378
+MD5sum: d5244f8f49c017f735c3677fc70865df
+SHA1: 201b3eb20be7726bb43c76facf29e2d6f44816e7
+SHA256: 4ea459e9493259f596595a854f16f9b3a49e9194be9f1a1531392e722a399840
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -5839,19 +6028,19 @@ Vendor: CacheWerk, Inc.
 
 Package: php8.1-relay
 Source: php-relay
-Version: 0.6.0
+Version: 0.5.1
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3752
+Installed-Size: 3241
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
-Replaces: php-relay (<< 0.6.0)
+Replaces: php-relay (<< 0.5.1)
 Provides: php-relay
-Filename: pools/bookworm/v0.6.0/php8.1-relay-0.6.0-php8.1-debian+libssl3_amd64.deb
-Size: 1483596
-MD5sum: 0f51d04c1818b612cda39e9fc7d58a2c
-SHA1: 42966d949ee88eda51ea2f5abe0cacd247cdfa84
-SHA256: f9ce04e8917c8bb2a50368333c39ba8f3995eeb187a1458f41dc44fdda375368
+Filename: pools/bookworm/v0.5.1/php8.1-relay-0.5.1-php8.1-debian_amd64.deb
+Size: 1092540
+MD5sum: 53928c5ffe28574fdc511348a12e4421
+SHA1: d640a5997aeeea949e718da5b1644d44d797af07
+SHA256: f86f3800e8ddee597956985296e1282a1ccee27e5f874116e8dfc21f1203e710
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -5874,6 +6063,28 @@ Size: 1198932
 MD5sum: 2db7378363eede18053a9c778941f1f0
 SHA1: 9de5d86e7e00116223bda2190eeb27419bf2851c
 SHA256: 8e8a035b410485b6fbc1112e1f2b2cef3ace53ce8b67fcdd4aec1a0a52ab1a27
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php8.1-relay
+Source: php-relay
+Version: 0.6.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 3752
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
+Replaces: php-relay (<< 0.6.0)
+Provides: php-relay
+Filename: pools/bookworm/v0.6.0/php8.1-relay-0.6.0-php8.1-debian+libssl3_amd64.deb
+Size: 1483596
+MD5sum: 0f51d04c1818b612cda39e9fc7d58a2c
+SHA1: 42966d949ee88eda51ea2f5abe0cacd247cdfa84
+SHA256: f9ce04e8917c8bb2a50368333c39ba8f3995eeb187a1458f41dc44fdda375368
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -5930,16 +6141,16 @@ Source: php-relay
 Version: 0.6.2
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3838
+Installed-Size: 3644
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
 Replaces: php-relay (<< 0.6.2)
 Provides: php-relay
-Filename: pools/bookworm/v0.6.2/php8.1-relay-0.6.2-php8.1-debian+libssl3_amd64.deb
-Size: 1520640
-MD5sum: 73d3fa9595c515df1a0b1cfd5708810b
-SHA1: 885bdbd2327e2dc8af71019a420bd9d062b3726e
-SHA256: 43ae98b0ec473b117bb94bcf773a8ecbcf6e5964c064018302c9b8d4a52760e0
+Filename: pools/bookworm/v0.6.2/php8.1-relay-0.6.2-php8.1-debian_amd64.deb
+Size: 1233104
+MD5sum: 79c138035f641a516718fb501dcf46dc
+SHA1: 13c64b117f1a39f80dbdeea0dd740d0397feec8c
+SHA256: dcb1841a6bc1edf081e395f5061a34cb2598818500eeec20c03692a92e747a9e
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -5952,16 +6163,16 @@ Source: php-relay
 Version: 0.6.2
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3644
+Installed-Size: 3838
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
 Replaces: php-relay (<< 0.6.2)
 Provides: php-relay
-Filename: pools/bookworm/v0.6.2/php8.1-relay-0.6.2-php8.1-debian_amd64.deb
-Size: 1233104
-MD5sum: 79c138035f641a516718fb501dcf46dc
-SHA1: 13c64b117f1a39f80dbdeea0dd740d0397feec8c
-SHA256: dcb1841a6bc1edf081e395f5061a34cb2598818500eeec20c03692a92e747a9e
+Filename: pools/bookworm/v0.6.2/php8.1-relay-0.6.2-php8.1-debian+libssl3_amd64.deb
+Size: 1520640
+MD5sum: 73d3fa9595c515df1a0b1cfd5708810b
+SHA1: 885bdbd2327e2dc8af71019a420bd9d062b3726e
+SHA256: 43ae98b0ec473b117bb94bcf773a8ecbcf6e5964c064018302c9b8d4a52760e0
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -6062,28 +6273,6 @@ Source: php-relay
 Version: 0.6.5
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3925
-Pre-Depends: php-common
-Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
-Replaces: php-relay (<< 0.6.5)
-Provides: php-relay
-Filename: pools/bookworm/v0.6.5/php8.1-relay-0.6.5-php8.1-debian+libssl3_amd64.deb
-Size: 1557022
-MD5sum: 6f554ca8199ab999e5a299ddacea495c
-SHA1: 23b2b3991e1c4ed62becdff797e6de1999e8896c
-SHA256: 32a5d07515d361dfc61886c14e9b58851ebb66f19f646bec875a25c35fb1a6a6
-Section: php
-Priority: optional
-Homepage: https://relay.so
-Description: The next-generation caching layer for PHP.
-License: Proprietary
-Vendor: CacheWerk, Inc.
-
-Package: php8.1-relay
-Source: php-relay
-Version: 0.6.5
-Architecture: amd64
-Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 3753
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
@@ -6103,19 +6292,19 @@ Vendor: CacheWerk, Inc.
 
 Package: php8.1-relay
 Source: php-relay
-Version: 0.6.6
+Version: 0.6.5
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3755
+Installed-Size: 3925
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
-Replaces: php-relay (<< 0.6.6)
+Replaces: php-relay (<< 0.6.5)
 Provides: php-relay
-Filename: pools/bookworm/v0.6.6/php8.1-relay-0.6.6-php8.1-debian_amd64.deb
-Size: 1269258
-MD5sum: 286dc156dfe88cd0af460001ae6b9014
-SHA1: 1d948fff19b4c26b51f407dffa8bb2bc0f24bb1d
-SHA256: 9fe125171acd2a67ea32cbc9e4612ec81076c1597c12fb563f6491e693dc1526
+Filename: pools/bookworm/v0.6.5/php8.1-relay-0.6.5-php8.1-debian+libssl3_amd64.deb
+Size: 1557022
+MD5sum: 6f554ca8199ab999e5a299ddacea495c
+SHA1: 23b2b3991e1c4ed62becdff797e6de1999e8896c
+SHA256: 32a5d07515d361dfc61886c14e9b58851ebb66f19f646bec875a25c35fb1a6a6
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -6138,6 +6327,28 @@ Size: 1557792
 MD5sum: e3c9525b0672c95081d999e9ad57a27d
 SHA1: 6cb6dfe32c7b13d12335e7f3fd95b1c3de31eaa2
 SHA256: 78d72338da94900de7e380922669277eff0b0d7070823635ad82cb6ca638139f
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php8.1-relay
+Source: php-relay
+Version: 0.6.6
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 3755
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
+Replaces: php-relay (<< 0.6.6)
+Provides: php-relay
+Filename: pools/bookworm/v0.6.6/php8.1-relay-0.6.6-php8.1-debian_amd64.deb
+Size: 1269258
+MD5sum: 286dc156dfe88cd0af460001ae6b9014
+SHA1: 1d948fff19b4c26b51f407dffa8bb2bc0f24bb1d
+SHA256: 9fe125171acd2a67ea32cbc9e4612ec81076c1597c12fb563f6491e693dc1526
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -6194,16 +6405,16 @@ Source: php-relay
 Version: 0.6.8
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 4021
+Installed-Size: 2170
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
 Replaces: php-relay (<< 0.6.8)
 Provides: php-relay
-Filename: pools/bookworm/v0.6.8/php8.1-relay-0.6.8-php8.1-debian+libssl3_amd64.deb
-Size: 1599498
-MD5sum: 161b309e49fc1c6b9ae03e72703b6dd1
-SHA1: 8d847e13411276e393558c382e9a766412f712a1
-SHA256: c74a7935446d26fa73912410b8d72a6a6ca5c8b8c0298e17a3c6a4e212eead31
+Filename: pools/bookworm/v0.6.8/php8.1-relay-0.6.8-php8.1-debian_amd64.deb
+Size: 765468
+MD5sum: f1f3a05d4464c76f59b21e958a2ee96a
+SHA1: becc6a6d96d56ff3bcd4ece1954452a451e08414
+SHA256: d7fa46d94c4b500e2074bf225bc751c6395774b342bb0d3a5f87d71ae0dbc896
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -6216,16 +6427,16 @@ Source: php-relay
 Version: 0.6.8
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 2170
+Installed-Size: 4021
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.1-common, php8.1-igbinary, php8.1-msgpack
 Replaces: php-relay (<< 0.6.8)
 Provides: php-relay
-Filename: pools/bookworm/v0.6.8/php8.1-relay-0.6.8-php8.1-debian_amd64.deb
-Size: 765468
-MD5sum: f1f3a05d4464c76f59b21e958a2ee96a
-SHA1: becc6a6d96d56ff3bcd4ece1954452a451e08414
-SHA256: d7fa46d94c4b500e2074bf225bc751c6395774b342bb0d3a5f87d71ae0dbc896
+Filename: pools/bookworm/v0.6.8/php8.1-relay-0.6.8-php8.1-debian+libssl3_amd64.deb
+Size: 1599498
+MD5sum: 161b309e49fc1c6b9ae03e72703b6dd1
+SHA1: 8d847e13411276e393558c382e9a766412f712a1
+SHA256: c74a7935446d26fa73912410b8d72a6a6ca5c8b8c0298e17a3c6a4e212eead31
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -6565,6 +6776,28 @@ Vendor: CacheWerk, Inc.
 
 Package: php8.2-relay
 Source: php-relay
+Version: 0.40.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 2364
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.2-common, php8.2-igbinary, php8.2-msgpack
+Replaces: php-relay (<< 0.40.0)
+Provides: php-relay
+Filename: pools/bookworm/v0.40.0/php8.2-relay-0.40.0-php8.2-bookworm_amd64.deb
+Size: 893546
+MD5sum: d674cacb9c76ee956458d8579756cd50
+SHA1: aea7684fbbea039b22b3c915ee944e92f2d69932
+SHA256: 20007090f96a75fb46266139578a662ef6c7ad786edd4b2e01f96cc7dc73ceb7
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php8.2-relay
+Source: php-relay
 Version: 0.5.1
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
@@ -6612,16 +6845,16 @@ Source: php-relay
 Version: 0.6.0
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3807
+Installed-Size: 3638
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.2-common, php8.2-igbinary, php8.2-msgpack
 Replaces: php-relay (<< 0.6.0)
 Provides: php-relay
-Filename: pools/bookworm/v0.6.0/php8.2-relay-0.6.0-php8.2-debian+libssl3_amd64.deb
-Size: 1513238
-MD5sum: 9441c90a3e3ee3accc5a6c9c88b0e322
-SHA1: 4c67013e860d039e244e93ae059b83198ff0b24d
-SHA256: e74bafd33ee96e8d419f0e33577e13e4b5ed2513cc98479246a1f9112c1f7d82
+Filename: pools/bookworm/v0.6.0/php8.2-relay-0.6.0-php8.2-debian_amd64.deb
+Size: 1231444
+MD5sum: 5ad2e1752a08fa2d9ed04f7ddc23eb08
+SHA1: 4a8304904518aa89c2278119ba8ba5c2ed0b37b3
+SHA256: 3d59f5cb83f59bf15fb04e9961e813630a7dc507d418040b053895c3bb474062
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -6634,16 +6867,16 @@ Source: php-relay
 Version: 0.6.0
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3638
+Installed-Size: 3807
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.2-common, php8.2-igbinary, php8.2-msgpack
 Replaces: php-relay (<< 0.6.0)
 Provides: php-relay
-Filename: pools/bookworm/v0.6.0/php8.2-relay-0.6.0-php8.2-debian_amd64.deb
-Size: 1231444
-MD5sum: 5ad2e1752a08fa2d9ed04f7ddc23eb08
-SHA1: 4a8304904518aa89c2278119ba8ba5c2ed0b37b3
-SHA256: 3d59f5cb83f59bf15fb04e9961e813630a7dc507d418040b053895c3bb474062
+Filename: pools/bookworm/v0.6.0/php8.2-relay-0.6.0-php8.2-debian+libssl3_amd64.deb
+Size: 1513238
+MD5sum: 9441c90a3e3ee3accc5a6c9c88b0e322
+SHA1: 4c67013e860d039e244e93ae059b83198ff0b24d
+SHA256: e74bafd33ee96e8d419f0e33577e13e4b5ed2513cc98479246a1f9112c1f7d82
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -6700,28 +6933,6 @@ Source: php-relay
 Version: 0.6.2
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3887
-Pre-Depends: php-common
-Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.2-common, php8.2-igbinary, php8.2-msgpack
-Replaces: php-relay (<< 0.6.2)
-Provides: php-relay
-Filename: pools/bookworm/v0.6.2/php8.2-relay-0.6.2-php8.2-debian+libssl3_amd64.deb
-Size: 1547436
-MD5sum: 1c7c78deeaf0338f76913366af66dd3f
-SHA1: bbdb8c23dc2744a18cd763ea7818a05631147992
-SHA256: fd2b29cba37a78fdd1d0eea023094ac7fde6f55117c668555ace72715603bcc4
-Section: php
-Priority: optional
-Homepage: https://relay.so
-Description: The next-generation caching layer for PHP.
-License: Proprietary
-Vendor: CacheWerk, Inc.
-
-Package: php8.2-relay
-Source: php-relay
-Version: 0.6.2
-Architecture: amd64
-Maintainer: Relay Team <hello@cachewerk.com>
 Installed-Size: 3713
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.2-common, php8.2-igbinary, php8.2-msgpack
@@ -6741,19 +6952,19 @@ Vendor: CacheWerk, Inc.
 
 Package: php8.2-relay
 Source: php-relay
-Version: 0.6.3
+Version: 0.6.2
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3719
+Installed-Size: 3887
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.2-common, php8.2-igbinary, php8.2-msgpack
-Replaces: php-relay (<< 0.6.3)
+Replaces: php-relay (<< 0.6.2)
 Provides: php-relay
-Filename: pools/bookworm/v0.6.3/php8.2-relay-0.6.3-php8.2-debian_amd64.deb
-Size: 1260554
-MD5sum: b9b614f69f17462c8ee9b6a59e26b50b
-SHA1: 6788a7aba0a6483878225928b3a6fbd88cb2f14f
-SHA256: 036362dc0c80f2e5e9867024b7d19c3f5ad504aed7c5977ec436f20f02a963ec
+Filename: pools/bookworm/v0.6.2/php8.2-relay-0.6.2-php8.2-debian+libssl3_amd64.deb
+Size: 1547436
+MD5sum: 1c7c78deeaf0338f76913366af66dd3f
+SHA1: bbdb8c23dc2744a18cd763ea7818a05631147992
+SHA256: fd2b29cba37a78fdd1d0eea023094ac7fde6f55117c668555ace72715603bcc4
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -6785,19 +6996,19 @@ Vendor: CacheWerk, Inc.
 
 Package: php8.2-relay
 Source: php-relay
-Version: 0.6.4
+Version: 0.6.3
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3961
+Installed-Size: 3719
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.2-common, php8.2-igbinary, php8.2-msgpack
-Replaces: php-relay (<< 0.6.4)
+Replaces: php-relay (<< 0.6.3)
 Provides: php-relay
-Filename: pools/bookworm/v0.6.4/php8.2-relay-0.6.4-php8.2-debian+libssl3_amd64.deb
-Size: 1576090
-MD5sum: 00c0bb0e2b99aa59d3cec51ec8a8db40
-SHA1: cc5fcdccd7172a2f7b2e182ea3c4f91f1cfab380
-SHA256: 9a74491975277cbca00b2b51cf4329c4b4fbb7811bcb7ed9034b07dc1146227f
+Filename: pools/bookworm/v0.6.3/php8.2-relay-0.6.3-php8.2-debian_amd64.deb
+Size: 1260554
+MD5sum: b9b614f69f17462c8ee9b6a59e26b50b
+SHA1: 6788a7aba0a6483878225928b3a6fbd88cb2f14f
+SHA256: 036362dc0c80f2e5e9867024b7d19c3f5ad504aed7c5977ec436f20f02a963ec
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -6829,19 +7040,19 @@ Vendor: CacheWerk, Inc.
 
 Package: php8.2-relay
 Source: php-relay
-Version: 0.6.5
+Version: 0.6.4
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3824
+Installed-Size: 3961
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.2-common, php8.2-igbinary, php8.2-msgpack
-Replaces: php-relay (<< 0.6.5)
+Replaces: php-relay (<< 0.6.4)
 Provides: php-relay
-Filename: pools/bookworm/v0.6.5/php8.2-relay-0.6.5-php8.2-debian_amd64.deb
-Size: 1293660
-MD5sum: a9cb69552283bb123727fd86c4b66f54
-SHA1: a255fd68e13b57c759249e41f14f3e6d0e3f53aa
-SHA256: 24a8e9cd75d2eec283c8a506876ad6ac35935c2b822c8344f3feb1b1c4ebe262
+Filename: pools/bookworm/v0.6.4/php8.2-relay-0.6.4-php8.2-debian+libssl3_amd64.deb
+Size: 1576090
+MD5sum: 00c0bb0e2b99aa59d3cec51ec8a8db40
+SHA1: cc5fcdccd7172a2f7b2e182ea3c4f91f1cfab380
+SHA256: 9a74491975277cbca00b2b51cf4329c4b4fbb7811bcb7ed9034b07dc1146227f
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -6873,19 +7084,19 @@ Vendor: CacheWerk, Inc.
 
 Package: php8.2-relay
 Source: php-relay
-Version: 0.6.6
+Version: 0.6.5
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 3826
+Installed-Size: 3824
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.2-common, php8.2-igbinary, php8.2-msgpack
-Replaces: php-relay (<< 0.6.6)
+Replaces: php-relay (<< 0.6.5)
 Provides: php-relay
-Filename: pools/bookworm/v0.6.6/php8.2-relay-0.6.6-php8.2-debian_amd64.deb
-Size: 1294776
-MD5sum: fa3748f590e34aa72cd43c11c971c07f
-SHA1: 125e06a5adc8effba63e0fa06720943d8fc88535
-SHA256: 34862d9ce3fd237c95167c758e763579b250e60d24e98ab5bd8c8d82fffe14c9
+Filename: pools/bookworm/v0.6.5/php8.2-relay-0.6.5-php8.2-debian_amd64.deb
+Size: 1293660
+MD5sum: a9cb69552283bb123727fd86c4b66f54
+SHA1: a255fd68e13b57c759249e41f14f3e6d0e3f53aa
+SHA256: 24a8e9cd75d2eec283c8a506876ad6ac35935c2b822c8344f3feb1b1c4ebe262
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -6917,19 +7128,19 @@ Vendor: CacheWerk, Inc.
 
 Package: php8.2-relay
 Source: php-relay
-Version: 0.6.7
+Version: 0.6.6
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 4093
+Installed-Size: 3826
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.2-common, php8.2-igbinary, php8.2-msgpack
-Replaces: php-relay (<< 0.6.7)
+Replaces: php-relay (<< 0.6.6)
 Provides: php-relay
-Filename: pools/bookworm/v0.6.7/php8.2-relay-0.6.7-php8.2-debian+libssl3_amd64.deb
-Size: 1634248
-MD5sum: 465d08d891f113e8e84a23186f8b29f6
-SHA1: ab92978a707063ef16c532d111dc21a37bf050b9
-SHA256: 6be71ccca46536f9b32f8c7cec6337135bcfc766faf432aeb916694c80dd4dd1
+Filename: pools/bookworm/v0.6.6/php8.2-relay-0.6.6-php8.2-debian_amd64.deb
+Size: 1294776
+MD5sum: fa3748f590e34aa72cd43c11c971c07f
+SHA1: 125e06a5adc8effba63e0fa06720943d8fc88535
+SHA256: 34862d9ce3fd237c95167c758e763579b250e60d24e98ab5bd8c8d82fffe14c9
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -6961,19 +7172,19 @@ Vendor: CacheWerk, Inc.
 
 Package: php8.2-relay
 Source: php-relay
-Version: 0.6.8
+Version: 0.6.7
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 2189
+Installed-Size: 4093
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.2-common, php8.2-igbinary, php8.2-msgpack
-Replaces: php-relay (<< 0.6.8)
+Replaces: php-relay (<< 0.6.7)
 Provides: php-relay
-Filename: pools/bookworm/v0.6.8/php8.2-relay-0.6.8-php8.2-debian_amd64.deb
-Size: 774294
-MD5sum: 535750d3e1cb4de8eac7361c91e3c7d4
-SHA1: 851766a90edb2ca08cf617ff4514cb1a8b210f73
-SHA256: e1abbeca00c3fb62fd2ae98c5221294d6569bd285a6ef60debcfedb63341f460
+Filename: pools/bookworm/v0.6.7/php8.2-relay-0.6.7-php8.2-debian+libssl3_amd64.deb
+Size: 1634248
+MD5sum: 465d08d891f113e8e84a23186f8b29f6
+SHA1: ab92978a707063ef16c532d111dc21a37bf050b9
+SHA256: 6be71ccca46536f9b32f8c7cec6337135bcfc766faf432aeb916694c80dd4dd1
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -6996,6 +7207,28 @@ Size: 1635144
 MD5sum: 35c70790c68e54475e150d6a4cb5e9f3
 SHA1: efd749689fb55eaeaebf35cdbf7facf328d7c4d1
 SHA256: 92a214e7898d9fb0f9d257fd348f162545973ba5693a36eb6bc83edbe06e3505
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php8.2-relay
+Source: php-relay
+Version: 0.6.8
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 2189
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.2-common, php8.2-igbinary, php8.2-msgpack
+Replaces: php-relay (<< 0.6.8)
+Provides: php-relay
+Filename: pools/bookworm/v0.6.8/php8.2-relay-0.6.8-php8.2-debian_amd64.deb
+Size: 774294
+MD5sum: 535750d3e1cb4de8eac7361c91e3c7d4
+SHA1: 851766a90edb2ca08cf617ff4514cb1a8b210f73
+SHA256: e1abbeca00c3fb62fd2ae98c5221294d6569bd285a6ef60debcfedb63341f460
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -7335,19 +7568,19 @@ Vendor: CacheWerk, Inc.
 
 Package: php8.3-relay
 Source: php-relay
-Version: 0.6.8
+Version: 0.40.0
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
-Installed-Size: 4092
+Installed-Size: 2364
 Pre-Depends: php-common
 Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.3-common, php8.3-igbinary, php8.3-msgpack
-Replaces: php-relay (<< 0.6.8)
+Replaces: php-relay (<< 0.40.0)
 Provides: php-relay
-Filename: pools/bookworm/v0.6.8/php8.3-relay-0.6.8-php8.3-debian+libssl3_amd64.deb
-Size: 1636354
-MD5sum: f52c7d98a6ae865d90026799ec18103f
-SHA1: d1d2f70da4a63cc412396ffa512359ca31171f60
-SHA256: 39512081ab158231392b50ca0b45f6515082a9079ca7af9959d4f9e95f429454
+Filename: pools/bookworm/v0.40.0/php8.3-relay-0.40.0-php8.3-bookworm_amd64.deb
+Size: 893968
+MD5sum: 522f840cea94f568a445865582925657
+SHA1: 0fc640d8efb0b6052efce39b19333f9da031e5f3
+SHA256: 81043f0d7f5ba0e8bda9b3d33c502ad28d9e91beb79788462568f05234b878f6
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -7370,6 +7603,28 @@ Size: 774742
 MD5sum: 93d890e3c26fb99f3560bfddc0be5436
 SHA1: a305a360e85108955f78831a6213231891f4865b
 SHA256: 1a0e8b2efcd1e780258ddb7a566a479a6e664691664db065d09df48082425da8
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php8.3-relay
+Source: php-relay
+Version: 0.6.8
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 4092
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.3-common, php8.3-igbinary, php8.3-msgpack
+Replaces: php-relay (<< 0.6.8)
+Provides: php-relay
+Filename: pools/bookworm/v0.6.8/php8.3-relay-0.6.8-php8.3-debian+libssl3_amd64.deb
+Size: 1636354
+MD5sum: f52c7d98a6ae865d90026799ec18103f
+SHA1: d1d2f70da4a63cc412396ffa512359ca31171f60
+SHA256: 39512081ab158231392b50ca0b45f6515082a9079ca7af9959d4f9e95f429454
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -7709,6 +7964,28 @@ Vendor: CacheWerk, Inc.
 
 Package: php8.4-relay
 Source: php-relay
+Version: 0.40.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 2376
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.4-common, php8.4-igbinary, php8.4-msgpack
+Replaces: php-relay (<< 0.40.0)
+Provides: php-relay
+Filename: pools/bookworm/v0.40.0/php8.4-relay-0.40.0-php8.4-bookworm_amd64.deb
+Size: 894474
+MD5sum: 64ce60346b7ca278d8f41a8b41ab88e0
+SHA1: 61e473d6fe03fbcd03991b5366cd48477dba4ad3
+SHA256: 547e153b32eea463beb235dfd12823e440c8b4acdea09b3e77a6b86c5d65f0cd
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php8.4-relay
+Source: php-relay
 Version: 0.9.1
 Architecture: amd64
 Maintainer: Relay Team <hello@cachewerk.com>
@@ -7810,6 +8087,28 @@ Size: 701450
 MD5sum: 6558914d9888329aab5aa9f9aed834a5
 SHA1: e724dceb90987784ea3dc3d137211cf8c439e892
 SHA256: fbf720b1308eac7325766ff7e9895d31d1fcf21d509f495e36f08dae79d2ff0d
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: The next-generation caching layer for PHP.
+License: Proprietary
+Vendor: CacheWerk, Inc.
+
+Package: php8.5-relay
+Source: php-relay
+Version: 0.40.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 2376
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2), php8.5-common, php8.5-igbinary, php8.5-msgpack
+Replaces: php-relay (<< 0.40.0)
+Provides: php-relay
+Filename: pools/bookworm/v0.40.0/php8.5-relay-0.40.0-php8.5-bookworm_amd64.deb
+Size: 894278
+MD5sum: 71ad4c50e93bbe0674fb409a018a3bfd
+SHA1: 8b1eb2a4b19352a4956c2fe464b0474d62a62c5b
+SHA256: 42a0ac0c76e00041f5e714a8213dc6bd1966d81bcbe63e8a3b1d0e69ed10b5c1
 Section: php
 Priority: optional
 Homepage: https://relay.so
