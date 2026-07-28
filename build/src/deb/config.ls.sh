@@ -32,6 +32,18 @@ pkg_depends=(
   "libck0 >= 0.7.0"
 )
 
+# LiteSpeed keeps its bundled PHP under /usr/local, so these packages cannot
+# follow the FHS the way the regular ones do. The ini has to stay a conffile
+# despite living outside /etc, or a user's settings would be overwritten on
+# every upgrade.
+pkg_lintian_overrides=(
+  "dir-in-usr-local"
+  "file-in-usr-local"
+  "file-in-unusual-dir"
+  "file-in-usr-marked-as-conffile"
+  "non-etc-file-marked-as-conffile"
+)
+
 fpm_args=(
   "--after-install /root/build/src/deb/after-install.sh"
 )

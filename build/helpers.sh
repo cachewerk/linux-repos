@@ -99,6 +99,15 @@ fpm_build()
     fi
   } > $dest_path/usr/share/doc/$pkg_name/copyright
 
+  # Tags that are correct behaviour here and cannot be resolved without breaking
+  # the package, declared so they stop being reported as defects.
+  if [[ "$type" == "deb" && ${#pkg_lintian_overrides[@]} -gt 0 ]]; then
+    mkdir -p $dest_path/usr/share/lintian/overrides
+    for tag in "${pkg_lintian_overrides[@]}"; do
+      echo "$pkg_name binary: $tag"
+    done > $dest_path/usr/share/lintian/overrides/$pkg_name
+  fi
+
   pkg_version=${version#v}
   pkg_filename="${pkg_name}-${pkg_version}-php${php_version}-${pkg_identifier}-${pkg_arch}.${type}"
 
