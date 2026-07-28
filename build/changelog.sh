@@ -1,16 +1,11 @@
 #!/bin/bash
 
-# Renders Debian and RPM changelogs from the cachewerk/relay GitHub releases feed.
+# Renders changelogs from the relay GitHub releases feed.
 #
 #   changelog.sh <releases.json> <version> <out_dir>
 #
-# Writes:
-#   $out_dir/changelog.deb.tpl   Debian format, with @PKG@ standing in for the binary
-#                                package name (substituted per package by fpm_build)
-#   $out_dir/changelog.rpm       RPM %changelog format
-#
-# Releases newer than $version are dropped so a rebuild of an older tag does not
-# claim changes it does not contain.
+# Writes changelog.deb.tpl (@PKG@ is substituted per package by fpm_build),
+# changelog.rpm, and changelog.epoch.
 
 set -e
 
@@ -20,8 +15,7 @@ out=$3
 
 maintainer="Relay Team <hello@cachewerk.com>"
 
-# Release notes are written for GitHub and routinely exceed 80 columns, which
-# lintian flags as debian-changelog-line-too-long. Re-wrap the bullet lines.
+# release notes routinely exceed lintian's 80 column limit
 wrap_bullets()
 {
   awk -v prefix="$1" -v cont="$2" -v max=76 '
@@ -38,15 +32,14 @@ wrap_bullets()
     }'
 }
 
-# The topmost entry has to match the version being packaged, so refuse to run
-# rather than emit a changelog that claims the wrong release.
+# the topmost entry has to match the version being packaged
 if ! jq -e --arg v "$version" 'any(.[]; (.draft | not) and (.tag_name | ltrimstr("v")) == $v)' \
      "$releases" > /dev/null; then
   echo "No published release found for $version" >&2
   exit 1
 fi
 
-# Newest first, drop drafts, drop anything above the version being built.
+# newest first, without drafts or anything above the version being built
 filtered=$(jq --arg v "$version" '
   map(select(.draft | not))
   | sort_by(.published_at)
@@ -56,7 +49,7 @@ filtered=$(jq --arg v "$version" '
   | .[$i:]
 ' "$releases")
 
-# Bullet lines out of the Keep-a-Changelog markdown body, "### Added" headings dropped.
+# bullet lines only, headings dropped
 bullets='
   (.body // "")
   | gsub("\r"; "")
@@ -87,9 +80,7 @@ echo "$filtered" | jq -r --arg m "$maintainer" "
     + \"\n\"
 " | wrap_bullets "- " "  " > "$out/changelog.rpm"
 
-# Timestamp of the release being packaged. fpm stamps the gzipped changelog with
-# the source date epoch, and lintian flags the package when that is newer than
-# the newest changelog entry, so the two have to come from the same place.
+# the source date epoch must not be newer than the newest changelog entry
 echo "$filtered" | jq -r '.[0].published_at | fromdateiso8601' > "$out/changelog.epoch"
 
 echo "Wrote $(grep -c '^@PKG@' "$out/changelog.deb.tpl") deb entries, $(grep -c '^\* ' "$out/changelog.rpm") rpm entries"

@@ -1,5 +1,5 @@
 
-# NOTE: must NOT be named pkg_*, main() runs `unset ${!pkg_@}` before every build
+# must not be named pkg_*, main() unsets those before every build
 read -r -d '' relay_description <<'DESCRIPTION' || true
 Next-generation caching layer for PHP
 Relay is a fast, persistent, in-memory cache for PHP that serves as a drop-in
@@ -66,8 +66,6 @@ fpm_build()
     cp $src_path/relay.ini $dest_path/$config_file
   done
 
-  # Debian policy requires /usr/share/doc/<pkg>/copyright; rpm wants documentation.
-  # The year comes from the release date so the file stays reproducible.
   mkdir -p $dest_path/usr/share/doc/$pkg_name
   {
     echo "Copyright (C) 2021-$(date -u -d @$(cat /root/build/changelog.epoch) +%Y) CacheWerk, Inc."
@@ -78,9 +76,7 @@ fpm_build()
     echo
     cat $src_path/LICENSE
 
-    # relay-pkg.so statically links hiredis and ck, so their notices have to
-    # ship with it. The plain relay.so links both dynamically and is covered by
-    # the distribution's own packages. lz4 and zstd are dlopen'd either way.
+    # only the -pkg builds statically link these
     if [[ "$pkg_binary" == *-pkg* ]]; then
       for bundled in hiredis ck; do
         echo
@@ -91,16 +87,13 @@ fpm_build()
         cat /root/build/licenses/$bundled.txt
       done
 
-      # ck carries an Apache-2.0 notice for src/ck_hp.c. Debian policy wants the
-      # shipped copy referenced rather than the notice standing alone.
+      # ck's notice for src/ck_hp.c is Apache-2.0, which must reference the shipped copy
       echo
       echo "On Debian systems the complete text of the Apache License, Version 2.0"
       echo "can be found in /usr/share/common-licenses/Apache-2.0."
     fi
   } > $dest_path/usr/share/doc/$pkg_name/copyright
 
-  # Tags that are correct behaviour here and cannot be resolved without breaking
-  # the package, declared so they stop being reported as defects.
   if [[ "$type" == "deb" && ${#pkg_lintian_overrides[@]} -gt 0 ]]; then
     mkdir -p $dest_path/usr/share/lintian/overrides
     for tag in "${pkg_lintian_overrides[@]}"; do
@@ -134,17 +127,15 @@ fpm_build()
     "--deb-no-default-config-files"
   )
 
-  # `Vendor` is a real rpm tag but not a valid Debian control field. fpm guards
-  # the deb line with `!vendor.empty?`, so an explicit empty value omits it.
-  # Don't try the same on --license: that line is emitted unconditionally, so an
-  # empty value adds `empty-field` on top of the existing `unknown-field`.
+  # deb has no Vendor field; an empty value omits it. Don't do the same for
+  # --license, fpm emits that line unconditionally and it'd end up empty.
   if [[ "$type" == "rpm" ]]; then
     args+=("--vendor 'CacheWerk, Inc.'")
   else
     args+=("--vendor ''")
   fi
 
-  # changelogs: deb entries embed the binary package name, rpm entries do not
+  # deb changelog entries embed the package name, rpm ones don't
   if [[ "$type" == "deb" ]]; then
     sed "s/@PKG@/$pkg_name/g" /root/build/changelog.deb.tpl > /tmp/changelog-$pkg_name.deb
     args+=("--deb-changelog /tmp/changelog-$pkg_name.deb")

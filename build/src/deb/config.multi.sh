@@ -32,8 +32,7 @@ pkg_depends=(
 )
 
 fpm_args=(
-  # Relay dlopens these at startup rather than linking them, so they are
-  # wanted but not required.
+  # dlopen'd at startup, not linked
   "--deb-recommends 'liblz4-1 (>= 0.0~r130)'"
   "--deb-recommends 'libzstd1 (>= 1.3.2)'"
   "--replaces 'php-relay << ${version#v}'"

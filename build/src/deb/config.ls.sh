@@ -30,10 +30,8 @@ pkg_depends=(
   "libck0 >= 0.7.0"
 )
 
-# LiteSpeed keeps its bundled PHP under /usr/local, so these packages cannot
-# follow the FHS the way the regular ones do. The ini has to stay a conffile
-# despite living outside /etc, or a user's settings would be overwritten on
-# every upgrade.
+# LiteSpeed keeps its bundled PHP under /usr/local, and the ini must stay a
+# conffile there or user settings are lost on upgrade
 pkg_lintian_overrides=(
   "dir-in-usr-local"
   "file-in-usr-local"
@@ -43,8 +41,7 @@ pkg_lintian_overrides=(
 )
 
 fpm_args=(
-  # Relay dlopens these at startup rather than linking them, so they are
-  # wanted but not required.
+  # dlopen'd at startup, not linked
   "--deb-recommends 'liblz4-1 (>= 0.0~r130)'"
   "--deb-recommends 'libzstd1 (>= 1.3.2)'"
   "--after-install /root/build/src/deb/after-install.sh"
