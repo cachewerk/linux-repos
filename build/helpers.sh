@@ -1,7 +1,7 @@
 
 # must not be named pkg_*, main() unsets those before every build
 read -r -d '' relay_description <<'DESCRIPTION' || true
-The Fastest Redis client for PHP.
+Fastest Redis client for PHP
 100x faster cache reads, near-zero bandwidth, no code changes required.
 Relay keeps a partial replica of the Redis or Valkey data set inside the
 PHP process, avoiding network round trips.

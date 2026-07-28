@@ -7,7 +7,7 @@
 # Writes deb.tpl (@PKG@ is substituted per package by fpm_build), rpm and
 # epoch into <out_dir>.
 
-set -e
+set -euo pipefail
 
 releases=$1
 version=${2#v}
