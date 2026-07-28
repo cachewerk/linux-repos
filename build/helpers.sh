@@ -67,10 +67,10 @@ fpm_build()
   done
 
   # Debian policy requires /usr/share/doc/<pkg>/copyright; rpm wants documentation.
-  # The year comes from the binary's mtime so the file stays reproducible.
+  # The year comes from the release date so the file stays reproducible.
   mkdir -p $dest_path/usr/share/doc/$pkg_name
   {
-    echo "Copyright (C) 2021-$(date -u -d @$(stat -c %Y $src_path/relay.so) +%Y) CacheWerk, Inc."
+    echo "Copyright (C) 2021-$(date -u -d @$(cat /root/build/changelog.epoch) +%Y) CacheWerk, Inc."
     echo "All rights reserved."
     echo
     echo "Relay is proprietary software, licensed under the End-User License"
@@ -86,7 +86,6 @@ fpm_build()
     "--input-type dir"
     "--output-type $type"
 
-    "--vendor 'CacheWerk, Inc.'"
     "--maintainer 'Relay Team <hello@cachewerk.com>'"
     "--description '$relay_description'"
     "--url 'https://relay.so'"
@@ -97,7 +96,7 @@ fpm_build()
     "--architecture $pkg_arch"
 
     "--package dist/$pkg_filename"
-    "--source-date-epoch-default $(stat -c %Y $src_path/relay.so)"
+    "--source-date-epoch-default $(cat /root/build/changelog.epoch)"
 
     "--template-value binary_paths='$pkg_binary_dest'"
     "--template-value php_version='$php_version'"
@@ -105,6 +104,16 @@ fpm_build()
     "--deb-priority 'optional'"
     "--deb-no-default-config-files"
   )
+
+  # `Vendor` is a real rpm tag but not a valid Debian control field. fpm guards
+  # the deb line with `!vendor.empty?`, so an explicit empty value omits it.
+  # Don't try the same on --license: that line is emitted unconditionally, so an
+  # empty value adds `empty-field` on top of the existing `unknown-field`.
+  if [[ "$type" == "rpm" ]]; then
+    args+=("--vendor 'CacheWerk, Inc.'")
+  else
+    args+=("--vendor ''")
+  fi
 
   # changelogs: deb entries embed the binary package name, rpm entries do not
   if [[ "$type" == "deb" ]]; then

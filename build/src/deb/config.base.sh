@@ -24,4 +24,9 @@ pkg_depends=(
 fpm_args=(
   "--deb-pre-depends 'php-common'"
   "--after-install /root/build/src/deb/after-install.sh"
+
+  # This package ships no files of its own. The word "metapackage" is what tells
+  # lintian to skip its empty-package and arch-dependent-files checks, so keep
+  # it. The $'...' quoting is required: fpm does not expand \n in --description.
+  "--description $'Relay metapackage for PHP $php_version\nThis dependency metapackage pulls in the Relay extension for PHP\n$php_version along with its companion extensions.'"
 )

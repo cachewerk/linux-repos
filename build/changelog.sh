@@ -87,4 +87,9 @@ echo "$filtered" | jq -r --arg m "$maintainer" "
     + \"\n\"
 " | wrap_bullets "- " "  " > "$out/changelog.rpm"
 
+# Timestamp of the release being packaged. fpm stamps the gzipped changelog with
+# the source date epoch, and lintian flags the package when that is newer than
+# the newest changelog entry, so the two have to come from the same place.
+echo "$filtered" | jq -r '.[0].published_at | fromdateiso8601' > "$out/changelog.epoch"
+
 echo "Wrote $(grep -c '^@PKG@' "$out/changelog.deb.tpl") deb entries, $(grep -c '^\* ' "$out/changelog.rpm") rpm entries"
