@@ -21,8 +21,6 @@ pkg_config_dest=(
 
 pkg_depends=(
     "libc6 >= 2.17"
-    "liblz4-1 >= 0.0~r130"
-    "libzstd1 >= 1.3.2"
     "php$php_version-common"
     "php$php_version-igbinary"
     "php$php_version-msgpack"
@@ -34,8 +32,12 @@ pkg_depends=(
 )
 
 fpm_args=(
+  # dlopen'd at startup since Relay v0.40.0, not linked
+  "--deb-recommends 'liblz4-1 (>= 0.0~r130)'"
+  "--deb-recommends 'libzstd1 (>= 1.3.2)'"
   "--replaces 'php-relay << ${version#v}'"
   "--deb-pre-depends 'php-common'"
   "--deb-field 'Source: php-relay'"
   "--after-install /root/build/src/deb/after-install-multi.sh"
+  "--after-remove /root/build/src/deb/after-remove-multi.sh"
 )

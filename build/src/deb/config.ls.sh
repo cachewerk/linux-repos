@@ -20,8 +20,6 @@ pkg_config_dest=(
 
 pkg_depends=(
     "libc6 >= 2.17"
-    "liblz4-1 >= 0.0~r130"
-    "libzstd1 >= 1.3.2"
     "lsphp$php_version_short-common"
     "lsphp$php_version_short-igbinary"
     "lsphp$php_version_short-msgpack"
@@ -32,6 +30,19 @@ pkg_depends=(
   "libck0 >= 0.7.0"
 )
 
+# LiteSpeed keeps its bundled PHP under /usr/local, and the ini must stay a
+# conffile there or user settings are lost on upgrade
+pkg_lintian_overrides=(
+  "dir-in-usr-local"
+  "file-in-usr-local"
+  "file-in-unusual-dir"
+  "file-in-usr-marked-as-conffile"
+  "non-etc-file-marked-as-conffile"
+)
+
 fpm_args=(
+  # dlopen'd at startup since Relay v0.40.0, not linked
+  "--deb-recommends 'liblz4-1 (>= 0.0~r130)'"
+  "--deb-recommends 'libzstd1 (>= 1.3.2)'"
   "--after-install /root/build/src/deb/after-install.sh"
 )

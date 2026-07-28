@@ -24,4 +24,5 @@ pkg_depends=(
 fpm_args=(
   "--deb-pre-depends 'php-common'"
   "--after-install /root/build/src/deb/after-install.sh"
+  "--description $'Relay metapackage for PHP $php_version\nThis dependency metapackage pulls in the Relay extension for PHP\n$php_version.'"
 )

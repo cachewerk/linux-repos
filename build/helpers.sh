@@ -1,4 +1,12 @@
 
+# must not be named pkg_*, main() unsets those before every build
+read -r -d '' relay_description <<'DESCRIPTION' || true
+Fastest Redis client for PHP
+100x faster cache reads, near-zero bandwidth, no code changes required.
+Relay keeps a partial replica of the Redis or Valkey data set inside the
+PHP process, avoiding network round trips.
+DESCRIPTION
+
 main()
 {
   rm -rf /tmp/relay*
@@ -57,6 +65,41 @@ fpm_build()
     cp $src_path/relay.ini $dest_path/$config_file
   done
 
+  mkdir -p $dest_path/usr/share/doc/$pkg_name
+  {
+    echo "Copyright (C) 2021-$(date -u -d @$(cat /root/build/changelog/epoch) +%Y) CacheWerk, Inc."
+    echo "All rights reserved."
+    echo
+    echo "Relay is proprietary software, licensed under the End-User License"
+    echo "Agreement reproduced below."
+    echo
+    cat $src_path/LICENSE
+
+    # only the -pkg builds statically link these
+    if [[ "$pkg_binary" == *-pkg* ]]; then
+      for bundled in hiredis ck; do
+        echo
+        echo "------------------------------------------------------------------------------"
+        echo
+        echo "This build statically links $bundled, distributed under the following terms:"
+        echo
+        cat /root/build/licenses/$bundled.txt
+      done
+
+      # ck's notice for src/ck_hp.c is Apache-2.0, which must reference the shipped copy
+      echo
+      echo "On Debian systems the complete text of the Apache License, Version 2.0"
+      echo "can be found in /usr/share/common-licenses/Apache-2.0."
+    fi
+  } > $dest_path/usr/share/doc/$pkg_name/copyright
+
+  if [[ "$type" == "deb" && ${#pkg_lintian_overrides[@]} -gt 0 ]]; then
+    mkdir -p $dest_path/usr/share/lintian/overrides
+    for tag in "${pkg_lintian_overrides[@]}"; do
+      echo "$pkg_name binary: $tag"
+    done > $dest_path/usr/share/lintian/overrides/$pkg_name
+  fi
+
   pkg_version=${version#v}
   pkg_filename="${pkg_name}-${pkg_version}-php${php_version}-${pkg_identifier}-${pkg_arch}.${type}"
 
@@ -64,9 +107,8 @@ fpm_build()
     "--input-type dir"
     "--output-type $type"
 
-    "--vendor 'CacheWerk, Inc.'"
     "--maintainer 'Relay Team <hello@cachewerk.com>'"
-    "--description 'The next-generation caching layer for PHP.'"
+    "--description '$relay_description'"
     "--url 'https://relay.so'"
     "--license 'Proprietary'"
     "--category 'php'"
@@ -75,7 +117,7 @@ fpm_build()
     "--architecture $pkg_arch"
 
     "--package dist/$pkg_filename"
-    "--source-date-epoch-default $(stat -c %Y $src_path/relay.so)"
+    "--source-date-epoch-default $(cat /root/build/changelog/epoch)"
 
     "--template-value binary_paths='$pkg_binary_dest'"
     "--template-value php_version='$php_version'"
@@ -83,6 +125,22 @@ fpm_build()
     "--deb-priority 'optional'"
     "--deb-no-default-config-files"
   )
+
+  # deb has no Vendor field; an empty value omits it. Don't do the same for
+  # --license, fpm emits that line unconditionally and it'd end up empty.
+  if [[ "$type" == "rpm" ]]; then
+    args+=("--vendor 'CacheWerk, Inc.'")
+  else
+    args+=("--vendor ''")
+  fi
+
+  # deb changelog entries embed the package name, rpm ones don't
+  if [[ "$type" == "deb" ]]; then
+    sed "s/@PKG@/$pkg_name/g" /root/build/changelog/deb.tpl > /tmp/changelog-$pkg_name.deb
+    args+=("--deb-changelog /tmp/changelog-$pkg_name.deb")
+  else
+    args+=("--rpm-changelog /root/build/changelog/rpm")
+  fi
 
   if [ ! -z "$pkg_provides" ]; then
     args+=("--provides '$pkg_provides'")

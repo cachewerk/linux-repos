@@ -1,7 +1,6 @@
 #!/bin/bash
 
 pkg_name="php-relay"
-pkg_provides="php-relay"
 pkg_binary="relay-pkg.so"
 pkg_identifier="el8"
 
@@ -17,8 +16,6 @@ pkg_config_dest=(
 
 pkg_depends=(
     "openssl"
-    "libzstd"
-    "lz4"
     "php(api) = $php_api-64"
     "php-json"
     "php-session"
@@ -27,5 +24,8 @@ pkg_depends=(
 )
 
 fpm_args=(
+  # dlopen'd at startup since Relay v0.40.0, not linked
+  "--rpm-tag 'Recommends: libzstd'"
+  "--rpm-tag 'Recommends: lz4'"
   "--after-install /root/build/src/rpm/after-install.sh"
 )
