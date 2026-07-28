@@ -1,4 +1,13 @@
 
+# NOTE: must NOT be named pkg_*, main() runs `unset ${!pkg_@}` before every build
+read -r -d '' relay_description <<'DESCRIPTION' || true
+Next-generation caching layer for PHP
+Relay is a fast, persistent, in-memory cache for PHP that serves as a drop-in
+replacement for PhpRedis. It keeps a partial replica of the Redis or Valkey
+data set inside the PHP process, avoiding network round trips and decoding
+costs for cached keys.
+DESCRIPTION
+
 main()
 {
   rm -rf /tmp/relay*
@@ -57,6 +66,19 @@ fpm_build()
     cp $src_path/relay.ini $dest_path/$config_file
   done
 
+  # Debian policy requires /usr/share/doc/<pkg>/copyright; rpm wants documentation.
+  # The year comes from the binary's mtime so the file stays reproducible.
+  mkdir -p $dest_path/usr/share/doc/$pkg_name
+  {
+    echo "Copyright (C) 2021-$(date -u -d @$(stat -c %Y $src_path/relay.so) +%Y) CacheWerk, Inc."
+    echo "All rights reserved."
+    echo
+    echo "Relay is proprietary software, licensed under the End-User License"
+    echo "Agreement reproduced below."
+    echo
+    cat $src_path/LICENSE
+  } > $dest_path/usr/share/doc/$pkg_name/copyright
+
   pkg_version=${version#v}
   pkg_filename="${pkg_name}-${pkg_version}-php${php_version}-${pkg_identifier}-${pkg_arch}.${type}"
 
@@ -66,7 +88,7 @@ fpm_build()
 
     "--vendor 'CacheWerk, Inc.'"
     "--maintainer 'Relay Team <hello@cachewerk.com>'"
-    "--description 'The next-generation caching layer for PHP.'"
+    "--description '$relay_description'"
     "--url 'https://relay.so'"
     "--license 'Proprietary'"
     "--category 'php'"
@@ -83,6 +105,14 @@ fpm_build()
     "--deb-priority 'optional'"
     "--deb-no-default-config-files"
   )
+
+  # changelogs: deb entries embed the binary package name, rpm entries do not
+  if [[ "$type" == "deb" ]]; then
+    sed "s/@PKG@/$pkg_name/g" /root/build/changelog.deb.tpl > /tmp/changelog-$pkg_name.deb
+    args+=("--deb-changelog /tmp/changelog-$pkg_name.deb")
+  else
+    args+=("--rpm-changelog /root/build/changelog.rpm")
+  fi
 
   if [ ! -z "$pkg_provides" ]; then
     args+=("--provides '$pkg_provides'")
