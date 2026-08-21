@@ -18,6 +18,22 @@ declare -A php_api=(
   ["8.5"]=20250925
 )
 
+# LiteSpeed does not ship an `lsphp` runtime for every PHP version on every EL
+# release, and an `ls` package for a missing one carries a `Requires` that no
+# repository can ever satisfy. Derived from the `lsphpNN(api)` provides in
+# https://rpms.litespeedtech.com/centos/<el>/<arch>/ -- recheck when adding a
+# PHP version or an EL release.
+declare -A lsphp_versions=(
+  ["el7 x86_64"]="7.4 8.0 8.1 8.2 8.3"              # no 8.4/8.5
+  ["el7 aarch64"]=""                                 # no aarch64 repository
+  ["el8 x86_64"]="7.4 8.0 8.1 8.2 8.3 8.4 8.5"
+  ["el8 aarch64"]="7.4 8.0 8.1 8.2 8.3 8.4 8.5"
+  ["el9 x86_64"]="8.0 8.1 8.2 8.3 8.4 8.5"          # no 7.4
+  ["el9 aarch64"]="7.4 8.0 8.1 8.2 8.3 8.4 8.5"
+  ["el10 x86_64"]="8.1 8.2 8.3 8.4 8.5"             # no 7.4/8.0
+  ["el10 aarch64"]="8.1 8.2 8.3 8.4 8.5"            # no 7.4/8.0
+)
+
 packages=()
 
 for deb in "${deb_dists[@]}"; do
@@ -48,14 +64,26 @@ for el in "${el_dists[@]}"; do
   url_distro=$(echo $el | sed 's/el7/centos7/; s/el8/centos8/')
 
   for arch in x86_64 aarch64; do
+    # an unrecorded combination would silently ship no `ls` packages at all
+    if [[ -z "${lsphp_versions["$el $arch"]+set}" ]]; then
+      echo "Error: no lsphp availability recorded for $el $arch" >&2
+      exit 1
+    fi
+
     for php in 7.4 8.0 8.1 8.2 8.3 8.4 8.5; do
       api=${php_api[$php]}
+      url="$baseurl-php$php-$url_distro-${arch/_/-}.tar.gz"
 
       packages+=(
-        "$el rpm single.$el $arch $php $api $baseurl-php$php-$url_distro-${arch/_/-}.tar.gz"
-        "$el rpm multi.$el  $arch $php $api $baseurl-php$php-$url_distro-${arch/_/-}.tar.gz"
-        "$el rpm ls.$el     $arch $php $api $baseurl-php$php-$url_distro-${arch/_/-}.tar.gz"
+        "$el rpm single.$el $arch $php $api $url"
+        "$el rpm multi.$el  $arch $php $api $url"
       )
+
+      if [[ " ${lsphp_versions["$el $arch"]} " == *" $php "* ]]; then
+        packages+=(
+          "$el rpm ls.$el     $arch $php $api $url"
+        )
+      fi
     done
   done
 done

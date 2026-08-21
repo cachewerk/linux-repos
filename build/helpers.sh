@@ -49,7 +49,16 @@ fpm_build()
 
   if [[ ! -d "$src_path" ]]; then
     echo "Downloading $pkg_url"
-    curl -s ${pkg_url//+/%2B} | tar xz -C /tmp
+
+    # `curl` without `-f` exits 0 on a 404 and pipes the error page into `tar`,
+    # which then fails with a misleading "not in gzip format"
+    if ! curl -fsS "${pkg_url//+/%2B}" -o "$src_path.tar.gz"; then
+      echo "Error: no build artifact at $pkg_url" >&2
+      return 1
+    fi
+
+    tar xzf "$src_path.tar.gz" -C /tmp
+    rm -f "$src_path.tar.gz"
   fi
 
   rm -rf $dest_path

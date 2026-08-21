@@ -4,10 +4,13 @@ export PATH=/opt/gnupg22/bin:$PATH
 
 gpg --batch --import key-private.asc
 
+source build/distros.sh
+
 cd rpm
 
-for DISTRO in el7 el8 el9; do
-  pushd $DISTRO
+for DISTRO in "${el_dists[@]}"; do
+  mkdir -p "$DISTRO"
+  pushd "$DISTRO"
     createrepo \
       --update --database --pretty \
       --unique-md-filenames .
