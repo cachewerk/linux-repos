@@ -19,4 +19,5 @@ el_dists=(
   el7
   el8
   el9
+  el10
 )

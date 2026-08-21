@@ -29,3 +29,11 @@ gpgkey=https://repos.r2.relay.so/key.gpg
 gpgcheck=0
 repo_gpgcheck=1
 enabled=0
+
+[cachewerk-el10]
+name=CacheWerk Enterprise Linux 10
+baseurl=https://repos.r2.relay.so/rpm/el10/
+gpgkey=https://repos.r2.relay.so/key.gpg
+gpgcheck=0
+repo_gpgcheck=1
+enabled=0

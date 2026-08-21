@@ -50,11 +50,21 @@ for el in "${el_dists[@]}"; do
   for arch in x86_64 aarch64; do
     for php in 7.4 8.0 8.1 8.2 8.3 8.4 8.5; do
       api=${php_api[$php]}
+      url="$baseurl-php$php-$url_distro-${arch/_/-}.tar.gz"
 
       packages+=(
-        "$el rpm single.$el $arch $php $api $baseurl-php$php-$url_distro-${arch/_/-}.tar.gz"
-        "$el rpm multi.$el  $arch $php $api $baseurl-php$php-$url_distro-${arch/_/-}.tar.gz"
-        "$el rpm ls.$el     $arch $php $api $baseurl-php$php-$url_distro-${arch/_/-}.tar.gz"
+        "$el rpm single.$el $arch $php $api $url"
+        "$el rpm multi.$el  $arch $php $api $url"
+      )
+
+      # LiteSpeed publishes no lsphp74/lsphp80 for EL10, so an `ls` package for
+      # those would carry a `Requires` no repository can ever satisfy
+      if [[ "$el" == "el10" && ("$php" == "7.4" || "$php" == "8.0") ]]; then
+        continue
+      fi
+
+      packages+=(
+        "$el rpm ls.$el     $arch $php $api $url"
       )
     done
   done

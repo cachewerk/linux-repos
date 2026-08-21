@@ -74,15 +74,11 @@ jobs:
             --no-progress \
             --acl public-read \
             --endpoint-url ${{ env.R2_ENDPOINT }}
-          aws s3 sync rpm/el7/repodata s3://relay-repos/rpm/el7/repodata/ \
-            --no-progress \
-            --acl public-read \
-            --endpoint-url ${{ env.R2_ENDPOINT }}
-          aws s3 sync rpm/el8/repodata s3://relay-repos/rpm/el8/repodata/ \
-            --no-progress \
-            --acl public-read \
-            --endpoint-url ${{ env.R2_ENDPOINT }}
-          aws s3 sync rpm/el9/repodata s3://relay-repos/rpm/el9/repodata/ \
-            --no-progress \
-            --acl public-read \
-            --endpoint-url ${{ env.R2_ENDPOINT }}
+          source build/distros.sh
+
+          for distro in "${el_dists[@]}"; do
+            aws s3 sync "rpm/$distro/repodata" "s3://relay-repos/rpm/$distro/repodata/" \
+              --no-progress \
+              --acl public-read \
+              --endpoint-url ${{ env.R2_ENDPOINT }}
+          done

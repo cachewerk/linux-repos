@@ -1,0 +1,31 @@
+#!/bin/bash
+
+pkg_name="lsphp$php_version_short-relay"
+pkg_binary="relay-pkg.so"
+pkg_identifier="el10"
+
+pkg_binary_dest=(
+    "usr/local/lsws/lsphp$php_version_short/lib64/php/modules"
+)
+
+pkg_config_dest=(
+    "usr/local/lsws/lsphp$php_version_short/etc/php.d/60-relay.ini"
+)
+
+pkg_depends=(
+    "openssl"
+    # "hiredis >= 1.1.0"
+    # "ck >= 0.7.0"
+    "lsphp$php_version_short(api) = $php_api"
+    "lsphp$php_version_short-json"
+    "lsphp$php_version_short-session"
+    "lsphp$php_version_short-pecl-msgpack"
+    "lsphp$php_version_short-pecl-igbinary"
+)
+
+fpm_args=(
+  # dlopen'd at startup since Relay v0.40.0, not linked
+  "--rpm-tag 'Recommends: libzstd'"
+  "--rpm-tag 'Recommends: lz4'"
+  "--after-install /root/build/src/rpm/after-install.sh"
+)

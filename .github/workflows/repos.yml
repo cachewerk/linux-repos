@@ -145,12 +145,13 @@ jobs:
 
       - name: Copy packages
         run: |
-          mkdir -p rpm/el7/${{ env.TAG }}
-          find artifacts -name '*el7*.rpm' -exec cp {} rpm/el7/${{ env.TAG }} \;
-          mkdir -p rpm/el8/${{ env.TAG }}
-          find artifacts -name '*el8*.rpm' -exec cp {} rpm/el8/${{ env.TAG }} \;
-          mkdir -p rpm/el9/${{ env.TAG }}
-          find artifacts -name '*el9*.rpm' -exec cp {} rpm/el9/${{ env.TAG }} \;
+          source build/distros.sh
+
+          for distro in "${el_dists[@]}"; do
+            mkdir -p "rpm/$distro/${{ env.TAG }}"
+            find artifacts -name "*-$distro-*.rpm" \
+              -exec cp {} "rpm/$distro/${{ env.TAG }}" \;
+          done
 
       - name: Build the Docker image
         run: docker build . --tag rpm --file build/rpm.Dockerfile
@@ -199,15 +200,11 @@ jobs:
             --no-progress \
             --acl public-read \
             --endpoint-url ${{ env.R2_ENDPOINT }}
-          aws s3 sync rpm/el7/repodata s3://relay-repos/rpm/el7/repodata/ \
-            --no-progress \
-            --acl public-read \
-            --endpoint-url ${{ env.R2_ENDPOINT }}
-          aws s3 sync rpm/el8/repodata s3://relay-repos/rpm/el8/repodata/ \
-            --no-progress \
-            --acl public-read \
-            --endpoint-url ${{ env.R2_ENDPOINT }}
-          aws s3 sync rpm/el9/repodata s3://relay-repos/rpm/el9/repodata/ \
-            --no-progress \
-            --acl public-read \
-            --endpoint-url ${{ env.R2_ENDPOINT }}
+          source build/distros.sh
+
+          for distro in "${el_dists[@]}"; do
+            aws s3 sync "rpm/$distro/repodata" "s3://relay-repos/rpm/$distro/repodata/" \
+              --no-progress \
+              --acl public-read \
+              --endpoint-url ${{ env.R2_ENDPOINT }}
+          done
