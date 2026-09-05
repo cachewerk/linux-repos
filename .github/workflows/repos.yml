@@ -91,6 +91,10 @@ jobs:
             --no-progress \
             --acl public-read \
             --endpoint-url ${{ env.R2_ENDPOINT }}
+          aws s3 cp deb/sources.list s3://relay-repos/deb/ \
+            --no-progress \
+            --acl public-read \
+            --endpoint-url ${{ env.R2_ENDPOINT }}
           aws s3 sync deb s3://relay-repos/deb \
             --exclude "*" \
             --include "*${{ env.TAG }}*" \
@@ -190,6 +194,10 @@ jobs:
           AWS_DEFAULT_OUTPUT: json
         run: |
           aws s3 cp key.gpg s3://relay-repos/ \
+            --no-progress \
+            --acl public-read \
+            --endpoint-url ${{ env.R2_ENDPOINT }}
+          aws s3 cp rpm/el.repo s3://relay-repos/rpm/ \
             --no-progress \
             --acl public-read \
             --endpoint-url ${{ env.R2_ENDPOINT }}

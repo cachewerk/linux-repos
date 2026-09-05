@@ -10,6 +10,8 @@ symlink_pkg='pkg=${0/pool/$1}; mkdir -p $(dirname $pkg); [ ! -L $pkg ] && ln -sr
 
 cd deb
 
+printf 'deb https://repos.r2.relay.so/deb %s main\n' "${deb_dists[@]}" > sources.list
+
 for dist in "${deb_dists[@]}"; do
   find pool -name "*$dist*.deb" -exec bash -c "$symlink_pkg" {} pools/$dist \;
 
