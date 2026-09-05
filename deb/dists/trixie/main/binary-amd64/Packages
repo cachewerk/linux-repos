@@ -88,6 +88,27 @@ Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
 
+Package: lsphp74-relay
+Version: 0.50.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1506
+Depends: libc6 (>= 2.17), lsphp74-common, lsphp74-igbinary, lsphp74-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Filename: pools/trixie/v0.50.0/lsphp74-relay-0.50.0-php7.4-trixie_amd64.deb
+Size: 566966
+MD5sum: 5f312d624eaf19e1a3be82de7153bd7a
+SHA1: 86072d78194830c7e9edbfa2a843bfeb5f94201d
+SHA256: 9e7ec80b199bbc4aca44773aa7a99454e3ed177fe7f08289c2eb142b944eeeaa
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
+
 Package: lsphp80-relay
 Version: 0.20.0
 Architecture: amd64
@@ -177,6 +198,27 @@ Homepage: https://relay.so
 Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
+
+Package: lsphp80-relay
+Version: 0.50.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1834
+Depends: libc6 (>= 2.17), lsphp80-common, lsphp80-igbinary, lsphp80-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Filename: pools/trixie/v0.50.0/lsphp80-relay-0.50.0-php8.0-trixie_amd64.deb
+Size: 651936
+MD5sum: 7019ea3d00da26dffb917bc5cbaf2812
+SHA1: e647d73098992682be4494c0e0069621ca7eaed2
+SHA256: 3c42eafa3e47fbcd9a47e2b0418914ce6dfebe0e5d4d38337c39ebf0f1660ed1
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
 
 Package: lsphp81-relay
 Version: 0.20.0
@@ -268,6 +310,27 @@ Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
 
+Package: lsphp81-relay
+Version: 0.50.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1838
+Depends: libc6 (>= 2.17), lsphp81-common, lsphp81-igbinary, lsphp81-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Filename: pools/trixie/v0.50.0/lsphp81-relay-0.50.0-php8.1-trixie_amd64.deb
+Size: 653532
+MD5sum: 18b03642f9e0e4987e04779d97b8ab38
+SHA1: fa6ba524c7e812901a558b711fc08377730c442d
+SHA256: dea0ce293ecbf761864ee690ffb3571a956536801acb280566787bf386016717
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
+
 Package: lsphp82-relay
 Version: 0.20.0
 Architecture: amd64
@@ -357,6 +420,27 @@ Homepage: https://relay.so
 Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
+
+Package: lsphp82-relay
+Version: 0.50.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1850
+Depends: libc6 (>= 2.17), lsphp82-common, lsphp82-igbinary, lsphp82-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Filename: pools/trixie/v0.50.0/lsphp82-relay-0.50.0-php8.2-trixie_amd64.deb
+Size: 660080
+MD5sum: efcd7073534b8466dad952e246b80edf
+SHA1: c401da10f15a0a4a4a635583679e827c57cbfb4d
+SHA256: ad0078e3f69b1cfc09790c47cf6e7624d0e7696c95dffc1c68f242f489940fd6
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
 
 Package: lsphp83-relay
 Version: 0.20.0
@@ -448,6 +532,27 @@ Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
 
+Package: lsphp83-relay
+Version: 0.50.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1850
+Depends: libc6 (>= 2.17), lsphp83-common, lsphp83-igbinary, lsphp83-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Filename: pools/trixie/v0.50.0/lsphp83-relay-0.50.0-php8.3-trixie_amd64.deb
+Size: 660648
+MD5sum: 12b00cbcc495907bef997b7934d6e5ef
+SHA1: 9cd16e9fac21d9bca23363a328a78b11d551eb37
+SHA256: ee62daf82858e41415227f02ddd1c826327ef2e5fd854133570589ddf67b0dd4
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
+
 Package: lsphp84-relay
 Version: 0.20.0
 Architecture: amd64
@@ -538,6 +643,27 @@ Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
 
+Package: lsphp84-relay
+Version: 0.50.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1862
+Depends: libc6 (>= 2.17), lsphp84-common, lsphp84-igbinary, lsphp84-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Filename: pools/trixie/v0.50.0/lsphp84-relay-0.50.0-php8.4-trixie_amd64.deb
+Size: 661414
+MD5sum: 3f086aa78820af925af8437008c77f90
+SHA1: 1ada79f865cfac719475adec59e9f33d4c0d348a
+SHA256: 15783f47cc445d5b4975315f362acf75f3b4e4d0e8b916d24f06d62891215d65
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
+
 Package: lsphp85-relay
 Version: 0.20.0
 Architecture: amd64
@@ -627,6 +753,27 @@ Homepage: https://relay.so
 Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
+
+Package: lsphp85-relay
+Version: 0.50.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1862
+Depends: libc6 (>= 2.17), lsphp85-common, lsphp85-igbinary, lsphp85-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Filename: pools/trixie/v0.50.0/lsphp85-relay-0.50.0-php8.5-trixie_amd64.deb
+Size: 661180
+MD5sum: 4ede93bced8c79da34fb0c18158e9bf0
+SHA1: 39204b395af458ee52b04253f0d637b069585445
+SHA256: 5304a77aa01243e5c61575e3a4b0b996ddddf549cbbc3df6c4f55373ebf0aeaa
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
 
 Package: php-relay
 Version: 0.20.0
@@ -722,6 +869,26 @@ Homepage: https://relay.so
 Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
+
+Package: php-relay
+Version: 0.50.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 26
+Pre-Depends: php-common
+Depends: php8.4-relay, php8.4-igbinary, php8.4-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Filename: pools/trixie/v0.50.0/php-relay-0.50.0-php8.4-trixie_amd64.deb
+Size: 19068
+MD5sum: 49df87554aaa24aa73837bf3c3831e72
+SHA1: 4fd65ba10bd02a54b5cb217b55ff705db7022049
+SHA256: 957e8c96b469d2c3f367dcf175606d7f0afd7f12ec9c468a2c13bdca046b0707
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Relay metapackage for PHP 8.4
+ This dependency metapackage pulls in the Relay extension for PHP
+ 8.4.
+License: Proprietary
 
 Package: php7.4-relay
 Source: php-relay
@@ -833,6 +1000,31 @@ Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
 
+Package: php7.4-relay
+Source: php-relay
+Version: 0.50.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1506
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), php7.4-common, php7.4-igbinary, php7.4-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Replaces: php-relay (<< 0.50.0)
+Provides: php-relay
+Filename: pools/trixie/v0.50.0/php7.4-relay-0.50.0-php7.4-trixie_amd64.deb
+Size: 567110
+MD5sum: b2e7d1674ae1bd0d7075be8e3d07909d
+SHA1: 57e9909a06b19ef7c94d6c5da53140043e43407a
+SHA256: 3ca67cfd59cd1e8c6f4adac68d595b036bda03755dad9a8c39a265ded407ad50
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
+
 Package: php8.0-relay
 Source: php-relay
 Version: 0.20.0
@@ -942,6 +1134,31 @@ Homepage: https://relay.so
 Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
+
+Package: php8.0-relay
+Source: php-relay
+Version: 0.50.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1833
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), php8.0-common, php8.0-igbinary, php8.0-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Replaces: php-relay (<< 0.50.0)
+Provides: php-relay
+Filename: pools/trixie/v0.50.0/php8.0-relay-0.50.0-php8.0-trixie_amd64.deb
+Size: 652184
+MD5sum: c99f78f2eff0443e6692901129f07c3e
+SHA1: 976475c8776084a82fde2a300d0c1dd3f62b1778
+SHA256: 56515a047dc841afe64b5050da1c9edcf51d4fed0f3f856b5f658c6f0dbfab8e
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
 
 Package: php8.1-relay
 Source: php-relay
@@ -1053,6 +1270,31 @@ Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
 
+Package: php8.1-relay
+Source: php-relay
+Version: 0.50.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1837
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), php8.1-common, php8.1-igbinary, php8.1-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Replaces: php-relay (<< 0.50.0)
+Provides: php-relay
+Filename: pools/trixie/v0.50.0/php8.1-relay-0.50.0-php8.1-trixie_amd64.deb
+Size: 653718
+MD5sum: 01b37f42ed84396b4b4ffdf9c11fad2b
+SHA1: d9a1534579819a1667cda598e34ecc5e21fc0573
+SHA256: 302c5e9fb5eda7b0362d8b2b7872cca827c02a5bfd8b99975853d94f5c99cf36
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
+
 Package: php8.2-relay
 Source: php-relay
 Version: 0.20.0
@@ -1162,6 +1404,31 @@ Homepage: https://relay.so
 Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
+
+Package: php8.2-relay
+Source: php-relay
+Version: 0.50.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1849
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), php8.2-common, php8.2-igbinary, php8.2-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Replaces: php-relay (<< 0.50.0)
+Provides: php-relay
+Filename: pools/trixie/v0.50.0/php8.2-relay-0.50.0-php8.2-trixie_amd64.deb
+Size: 660244
+MD5sum: 0c875042d665124ed05bc6c0276ed239
+SHA1: 06e6eebc8bdf735f6f3c21c0a59d2f99cef4db39
+SHA256: f5834cc7504e327386930b6bb53f32712c98ccd8830a002a49b805b197820a49
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
 
 Package: php8.3-relay
 Source: php-relay
@@ -1273,6 +1540,31 @@ Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
 
+Package: php8.3-relay
+Source: php-relay
+Version: 0.50.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1849
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), php8.3-common, php8.3-igbinary, php8.3-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Replaces: php-relay (<< 0.50.0)
+Provides: php-relay
+Filename: pools/trixie/v0.50.0/php8.3-relay-0.50.0-php8.3-trixie_amd64.deb
+Size: 660416
+MD5sum: 63b370d516edcfd10fd1a36bfb6c37ea
+SHA1: a04382ba10dfcf84b9f76c2da6eea556e09ba133
+SHA256: 09dd0ca201f0a2f7ec42a619cb37a5fef048691b9ac8dc168a9a857b0d876c56
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
+
 Package: php8.4-relay
 Source: php-relay
 Version: 0.20.0
@@ -1383,6 +1675,31 @@ Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
 
+Package: php8.4-relay
+Source: php-relay
+Version: 0.50.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1861
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), php8.4-common, php8.4-igbinary, php8.4-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Replaces: php-relay (<< 0.50.0)
+Provides: php-relay
+Filename: pools/trixie/v0.50.0/php8.4-relay-0.50.0-php8.4-trixie_amd64.deb
+Size: 661624
+MD5sum: 80091fd3c7ba66d758952a9f36376122
+SHA1: 6b9bd5ec33d65ed81862ceba1048163c6bb5b24d
+SHA256: 95ff340abbe0c12b3275635f58690231d2fc398bfaef0f904a218f1a14f4d8b3
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
+
 Package: php8.5-relay
 Source: php-relay
 Version: 0.20.0
@@ -1492,4 +1809,29 @@ Homepage: https://relay.so
 Description: The next-generation caching layer for PHP.
 License: Proprietary
 Vendor: CacheWerk, Inc.
+
+Package: php8.5-relay
+Source: php-relay
+Version: 0.50.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1861
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), php8.5-common, php8.5-igbinary, php8.5-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Replaces: php-relay (<< 0.50.0)
+Provides: php-relay
+Filename: pools/trixie/v0.50.0/php8.5-relay-0.50.0-php8.5-trixie_amd64.deb
+Size: 661368
+MD5sum: 46ddd01f209c61c0a62b687f380d7d81
+SHA1: 85441860febb690d6a5e8b0338e7419f4abd6bbe
+SHA256: 8578bd193d1ab52ab477cb92e83aabb772759cf90ddc0eadcba39e01f96b8c9c
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
 
