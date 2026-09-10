@@ -38,7 +38,7 @@ packages=()
 
 for deb in "${deb_dists[@]}"; do
   case "$deb" in
-    jammy | noble | plucky | bookworm | trixie) variant=+libssl3 ;;
+    jammy | noble | resolute | bookworm | trixie) variant=+libssl3 ;;
     *) variant="" ;;
   esac
 
