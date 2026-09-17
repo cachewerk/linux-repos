@@ -2,6 +2,25 @@
 
 For detailed installations instruction see [relay.so](https://relay.so/docs/installation).
 
+## Packaging revisions
+
+**Build packages** reads the package revision for the tag from
+[`build/revisions/deb.json`](build/revisions/deb.json) and
+[`build/revisions/rpm.json`](build/revisions/rpm.json), so commit an entry
+for the tag before building: `1` for a new release, or bump the affected
+format(s) to repackage an existing one.
+
+With tag `v0.50.0` and revision `2`, DEBs are versioned `0.50.0-2` and RPMs
+`0.50.0` Release `2`. The revision is part of the filename; the upstream
+binaries are still fetched for `v0.50.0`.
+
+The build skips any package whose filename already exists in the pool, so
+new targets (a new distribution, say) can be added without a bump, while
+changing an existing package requires one. RPMs built before revisions
+existed have no revision in their filename and count as Release `1`; DEBs
+from before then are rebuilt as `-1`. Publishing refuses to overwrite an
+existing package with different bytes.
+
 ## Using APT (Debian, Ubuntu)
 
 ```bash

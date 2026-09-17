@@ -48,8 +48,8 @@ jobs:
 
       - name: Copy packages
         run: |
-          mkdir -p deb/pool/${{ env.TAG }}
-          find artifacts -name '*.deb' -exec cp {} deb/pool/${{ env.TAG }} \;
+          find artifacts -name '*.deb' \
+            -exec bash build/copy-packages.sh "deb/pool/${{ env.TAG }}" {} +
 
       - name: Build the Docker image
         run: docker build . --tag deb --file build/deb.Dockerfile
@@ -152,9 +152,8 @@ jobs:
           source build/distros.sh
 
           for distro in "${el_dists[@]}"; do
-            mkdir -p "rpm/$distro/${{ env.TAG }}"
             find artifacts -name "*-$distro-*.rpm" \
-              -exec cp {} "rpm/$distro/${{ env.TAG }}" \;
+              -exec bash build/copy-packages.sh "rpm/$distro/${{ env.TAG }}" {} +
           done
 
       - name: Build the Docker image

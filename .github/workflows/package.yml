@@ -24,6 +24,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v7
 
+      - name: Read packaging revisions
+        env:
+          TAG: ${{ inputs.tag }}
+        run: |
+          for type in deb rpm; do
+            if ! revision=$(jq -er --arg tag "$TAG" \
+              '.[$tag] | select(type == "number") | tostring | select(test("^[1-9][0-9]*$"))' \
+              "build/revisions/$type.json"); then
+              echo "::error::Add a positive integer revision for $TAG to build/revisions/$type.json"
+              exit 1
+            fi
+            echo "${type^^}_REVISION=$revision" >> "$GITHUB_ENV"
+          done
+
       - name: Log in to GHCR
         uses: docker/login-action@v4
         with:
@@ -39,17 +53,23 @@ jobs:
       - name: Render changelogs
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ inputs.tag }}
         run: |
           gh api --paginate 'repos/${{ github.repository_owner }}/relay/releases?per_page=100' \
             | jq -s 'add' > /tmp/releases.json
-          ./build/changelog.sh /tmp/releases.json '${{ github.event.inputs.tag }}' build/changelog
+          ./build/changelog.sh /tmp/releases.json "$TAG" build/changelog
 
       - name: Bundle packages
+        env:
+          TAG: ${{ inputs.tag }}
         run: |
           cd build
+          # /repo holds LFS pointers only; fpm.sh skips packages by filename
           docker run --tty \
-            -v ${PWD}:/root/build \
-            fpm /bin/bash -c "./fpm.sh ${{ github.event.inputs.tag }}"
+            -v "${PWD}:/root/build" \
+            -v "${PWD}/..:/repo:ro" \
+            -e DEB_REVISION -e RPM_REVISION \
+            fpm /bin/bash ./fpm.sh "$TAG"
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v7

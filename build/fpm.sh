@@ -6,6 +6,16 @@ source /root/build/helpers.sh
 source /root/build/distros.sh
 
 version=$1
+if [[ ! "$version" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] ||
+   [[ ! "${DEB_REVISION:-}" =~ ^[1-9][0-9]*$ ]] ||
+   [[ ! "${RPM_REVISION:-}" =~ ^[1-9][0-9]*$ ]]; then
+  echo "A release tag and positive DEB_REVISION/RPM_REVISION are required" >&2
+  exit 1
+fi
+if [[ ! -d /repo/deb/pool || ! -d /repo/rpm ]]; then
+  echo "Mount the repository at /repo so existing packages can be skipped" >&2
+  exit 1
+fi
 baseurl="https://builds.r2.relay.so/$version/relay-$version"
 
 declare -A php_api=(
