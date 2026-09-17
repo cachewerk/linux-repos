@@ -9,11 +9,15 @@ DESCRIPTION
 
 main()
 {
-  rm -rf /tmp/relay*
-  rm -rf /root/build/dist
-  mkdir /root/build/dist
-
-  echo -n "$version" > /root/build/dist/TAG
+  if [[ "$mode" != --list ]]; then
+    test -f "$build_dir/selected-packages.txt" || {
+      echo "Missing build plan; run packages.py plan first" >&2
+      exit 1
+    }
+    rm -rf /tmp/relay*
+    rm -rf "$build_dir/dist"
+    mkdir "$build_dir/dist"
+  fi
 
   for package in "${packages[@]}"; do
     unset ${!pkg_@}
@@ -36,11 +40,27 @@ fpm_build()
 
   # we don't have centos builds for v0.1.0
   if [[ "$version" == "v0.1.0" && "$type" == "rpm" ]]; then
-    echo "Skipping RPMs for v0.1.0"
+    echo "Skipping RPMs for v0.1.0" >&2
     return 0
   fi
 
-  source /root/build/src/$type/config.$config.sh
+  source "$build_dir/src/$type/config.$config.sh"
+
+  pkg_version=${version#v}
+  if [[ "$type" == deb ]]; then
+    pkg_revision=$DEB_REVISION
+  else
+    pkg_revision=$RPM_REVISION
+  fi
+  pkg_filename="${pkg_name}-${pkg_version}-${pkg_revision}-php${php_version}-${pkg_identifier}-${pkg_arch}.${type}"
+
+  if [[ "$mode" == --list ]]; then
+    printf '%s\t%s\t%s\t%s\t%s\t%s\n' "$type" "$distro" "$pkg_arch" "$php_version" "$pkg_name" "$pkg_filename"
+    return 0
+  fi
+  if ! grep -Fxq -- "$pkg_filename" "$build_dir/selected-packages.txt"; then
+    return 0
+  fi
 
   echo "Building Relay ($version) .$type package for PHP $php_version on $pkg_arch"
 
@@ -109,9 +129,6 @@ fpm_build()
     done > $dest_path/usr/share/lintian/overrides/$pkg_name
   fi
 
-  pkg_version=${version#v}
-  pkg_filename="${pkg_name}-${pkg_version}-php${php_version}-${pkg_identifier}-${pkg_arch}.${type}"
-
   args=(
     "--input-type dir"
     "--output-type $type"
@@ -123,6 +140,7 @@ fpm_build()
     "--category 'php'"
     "--name '$pkg_name'"
     "--version '$pkg_version'"
+    "--iteration '$pkg_revision'"
     "--architecture $pkg_arch"
 
     "--package dist/$pkg_filename"
@@ -145,10 +163,14 @@ fpm_build()
 
   # deb changelog entries embed the package name, rpm ones don't
   if [[ "$type" == "deb" ]]; then
-    sed "s/@PKG@/$pkg_name/g" /root/build/changelog/deb.tpl > /tmp/changelog-$pkg_name.deb
+    sed -e "s/@PKG@/$pkg_name/g" \
+      -e "1s/($pkg_version)/($pkg_version-$pkg_revision)/" \
+      /root/build/changelog/deb.tpl > /tmp/changelog-$pkg_name.deb
     args+=("--deb-changelog /tmp/changelog-$pkg_name.deb")
   else
-    args+=("--rpm-changelog /root/build/changelog/rpm")
+    sed "1s/ - $pkg_version-1$/ - $pkg_version-$pkg_revision/" \
+      /root/build/changelog/rpm > /tmp/changelog-$pkg_name.rpm
+    args+=("--rpm-changelog /tmp/changelog-$pkg_name.rpm")
   fi
 
   if [ ! -z "$pkg_provides" ]; then
@@ -171,4 +193,15 @@ fpm_build()
 
   echo "Building package: $pkg_filename"
   bash -c "fpm $args $dest_path/=/"
+
+  # Check the actual package version, not just the filename we supplied to FPM.
+  if [[ "$type" == deb ]]; then
+    actual_version=$(dpkg-deb -f "dist/$pkg_filename" Version)
+  else
+    actual_version=$(rpm -qp --qf '%{VERSION}-%{RELEASE}' "dist/$pkg_filename")
+  fi
+  if [[ "$actual_version" != "$pkg_version-$pkg_revision" ]]; then
+    echo "Unexpected version in $pkg_filename: $actual_version" >&2
+    exit 1
+  fi
 }

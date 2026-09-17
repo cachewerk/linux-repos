@@ -5,81 +5,108 @@ on:
     workflows: [Build packages]
     types: [completed]
 
+# Both formats commit to the same branch and publish repository metadata.
+concurrency:
+  group: package-repositories
+  cancel-in-progress: false
+
 jobs:
-
-  deb-repo:
-
-    name: Update deb repository
+  publish:
+    name: Update ${{ matrix.format }} repository
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
+    if: >-
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.head_branch == github.event.repository.default_branch &&
+      github.event.workflow_run.head_repository.full_name == github.repository
 
-    if: github.event.workflow_run.conclusion == 'success'
+    strategy:
+      max-parallel: 1
+      fail-fast: false
+      matrix:
+        format: [deb, rpm]
 
     permissions:
       contents: write
       actions: read
 
-    steps:
+    env:
+      FORMAT: ${{ matrix.format }}
 
-      - name: Checkout code
+    steps:
+      - name: Checkout current repository
         uses: actions/checkout@v7
         with:
+          ref: ${{ github.event.repository.default_branch }}
           lfs: true
 
-      # Uses AWS CLI preinstalled on ubuntu-latest runners.
-      - name: Download artifacts
+      - name: Download packages and build manifest
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh run download ${{ github.event.workflow_run.id }} --dir artifacts
+          BUILD_RUN: ${{ github.event.workflow_run.id }}
+        run: gh run download "$BUILD_RUN" --name packages --dir artifacts/packages
 
-      - name: Get build tag
-        run: |
-          TAG_FILE=$(find artifacts -name 'TAG' | head -n 1)
-          if [ -z "$TAG_FILE" ]; then
-            echo "No TAG file found in downloaded artifacts" >&2
-            exit 1
-          fi
-          TAG=$(tr -d '[:space:]' < "$TAG_FILE")
-          if [ -z "$TAG" ]; then
-            echo "TAG file is empty in downloaded artifacts" >&2
-            exit 1
-          fi
-          echo "TAG=$TAG" >> $GITHUB_ENV
-
-      - name: Copy packages
-        run: |
-          mkdir -p deb/pool/${{ env.TAG }}
-          find artifacts -name '*.deb' -exec cp {} deb/pool/${{ env.TAG }} \;
+      - name: Verify and stage packages without overwriting published versions
+        id: stage
+        env:
+          BUILD_COMMIT: ${{ github.event.workflow_run.head_sha }}
+        run: python3 build/packages.py stage "$FORMAT" --source-commit "$BUILD_COMMIT"
 
       - name: Build the Docker image
-        run: docker build . --tag deb --file build/deb.Dockerfile
+        if: steps.stage.outputs.has_packages == 'true'
+        run: docker build . --tag "$FORMAT" --file "build/$FORMAT.Dockerfile"
 
       - name: Set up private key
-        run: echo -n '${{ secrets.PRIVATE_KEY }}' | base64 --decode > key-private.asc
+        if: steps.stage.outputs.has_packages == 'true'
+        env:
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+        run: printf '%s' "$PRIVATE_KEY" | base64 --decode > key-private.asc
 
-      - name: Set up Git
+      - name: Update repository
+        if: steps.stage.outputs.has_packages == 'true'
+        env:
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+        run: |
+          docker run --tty \
+            -v "${PWD}:/root/$FORMAT" \
+            -e GPG_PASSPHRASE \
+            "$FORMAT" /bin/bash "./build/$FORMAT-repo.sh"
+
+      - name: Remove private key
+        if: always()
+        run: rm -f key-private.asc
+
+      # Upload packages before advertising them in either Git or repository metadata.
+      # Conditional writes allow identical retries but never replace existing bytes.
+      - name: Publish immutable package files to R2
+        if: steps.stage.outputs.has_packages == 'true'
+        env:
+          R2_ENDPOINT: https://a1220fd38ad4771f7b7b38f5f3c2b00d.r2.cloudflarestorage.com
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          AWS_DEFAULT_OUTPUT: json
+        run: |
+          python3 build/packages.py upload "$FORMAT" \
+            --bucket relay-repos --endpoint "$R2_ENDPOINT"
+
+      - name: Commit changes
+        if: steps.stage.outputs.has_packages == 'true'
+        env:
+          TAG: ${{ steps.stage.outputs.tag }}
+          REVISION: ${{ steps.stage.outputs.revision }}
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$FORMAT"
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish $FORMAT packages for $TAG revision $REVISION"
+            git pull --rebase
+            git push
+          fi
 
-      - name: Update repository
-        run: |
-          docker run --tty \
-            -v ${PWD}:/root/deb \
-            -e GPG_PASSPHRASE='${{ secrets.GPG_PASSPHRASE }}' \
-            deb /bin/bash -c "./build/deb-repo.sh"
-
-      - name: Remove private key
-        run: rm -f key-private.asc
-
-      - name: Commit changes
-        run: |
-          git pull
-          git add deb/*
-          git commit -m "Bump deb repo to ${{ env.TAG }}" || echo "No changes to commit"
-          git push
-
-      - name: Sync repo with R2
+      - name: Publish repository metadata to R2
+        if: steps.stage.outputs.has_packages == 'true'
         env:
           R2_ENDPOINT: https://a1220fd38ad4771f7b7b38f5f3c2b00d.r2.cloudflarestorage.com
           AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
@@ -88,131 +115,18 @@ jobs:
           AWS_DEFAULT_OUTPUT: json
         run: |
           aws s3 cp key.gpg s3://relay-repos/ \
-            --no-progress \
-            --acl public-read \
-            --endpoint-url ${{ env.R2_ENDPOINT }}
-          aws s3 cp deb/sources.list s3://relay-repos/deb/ \
-            --no-progress \
-            --acl public-read \
-            --endpoint-url ${{ env.R2_ENDPOINT }}
-          aws s3 sync deb s3://relay-repos/deb \
-            --exclude "*" \
-            --include "*${{ env.TAG }}*" \
-            --delete \
-            --no-progress \
-            --acl public-read \
-            --endpoint-url ${{ env.R2_ENDPOINT }}
-          aws s3 sync deb/dists s3://relay-repos/deb/dists/ \
-            --no-progress \
-            --acl public-read \
-            --endpoint-url ${{ env.R2_ENDPOINT }}
-
-  rpm-repo:
-
-    name: Update rpm repository
-    runs-on: ubuntu-latest
-    needs: deb-repo
-    timeout-minutes: 10
-
-    if: github.event.workflow_run.conclusion == 'success'
-
-    permissions:
-      contents: write
-      actions: read
-
-    steps:
-
-      - name: Checkout code
-        uses: actions/checkout@v7
-        with:
-          lfs: true
-
-      # Uses AWS CLI preinstalled on ubuntu-latest runners.
-      - name: Download artifacts
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh run download ${{ github.event.workflow_run.id }} --dir artifacts
-
-      - name: Get build tag
-        run: |
-          TAG_FILE=$(find artifacts -name 'TAG' | head -n 1)
-          if [ -z "$TAG_FILE" ]; then
-            echo "No TAG file found in downloaded artifacts" >&2
-            exit 1
+            --no-progress --endpoint-url "$R2_ENDPOINT"
+          if [ "$FORMAT" = deb ]; then
+            aws s3 cp deb/sources.list s3://relay-repos/deb/ \
+              --no-progress --endpoint-url "$R2_ENDPOINT"
+            aws s3 sync deb/dists s3://relay-repos/deb/dists/ \
+              --no-progress --endpoint-url "$R2_ENDPOINT"
+          else
+            aws s3 cp rpm/el.repo s3://relay-repos/rpm/ \
+              --no-progress --endpoint-url "$R2_ENDPOINT"
+            source build/distros.sh
+            for distro in "${el_dists[@]}"; do
+              aws s3 sync "rpm/$distro/repodata" "s3://relay-repos/rpm/$distro/repodata/" \
+                --no-progress --endpoint-url "$R2_ENDPOINT"
+            done
           fi
-          TAG=$(tr -d '[:space:]' < "$TAG_FILE")
-          if [ -z "$TAG" ]; then
-            echo "TAG file is empty in downloaded artifacts" >&2
-            exit 1
-          fi
-          echo "TAG=$TAG" >> $GITHUB_ENV
-
-      - name: Copy packages
-        run: |
-          source build/distros.sh
-
-          for distro in "${el_dists[@]}"; do
-            mkdir -p "rpm/$distro/${{ env.TAG }}"
-            find artifacts -name "*-$distro-*.rpm" \
-              -exec cp {} "rpm/$distro/${{ env.TAG }}" \;
-          done
-
-      - name: Build the Docker image
-        run: docker build . --tag rpm --file build/rpm.Dockerfile
-
-      - name: Set up private key
-        run: echo -n '${{ secrets.PRIVATE_KEY }}' | base64 --decode > key-private.asc
-
-      - name: Set up Git
-        run: |
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-      - name: Update repository
-        run: |
-          docker run --tty \
-            -v ${PWD}:/root/rpm \
-            -e GPG_PASSPHRASE='${{ secrets.GPG_PASSPHRASE }}' \
-            rpm /bin/bash -c "./build/rpm-repo.sh"
-
-      - name: Remove private key
-        run: rm -f key-private.asc
-
-      - name: Commit changes
-        run: |
-          git pull
-          git add rpm/*
-          git commit -m "Bump rpm repos to ${{ env.TAG }}" || echo "No changes to commit"
-          git push
-
-      - name: Sync repo with R2
-        env:
-          R2_ENDPOINT: https://a1220fd38ad4771f7b7b38f5f3c2b00d.r2.cloudflarestorage.com
-          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: auto
-          AWS_DEFAULT_OUTPUT: json
-        run: |
-          aws s3 cp key.gpg s3://relay-repos/ \
-            --no-progress \
-            --acl public-read \
-            --endpoint-url ${{ env.R2_ENDPOINT }}
-          aws s3 cp rpm/el.repo s3://relay-repos/rpm/ \
-            --no-progress \
-            --acl public-read \
-            --endpoint-url ${{ env.R2_ENDPOINT }}
-          aws s3 sync rpm s3://relay-repos/rpm \
-            --exclude "*" \
-            --include "*${{ env.TAG }}*" \
-            --delete \
-            --no-progress \
-            --acl public-read \
-            --endpoint-url ${{ env.R2_ENDPOINT }}
-          source build/distros.sh
-
-          for distro in "${el_dists[@]}"; do
-            aws s3 sync "rpm/$distro/repodata" "s3://relay-repos/rpm/$distro/repodata/" \
-              --no-progress \
-              --acl public-read \
-              --endpoint-url ${{ env.R2_ENDPOINT }}
-          done

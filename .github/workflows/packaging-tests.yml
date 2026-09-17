@@ -1,0 +1,25 @@
+name: Packaging tests
+
+on:
+  pull_request:
+    paths: ['build/**', 'tests/**', '.github/workflows/**']
+  push:
+    branches: [main]
+    paths: ['build/**', 'tests/**', '.github/workflows/**']
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Check shell syntax
+        run: bash -n build/fpm.sh && bash -n build/helpers.sh
+      - name: Test planning and immutable publication
+        run: python3 -m unittest discover -s tests -v
+      - name: Build FPM test image
+        run: docker build --file build/fpm.Dockerfile --tag fpm-test build
+      - name: Verify DEB and RPM versions with fixture packages
+        run: docker run --rm --network none -v "$PWD:/workspace:ro" fpm-test bash /workspace/tests/smoke-packages.sh

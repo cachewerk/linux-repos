@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 gpg --batch --import key-private.asc
 
 source build/distros.sh

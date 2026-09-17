@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 export PATH=/opt/gnupg22/bin:$PATH
 
 gpg --batch --import key-private.asc

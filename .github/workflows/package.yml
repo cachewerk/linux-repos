@@ -24,7 +24,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v7
 
+      - name: Plan unpublished packages
+        id: plan
+        env:
+          TAG: ${{ inputs.tag }}
+        run: python3 build/packages.py plan "$TAG"
+
       - name: Log in to GHCR
+        if: steps.plan.outputs.has_packages == 'true'
         uses: docker/login-action@v4
         with:
           registry: ghcr.io
@@ -32,24 +39,36 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Pull the Docker image
+        if: steps.plan.outputs.has_packages == 'true'
         run: |
           docker pull ghcr.io/${{ github.repository_owner }}/fpm:latest
           docker tag ghcr.io/${{ github.repository_owner }}/fpm:latest fpm
 
       - name: Render changelogs
+        if: steps.plan.outputs.has_packages == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ inputs.tag }}
         run: |
           gh api --paginate 'repos/${{ github.repository_owner }}/relay/releases?per_page=100' \
             | jq -s 'add' > /tmp/releases.json
-          ./build/changelog.sh /tmp/releases.json '${{ github.event.inputs.tag }}' build/changelog
+          ./build/changelog.sh /tmp/releases.json "$TAG" build/changelog
 
       - name: Bundle packages
+        if: steps.plan.outputs.has_packages == 'true'
+        env:
+          TAG: ${{ inputs.tag }}
+          DEB_REVISION: ${{ steps.plan.outputs.deb_revision }}
+          RPM_REVISION: ${{ steps.plan.outputs.rpm_revision }}
         run: |
           cd build
           docker run --tty \
-            -v ${PWD}:/root/build \
-            fpm /bin/bash -c "./fpm.sh ${{ github.event.inputs.tag }}"
+            -v "${PWD}:/root/build" \
+            -e DEB_REVISION -e RPM_REVISION \
+            fpm /bin/bash ./fpm.sh "$TAG"
+
+      - name: Record artifact checksums and build revision
+        run: python3 build/packages.py manifest
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v7

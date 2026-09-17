@@ -5,6 +5,10 @@ on:
   # schedule:
   #  - cron: '0 0 * * 0' # once a week
 
+concurrency:
+  group: package-repositories
+  cancel-in-progress: false
+
 jobs:
 
   deb-repo:

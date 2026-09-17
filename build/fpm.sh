@@ -2,10 +2,22 @@
 
 set -e
 
-source /root/build/helpers.sh
-source /root/build/distros.sh
+build_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+source "$build_dir/helpers.sh"
+source "$build_dir/distros.sh"
 
-version=$1
+version=${1:?Usage: fpm.sh TAG [--list]}
+mode=${2:-build}
+if [[ ! "$version" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] ||
+   [[ ! "${DEB_REVISION:-}" =~ ^[1-9][0-9]*$ ]] ||
+   [[ ! "${RPM_REVISION:-}" =~ ^[1-9][0-9]*$ ]]; then
+  echo "A release tag and positive DEB_REVISION/RPM_REVISION are required; run packages.py plan first" >&2
+  exit 1
+fi
+if [[ "$mode" != build && "$mode" != --list ]]; then
+  echo "Unknown mode: $mode" >&2
+  exit 1
+fi
 baseurl="https://builds.r2.relay.so/$version/relay-$version"
 
 declare -A php_api=(
