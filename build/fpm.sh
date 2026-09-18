@@ -6,10 +6,14 @@ source /root/build/helpers.sh
 source /root/build/distros.sh
 
 version=$1
-if [[ ! "$version" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] ||
-   [[ ! "${DEB_REVISION:-}" =~ ^[1-9][0-9]*$ ]] ||
-   [[ ! "${RPM_REVISION:-}" =~ ^[1-9][0-9]*$ ]]; then
-  echo "A release tag and positive DEB_REVISION/RPM_REVISION are required" >&2
+if [[ ! "$version" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+  echo "A release tag is required, e.g. v0.50.0" >&2
+  exit 1
+fi
+
+revision=${REVISION:-1}
+if [[ ! "$revision" =~ ^[1-9][0-9]*$ ]]; then
+  echo "REVISION must be a positive integer, got '$revision'" >&2
   exit 1
 fi
 if [[ ! -d /repo/deb/pool || ! -d /repo/rpm ]]; then

@@ -44,17 +44,15 @@ fpm_build()
 
   pkg_version=${version#v}
   if [[ "$type" == deb ]]; then
-    pkg_revision=$DEB_REVISION
     pkg_pool="/repo/deb/pool/$version"
   else
-    pkg_revision=$RPM_REVISION
     pkg_pool="/repo/rpm/$distro/$version"
   fi
 
   # revision 1 is what fpm produces without `--iteration`, so it stays out of
   # the version and the filename and rebuilds of an old tag match what shipped
   pkg_release=""
-  [[ "$pkg_revision" != 1 ]] && pkg_release="-$pkg_revision"
+  [[ "$revision" != 1 ]] && pkg_release="-$revision"
 
   pkg_filename="${pkg_name}-${pkg_version}${pkg_release}-php${php_version}-${pkg_identifier}-${pkg_arch}.${type}"
 
@@ -154,7 +152,7 @@ fpm_build()
   )
 
   if [[ -n "$pkg_release" ]]; then
-    args+=("--iteration '$pkg_revision'")
+    args+=("--iteration '$revision'")
   fi
 
   # deb has no Vendor field; an empty value omits it. Don't do the same for
@@ -172,7 +170,7 @@ fpm_build()
       /root/build/changelog/deb.tpl > /tmp/changelog-$pkg_name.deb
     args+=("--deb-changelog /tmp/changelog-$pkg_name.deb")
   else
-    sed "1s/ - $pkg_version-1$/ - $pkg_version-$pkg_revision/" \
+    sed "1s/ - $pkg_version-1$/ - $pkg_version-$revision/" \
       /root/build/changelog/rpm > /tmp/changelog-$pkg_name.rpm
     args+=("--rpm-changelog /tmp/changelog-$pkg_name.rpm")
   fi

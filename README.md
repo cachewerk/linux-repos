@@ -4,25 +4,16 @@ For detailed installations instruction see [relay.so](https://relay.so/docs/inst
 
 ## Packaging revisions
 
-To repackage a release without a new upstream version of Relay, add its tag to
-[`build/revisions.json`](build/revisions.json) and bump the affected format:
+**Build packages** takes an optional revision, left empty for a normal
+release. To repackage a release without a new upstream version of Relay,
+dispatch it again with the revision set to `2`, then `3`, and so on.
 
-```json
-{
-  "v0.50.0": { "deb": 2 }
-}
-```
-
-Anything not listed is revision `1`, which is what the packages have always
-been built as, so a new release needs no entry at all.
-
-With revision `2`, DEBs are versioned `0.50.0-2` and RPMs `0.50.0` Release
-`2`, and the revision becomes part of the filename. The upstream binaries are
-still fetched for `v0.50.0`.
+Revision `2` versions DEBs `0.50.0-2` and RPMs `0.50.0` Release `2`, and adds
+`-2` to the filename. The upstream binaries are still fetched for `v0.50.0`.
 
 The build skips any package whose filename already exists in this repository,
-so a new target (another distribution, say) can be added without a bump, while
-changing an existing package requires one.
+so a new target (another distribution, say) can be added without a revision,
+while changing an existing package needs one.
 
 ## Using APT (Debian, Ubuntu)
 
