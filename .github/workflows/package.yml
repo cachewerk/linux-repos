@@ -6,6 +6,9 @@ on:
       tag:
         description: 'Tag'
         required: true
+      revision: # leave empty, or start with `2`
+        description: 'Revision'
+        required: false
 
 jobs:
 
@@ -18,6 +21,10 @@ jobs:
     permissions:
       contents: read
       packages: read
+
+    env:
+      TAG: ${{ inputs.tag }}
+      REVISION: ${{ inputs.revision }}
 
     steps:
 
@@ -42,14 +49,17 @@ jobs:
         run: |
           gh api --paginate 'repos/${{ github.repository_owner }}/relay/releases?per_page=100' \
             | jq -s 'add' > /tmp/releases.json
-          ./build/changelog.sh /tmp/releases.json '${{ github.event.inputs.tag }}' build/changelog
+          ./build/changelog.sh /tmp/releases.json "$TAG" build/changelog
 
       - name: Bundle packages
         run: |
           cd build
+          # /repo holds LFS pointers only; fpm.sh skips packages by filename
           docker run --tty \
-            -v ${PWD}:/root/build \
-            fpm /bin/bash -c "./fpm.sh ${{ github.event.inputs.tag }}"
+            -v "${PWD}:/root/build" \
+            -v "${PWD}/..:/repo:ro" \
+            -e REVISION \
+            fpm /bin/bash ./fpm.sh "$TAG"
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v7

@@ -42,6 +42,25 @@ fpm_build()
 
   source /root/build/src/$type/config.$config.sh
 
+  pkg_version=${version#v}
+  if [[ "$type" == deb ]]; then
+    pkg_pool="/repo/deb/pool/$version"
+  else
+    pkg_pool="/repo/rpm/$distro/$version"
+  fi
+
+  # revision 1 is what fpm produces without `--iteration`, so it stays out of
+  # the version and the filename and rebuilds of an old tag match what shipped
+  pkg_release=""
+  [[ "$revision" != 1 ]] && pkg_release="-$revision"
+
+  pkg_filename="${pkg_name}-${pkg_version}${pkg_release}-php${php_version}-${pkg_identifier}-${pkg_arch}.${type}"
+
+  if [[ -f "$pkg_pool/$pkg_filename" ]]; then
+    echo "Skipping existing package: $pkg_filename"
+    return 0
+  fi
+
   echo "Building Relay ($version) .$type package for PHP $php_version on $pkg_arch"
 
   src_path=/tmp/$(basename $pkg_url .tar.gz)
@@ -109,9 +128,6 @@ fpm_build()
     done > $dest_path/usr/share/lintian/overrides/$pkg_name
   fi
 
-  pkg_version=${version#v}
-  pkg_filename="${pkg_name}-${pkg_version}-php${php_version}-${pkg_identifier}-${pkg_arch}.${type}"
-
   args=(
     "--input-type dir"
     "--output-type $type"
@@ -135,6 +151,10 @@ fpm_build()
     "--deb-no-default-config-files"
   )
 
+  if [[ -n "$pkg_release" ]]; then
+    args+=("--iteration '$revision'")
+  fi
+
   # deb has no Vendor field; an empty value omits it. Don't do the same for
   # --license, fpm emits that line unconditionally and it'd end up empty.
   if [[ "$type" == "rpm" ]]; then
@@ -145,10 +165,14 @@ fpm_build()
 
   # deb changelog entries embed the package name, rpm ones don't
   if [[ "$type" == "deb" ]]; then
-    sed "s/@PKG@/$pkg_name/g" /root/build/changelog/deb.tpl > /tmp/changelog-$pkg_name.deb
+    sed -e "s/@PKG@/$pkg_name/g" \
+      -e "1s/($pkg_version)/($pkg_version$pkg_release)/" \
+      /root/build/changelog/deb.tpl > /tmp/changelog-$pkg_name.deb
     args+=("--deb-changelog /tmp/changelog-$pkg_name.deb")
   else
-    args+=("--rpm-changelog /root/build/changelog/rpm")
+    sed "1s/ - $pkg_version-1$/ - $pkg_version-$revision/" \
+      /root/build/changelog/rpm > /tmp/changelog-$pkg_name.rpm
+    args+=("--rpm-changelog /tmp/changelog-$pkg_name.rpm")
   fi
 
   if [ ! -z "$pkg_provides" ]; then

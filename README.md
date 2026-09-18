@@ -2,6 +2,19 @@
 
 For detailed installations instruction see [relay.so](https://relay.so/docs/installation).
 
+## Packaging revisions
+
+**Build packages** takes an optional revision, left empty for a normal
+release. To repackage a release without a new upstream version of Relay,
+dispatch it again with the revision set to `2`, then `3`, and so on.
+
+Revision `2` versions DEBs `0.50.0-2` and RPMs `0.50.0` Release `2`, and adds
+`-2` to the filename. The upstream binaries are still fetched for `v0.50.0`.
+
+The build skips any package whose filename already exists in this repository,
+so a new target (another distribution, say) can be added without a revision,
+while changing an existing package needs one.
+
 ## Using APT (Debian, Ubuntu)
 
 ```bash
