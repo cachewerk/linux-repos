@@ -19,22 +19,19 @@ jobs:
       contents: read
       packages: read
 
+    env:
+      TAG: ${{ inputs.tag }}
+
     steps:
 
       - name: Checkout code
         uses: actions/checkout@v7
 
       - name: Read packaging revisions
-        env:
-          TAG: ${{ inputs.tag }}
         run: |
           for type in deb rpm; do
-            if ! revision=$(jq -er --arg tag "$TAG" \
-              '.[$tag] | select(type == "number") | tostring | select(test("^[1-9][0-9]*$"))' \
-              "build/revisions/$type.json"); then
-              echo "::error::Add a positive integer revision for $TAG to build/revisions/$type.json"
-              exit 1
-            fi
+            revision=$(jq -er --arg tag "$TAG" --arg type "$type" \
+              '.[$tag][$type] // 1' build/revisions.json)
             echo "${type^^}_REVISION=$revision" >> "$GITHUB_ENV"
           done
 
@@ -53,15 +50,12 @@ jobs:
       - name: Render changelogs
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TAG: ${{ inputs.tag }}
         run: |
           gh api --paginate 'repos/${{ github.repository_owner }}/relay/releases?per_page=100' \
             | jq -s 'add' > /tmp/releases.json
           ./build/changelog.sh /tmp/releases.json "$TAG" build/changelog
 
       - name: Bundle packages
-        env:
-          TAG: ${{ inputs.tag }}
         run: |
           cd build
           # /repo holds LFS pointers only; fpm.sh skips packages by filename

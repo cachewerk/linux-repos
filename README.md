@@ -4,22 +4,25 @@ For detailed installations instruction see [relay.so](https://relay.so/docs/inst
 
 ## Packaging revisions
 
-**Build packages** reads the package revision for the tag from
-[`build/revisions/deb.json`](build/revisions/deb.json) and
-[`build/revisions/rpm.json`](build/revisions/rpm.json), so commit an entry
-for the tag before building: `1` for a new release, or bump the affected
-format(s) to repackage an existing one.
+To repackage a release without a new upstream version of Relay, add its tag to
+[`build/revisions.json`](build/revisions.json) and bump the affected format:
 
-With tag `v0.50.0` and revision `2`, DEBs are versioned `0.50.0-2` and RPMs
-`0.50.0` Release `2`. The revision is part of the filename; the upstream
-binaries are still fetched for `v0.50.0`.
+```json
+{
+  "v0.50.0": { "deb": 2 }
+}
+```
 
-The build skips any package whose filename already exists in the pool, so
-new targets (a new distribution, say) can be added without a bump, while
-changing an existing package requires one. RPMs built before revisions
-existed have no revision in their filename and count as Release `1`; DEBs
-from before then are rebuilt as `-1`. Publishing refuses to overwrite an
-existing package with different bytes.
+Anything not listed is revision `1`, which is what the packages have always
+been built as, so a new release needs no entry at all.
+
+With revision `2`, DEBs are versioned `0.50.0-2` and RPMs `0.50.0` Release
+`2`, and the revision becomes part of the filename. The upstream binaries are
+still fetched for `v0.50.0`.
+
+The build skips any package whose filename already exists in this repository,
+so a new target (another distribution, say) can be added without a bump, while
+changing an existing package requires one.
 
 ## Using APT (Debian, Ubuntu)
 
