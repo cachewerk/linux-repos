@@ -40,7 +40,7 @@ for dist in "${deb_dists[@]}"; do
   apt-ftparchive release \
     -o APT::FTPArchive::Release::Origin="repos.r2.relay.so" \
     -o APT::FTPArchive::Release::Label="CacheWerk" \
-    -o APT::FTPArchive::Release::Architectures="amd64 aarch64" \
+    -o APT::FTPArchive::Release::Architectures="amd64 arm64" \
     -o APT::FTPArchive::Release::Codename="$dist" \
     -o APT::FTPArchive::Release::Suite="$dist" \
     -o APT::FTPArchive::Release::Components="main" \
