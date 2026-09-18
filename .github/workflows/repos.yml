@@ -210,8 +210,18 @@ jobs:
             --endpoint-url ${{ env.R2_ENDPOINT }}
           source build/distros.sh
 
+          # Two passes: upload the fresh metadata first, then prune what
+          # `createrepo` superseded. A single `--delete` pass interleaves
+          # uploads and deletions, which can leave `repomd.xml` pointing at a
+          # blob that is not there yet.
           for distro in "${el_dists[@]}"; do
             aws s3 sync "rpm/$distro/repodata" "s3://relay-repos/rpm/$distro/repodata/" \
+              --no-progress \
+              --acl public-read \
+              --endpoint-url ${{ env.R2_ENDPOINT }}
+
+            aws s3 sync "rpm/$distro/repodata" "s3://relay-repos/rpm/$distro/repodata/" \
+              --delete \
               --no-progress \
               --acl public-read \
               --endpoint-url ${{ env.R2_ENDPOINT }}
