@@ -35,6 +35,7 @@ jobs:
             --endpoint-url ${{ env.R2_ENDPOINT }}
           aws s3 sync deb s3://relay-repos/deb \
             --delete \
+            --exclude 'dists/*' \
             --no-progress \
             --acl public-read \
             --endpoint-url ${{ env.R2_ENDPOINT }}
@@ -71,6 +72,7 @@ jobs:
             --endpoint-url ${{ env.R2_ENDPOINT }}
           aws s3 sync rpm s3://relay-repos/rpm \
             --delete \
+            --exclude '*/repodata/*' \
             --no-progress \
             --acl public-read \
             --endpoint-url ${{ env.R2_ENDPOINT }}
@@ -78,6 +80,13 @@ jobs:
 
           for distro in "${el_dists[@]}"; do
             aws s3 sync "rpm/$distro/repodata" "s3://relay-repos/rpm/$distro/repodata/" \
+              --no-progress \
+              --acl public-read \
+              --endpoint-url ${{ env.R2_ENDPOINT }}
+
+            aws s3 sync "rpm/$distro/repodata" "s3://relay-repos/rpm/$distro/repodata/" \
+              --delete \
+              --exclude 'repomd.xml*' \
               --no-progress \
               --acl public-read \
               --endpoint-url ${{ env.R2_ENDPOINT }}
