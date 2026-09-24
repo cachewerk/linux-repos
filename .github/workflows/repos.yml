@@ -222,6 +222,7 @@ jobs:
 
             aws s3 sync "rpm/$distro/repodata" "s3://relay-repos/rpm/$distro/repodata/" \
               --delete \
+              --exclude 'repomd.xml*' \
               --no-progress \
               --acl public-read \
               --endpoint-url ${{ env.R2_ENDPOINT }}

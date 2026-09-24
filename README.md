@@ -40,7 +40,7 @@ sudo apt-get update
 ```bash
 curl -s -o "/etc/yum.repos.d/cachewerk.repo" "https://repos.r2.relay.so/rpm/el.repo"
 
-yum install relay-php        # single php version
+yum install php-relay        # single php version
 yum install php81-php-relay  # multiple php versions
 yum install lsphp81-relay    # for litespeed setups
 ```
