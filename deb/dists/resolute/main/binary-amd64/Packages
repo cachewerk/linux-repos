@@ -40,6 +40,27 @@ Description: Fastest Redis client for PHP
  PHP process, avoiding network round trips.
 License: Proprietary
 
+Package: lsphp74-relay
+Version: 0.60.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1434
+Depends: libc6 (>= 2.17), lsphp74-common, lsphp74-igbinary, lsphp74-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Filename: pools/resolute/v0.60.0/lsphp74-relay-0.60.0-php7.4-resolute_amd64.deb
+Size: 550982
+MD5sum: ee93a1206834e4f1db9b72eeb6b21438
+SHA1: dc323400f921d415b5c7b2eceef054d826d3862d
+SHA256: cff6c24caf55712a9f7bda432ce134323198e6b09d5d43eb896631cee231e776
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
+
 Package: lsphp80-relay
 Version: 0.50.0-2
 Architecture: amd64
@@ -73,6 +94,27 @@ Size: 652474
 MD5sum: 3e3a160e1bb597449500fe286b75b376
 SHA1: 48afaad4be58c44469489cb072a0aaa1af287a38
 SHA256: a4eb365f837f4cfc78dbfa5484c32e5c955d0e2f8a1a10d15e95c253afad5b36
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
+
+Package: lsphp80-relay
+Version: 0.60.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1765
+Depends: libc6 (>= 2.17), lsphp80-common, lsphp80-igbinary, lsphp80-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Filename: pools/resolute/v0.60.0/lsphp80-relay-0.60.0-php8.0-resolute_amd64.deb
+Size: 634096
+MD5sum: a5966aa0d2be8aea0987166a818284cb
+SHA1: b1778538d0e7878f59afa9b3c1f6097145700ae6
+SHA256: acec20507e5ed1b79ca3b749993c88451599f776ca4855be0dd3e035b4f31f93
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -124,6 +166,27 @@ Description: Fastest Redis client for PHP
  PHP process, avoiding network round trips.
 License: Proprietary
 
+Package: lsphp81-relay
+Version: 0.60.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1781
+Depends: libc6 (>= 2.17), lsphp81-common, lsphp81-igbinary, lsphp81-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Filename: pools/resolute/v0.60.0/lsphp81-relay-0.60.0-php8.1-resolute_amd64.deb
+Size: 637306
+MD5sum: 158f33beb48d0687402813b16ef97405
+SHA1: bbc4bdaa336b58f501709476a42079fa3dd7b7ac
+SHA256: 847e4f9e5b32bfe7573ad088cfa8f32340336b654c75c45bab1197ae1c058a91
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
+
 Package: lsphp82-relay
 Version: 0.50.0-2
 Architecture: amd64
@@ -157,6 +220,27 @@ Size: 659856
 MD5sum: 4139dca8754545d4737503c2b1948123
 SHA1: c9ea6ffbc5821e13726518deac7b6bd883d2584b
 SHA256: 2d5dbc1e34d9b02e99a7e89686ee9c16e966ee417c68abced223c8fdf7a0457a
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
+
+Package: lsphp82-relay
+Version: 0.60.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1793
+Depends: libc6 (>= 2.17), lsphp82-common, lsphp82-igbinary, lsphp82-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Filename: pools/resolute/v0.60.0/lsphp82-relay-0.60.0-php8.2-resolute_amd64.deb
+Size: 646112
+MD5sum: 11528258e2f6a003a0af67b9a474a8a6
+SHA1: 6a5718e45033a5af483128f72c6fe0274e9377c3
+SHA256: f8340a27190da580eb4b93474209178f376c2700fe9acf23fec084ba63619124
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -208,6 +292,27 @@ Description: Fastest Redis client for PHP
  PHP process, avoiding network round trips.
 License: Proprietary
 
+Package: lsphp83-relay
+Version: 0.60.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1793
+Depends: libc6 (>= 2.17), lsphp83-common, lsphp83-igbinary, lsphp83-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Filename: pools/resolute/v0.60.0/lsphp83-relay-0.60.0-php8.3-resolute_amd64.deb
+Size: 646290
+MD5sum: 1a2a7bb02596083c2308d8c19e8bf211
+SHA1: 9e2b982425b396152cd18784d28d142bf7c7a2d0
+SHA256: f27f5f9182f3fb73232f961b9ad61493475d9cf0d38565393b38ad05aaab9c0e
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
+
 Package: lsphp84-relay
 Version: 0.50.0-2
 Architecture: amd64
@@ -241,6 +346,27 @@ Size: 661536
 MD5sum: f8093e72125efd2ed8470e20ea90fa59
 SHA1: 4d7a99390e3014be03089117a1dd74ed02bb0b37
 SHA256: f324e79d7cc64410bd61d63010ec07f6ce3c8e855445f6a8cbfb4b9d9719abd5
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
+
+Package: lsphp84-relay
+Version: 0.60.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1805
+Depends: libc6 (>= 2.17), lsphp84-common, lsphp84-igbinary, lsphp84-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Filename: pools/resolute/v0.60.0/lsphp84-relay-0.60.0-php8.4-resolute_amd64.deb
+Size: 646700
+MD5sum: 2671e74b2d69c23323bf1da3575d8890
+SHA1: 511be68d99f692fc3e18a9469e90be0c43283d77
+SHA256: 8913534164e6bc5731052ccdeae1e35e2fb230375e3d3772debabf831f2d711d
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -292,6 +418,27 @@ Description: Fastest Redis client for PHP
  PHP process, avoiding network round trips.
 License: Proprietary
 
+Package: lsphp85-relay
+Version: 0.60.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1805
+Depends: libc6 (>= 2.17), lsphp85-common, lsphp85-igbinary, lsphp85-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Filename: pools/resolute/v0.60.0/lsphp85-relay-0.60.0-php8.5-resolute_amd64.deb
+Size: 646732
+MD5sum: 4e69a473161c1e6f4a7facf148dec917
+SHA1: 76f2f2ab19227b8fcfc42ddefe09828f525df358
+SHA256: 4fdddb2bc587d4e05ad20443c671eefa7ece4b0765cf7a0a801f8449058fc30a
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
+
 Package: php-relay
 Version: 0.50.0-2
 Architecture: amd64
@@ -324,6 +471,26 @@ Size: 19134
 MD5sum: 5f87b532985e6f18fb6f36a412eabecf
 SHA1: 28550804079c8774b3e7ac940a2bba305ce25eaf
 SHA256: 3a30c3e92991148d380e9d6077cc37a696a1befd3dde37818d64a605c0e620c1
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Relay metapackage for PHP 8.4
+ This dependency metapackage pulls in the Relay extension for PHP
+ 8.4.
+License: Proprietary
+
+Package: php-relay
+Version: 0.60.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 26
+Pre-Depends: php-common
+Depends: php8.4-relay, php8.4-igbinary, php8.4-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Filename: pools/resolute/v0.60.0/php-relay-0.60.0-php8.4-resolute_amd64.deb
+Size: 19790
+MD5sum: 8ea7c9df5cbca6b1ad3e40d73b8d090c
+SHA1: 9d677525d1ae70fd7ed89751117a247ceaa45ed3
+SHA256: 860c1b367f28f60cfd876be7f17072519d515b9701e13b913cec1546c8cafea3
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -373,6 +540,31 @@ Size: 568478
 MD5sum: 0ff872c4f57c1519ba8543132f29e242
 SHA1: 8dc1316678b38b13941c8e431fd53cf5a5edd37e
 SHA256: ac753f9ad2be8e6f0d59c8b7032d625a95baab4072487da50be66a1c4e77608e
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
+
+Package: php7.4-relay
+Source: php-relay
+Version: 0.60.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1434
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), php7.4-common, php7.4-igbinary, php7.4-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Replaces: php-relay (<< 0.60.0)
+Provides: php-relay
+Filename: pools/resolute/v0.60.0/php7.4-relay-0.60.0-php7.4-resolute_amd64.deb
+Size: 550914
+MD5sum: cfcfd389e2c861a3dee9ac0273fe3d51
+SHA1: 943fd62e41769a1a8b425eb1a023ef81981b8b5a
+SHA256: 8ea6637b582ef28a0b03991c0d2e62ed81fce9b14102fcc4aa5c1d9fba336717
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -432,6 +624,31 @@ Description: Fastest Redis client for PHP
  PHP process, avoiding network round trips.
 License: Proprietary
 
+Package: php8.0-relay
+Source: php-relay
+Version: 0.60.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1765
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), php8.0-common, php8.0-igbinary, php8.0-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Replaces: php-relay (<< 0.60.0)
+Provides: php-relay
+Filename: pools/resolute/v0.60.0/php8.0-relay-0.60.0-php8.0-resolute_amd64.deb
+Size: 634332
+MD5sum: c5f7178a16e453b60c23a7e3c74619c4
+SHA1: eaf33f6a98bc09c8989ee63aa8b9422df03b833b
+SHA256: b23cfe5cf4eeaed88d711a2f1c4a0a24ed9feceab0fac1ce9aad8839808f4f31
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
+
 Package: php8.1-relay
 Source: php-relay
 Version: 0.50.0-2
@@ -473,6 +690,31 @@ Size: 653784
 MD5sum: 9b9fe19cacd3755b8f98375f5e0dee27
 SHA1: e551895d4d18a7a4c0f2e190621781e5fa4c3f6f
 SHA256: 6687bf3ed1ad9f49c447082fc04737b9a812b01efb27eb64caa5796da131926c
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
+
+Package: php8.1-relay
+Source: php-relay
+Version: 0.60.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1781
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), php8.1-common, php8.1-igbinary, php8.1-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Replaces: php-relay (<< 0.60.0)
+Provides: php-relay
+Filename: pools/resolute/v0.60.0/php8.1-relay-0.60.0-php8.1-resolute_amd64.deb
+Size: 637516
+MD5sum: fd246058a79c6215649937d5c46ffe3b
+SHA1: d930d7c9dbc02c50da60fe2533f4c33ac15e8002
+SHA256: 6319a9597ada2f329333f6e21be72d48060aa80e9b3b1b2224c3b9d28bc3f864
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -532,6 +774,31 @@ Description: Fastest Redis client for PHP
  PHP process, avoiding network round trips.
 License: Proprietary
 
+Package: php8.2-relay
+Source: php-relay
+Version: 0.60.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1793
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), php8.2-common, php8.2-igbinary, php8.2-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Replaces: php-relay (<< 0.60.0)
+Provides: php-relay
+Filename: pools/resolute/v0.60.0/php8.2-relay-0.60.0-php8.2-resolute_amd64.deb
+Size: 646296
+MD5sum: 7dd8357c5b000f1424ae24d136fe1b7b
+SHA1: 66eb9082efd9ad108b1c2faff24e62e631e2e960
+SHA256: 18b9951f9c8061003e9bfa1c7e9e9ae0e35896fb8a2d0de9b8953bc7127dc82d
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
+
 Package: php8.3-relay
 Source: php-relay
 Version: 0.50.0-2
@@ -573,6 +840,31 @@ Size: 660772
 MD5sum: 3d8e2352b9c5929e1c72d73583f481f3
 SHA1: c80fd4f6cf5373c68b4382e9b701a84765ecc468
 SHA256: b53f54607404d67eb931e4dd0b28b4d952a83df0e22eae88c88d95847ee9e20d
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
+
+Package: php8.3-relay
+Source: php-relay
+Version: 0.60.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1793
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), php8.3-common, php8.3-igbinary, php8.3-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Replaces: php-relay (<< 0.60.0)
+Provides: php-relay
+Filename: pools/resolute/v0.60.0/php8.3-relay-0.60.0-php8.3-resolute_amd64.deb
+Size: 646540
+MD5sum: a10b447d8f486d4074898825a2236d7f
+SHA1: c65a5c791b0ecf1c73e2b26cc864cddbafb376fa
+SHA256: 0808f6b0ae79e6d1300cb4a5d962c631aafa4d2c749d1080c4a6a43629b61a57
 Section: php
 Priority: optional
 Homepage: https://relay.so
@@ -632,6 +924,31 @@ Description: Fastest Redis client for PHP
  PHP process, avoiding network round trips.
 License: Proprietary
 
+Package: php8.4-relay
+Source: php-relay
+Version: 0.60.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1805
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), php8.4-common, php8.4-igbinary, php8.4-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Replaces: php-relay (<< 0.60.0)
+Provides: php-relay
+Filename: pools/resolute/v0.60.0/php8.4-relay-0.60.0-php8.4-resolute_amd64.deb
+Size: 646956
+MD5sum: 774f33e36b84e91df18b77c61d41f339
+SHA1: 646d5196c0b54403cfcdacdbebd980a73740efcc
+SHA256: f79b0983295ba1fac3ad441a61c6408d4724a3ca472e27fe1a0427c9683d4bf6
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
+
 Package: php8.5-relay
 Source: php-relay
 Version: 0.50.0-2
@@ -673,6 +990,31 @@ Size: 661668
 MD5sum: 118377810e097e64c77e79873034e403
 SHA1: b89905b5260d520bc7e80bc671648e71003f3b36
 SHA256: 7d3585e7eb3bde5863e90c02d6ec71a027240fc6522d9a2d12d9a0be21998477
+Section: php
+Priority: optional
+Homepage: https://relay.so
+Description: Fastest Redis client for PHP
+ 100x faster cache reads, near-zero bandwidth, no code changes required.
+ Relay keeps a partial replica of the Redis or Valkey data set inside the
+ PHP process, avoiding network round trips.
+License: Proprietary
+
+Package: php8.5-relay
+Source: php-relay
+Version: 0.60.0
+Architecture: amd64
+Maintainer: Relay Team <hello@cachewerk.com>
+Installed-Size: 1805
+Pre-Depends: php-common
+Depends: libc6 (>= 2.17), php8.5-common, php8.5-igbinary, php8.5-msgpack, libhiredis1.1.0 (>= 1.1.0), libck0 (>= 0.7.0)
+Recommends: liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.3.2)
+Replaces: php-relay (<< 0.60.0)
+Provides: php-relay
+Filename: pools/resolute/v0.60.0/php8.5-relay-0.60.0-php8.5-resolute_amd64.deb
+Size: 646954
+MD5sum: 55b451b666c0ca681c137cfa6402be6e
+SHA1: 2ca7f6ee73a60f613402aae7113f104c0d4db78d
+SHA256: 0c9dbcc4ec5d72ef9725ec2c531e4972e8767e4363a158e247dcf9b69ca434fc
 Section: php
 Priority: optional
 Homepage: https://relay.so
