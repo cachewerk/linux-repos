@@ -35,9 +35,14 @@ declare -A php_api=(
 
 php_versions=(7.4 8.0 8.1 8.2 8.3 8.4 8.5)
 
+# the `php-relay` metapackage follows deb.sury.org's `PHP_DEFAULT_VERSION`,
+# which `.github/workflows/checks.yml` watches
+php_default=8.4
+
 # earlier PHP 8.6 builds target a pre-release module API that 8.6.0 won't load
 if [[ "$(printf '%s\n' v0.62.0 "$version" | sort -V | head -n1)" == v0.62.0 ]]; then
   php_versions+=(8.6)
+  php_default=8.6
 fi
 
 # LiteSpeed does not ship an `lsphp` runtime for every PHP version on every EL
@@ -68,7 +73,7 @@ for deb in "${deb_dists[@]}"; do
     arch_url=$(echo $arch | sed 's/amd64/x86-64/; s/arm64/aarch64/')
 
     packages+=(
-      "$deb deb base $arch 8.4 20240924 $baseurl-php8.4-debian-${arch_url}${variant}.tar.gz"
+      "$deb deb base $arch $php_default ${php_api[$php_default]} $baseurl-php$php_default-debian-${arch_url}${variant}.tar.gz"
     )
 
     for php in "${php_versions[@]}"; do
