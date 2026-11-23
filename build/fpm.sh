@@ -30,7 +30,15 @@ declare -A php_api=(
   ["8.3"]=20230831
   ["8.4"]=20240924
   ["8.5"]=20250925
+  ["8.6"]=20261112
 )
+
+php_versions=(7.4 8.0 8.1 8.2 8.3 8.4 8.5)
+
+# earlier PHP 8.6 builds target a pre-release module API that 8.6.0 won't load
+if [[ "$(printf '%s\n' v0.62.0 "$version" | sort -V | head -n1)" == v0.62.0 ]]; then
+  php_versions+=(8.6)
+fi
 
 # LiteSpeed does not ship an `lsphp` runtime for every PHP version on every EL
 # release, and an `ls` package for a missing one carries a `Requires` that no
@@ -38,14 +46,14 @@ declare -A php_api=(
 # https://rpms.litespeedtech.com/centos/<el>/<arch>/ -- recheck when adding a
 # PHP version or an EL release.
 declare -A lsphp_versions=(
-  ["el7 x86_64"]="7.4 8.0 8.1 8.2 8.3"              # no 8.4/8.5
+  ["el7 x86_64"]="7.4 8.0 8.1 8.2 8.3"              # no 8.4/8.5/8.6
   ["el7 aarch64"]=""                                 # no aarch64 repository
-  ["el8 x86_64"]="7.4 8.0 8.1 8.2 8.3 8.4 8.5"
-  ["el8 aarch64"]="7.4 8.0 8.1 8.2 8.3 8.4 8.5"
-  ["el9 x86_64"]="8.0 8.1 8.2 8.3 8.4 8.5"          # no 7.4
-  ["el9 aarch64"]="7.4 8.0 8.1 8.2 8.3 8.4 8.5"
-  ["el10 x86_64"]="8.1 8.2 8.3 8.4 8.5"             # no 7.4/8.0
-  ["el10 aarch64"]="8.1 8.2 8.3 8.4 8.5"            # no 7.4/8.0
+  ["el8 x86_64"]="7.4 8.0 8.1 8.2 8.3 8.4 8.5 8.6"
+  ["el8 aarch64"]="7.4 8.0 8.1 8.2 8.3 8.4 8.5 8.6"
+  ["el9 x86_64"]="8.0 8.1 8.2 8.3 8.4 8.5 8.6"      # no 7.4
+  ["el9 aarch64"]="7.4 8.0 8.1 8.2 8.3 8.4 8.5 8.6"
+  ["el10 x86_64"]="8.1 8.2 8.3 8.4 8.5 8.6"         # no 7.4/8.0
+  ["el10 aarch64"]="8.1 8.2 8.3 8.4 8.5 8.6"        # no 7.4/8.0
 )
 
 packages=()
@@ -63,7 +71,7 @@ for deb in "${deb_dists[@]}"; do
       "$deb deb base $arch 8.4 20240924 $baseurl-php8.4-debian-${arch_url}${variant}.tar.gz"
     )
 
-    for php in 7.4 8.0 8.1 8.2 8.3 8.4 8.5; do
+    for php in "${php_versions[@]}"; do
       api=${php_api[$php]}
 
       packages+=(
@@ -84,7 +92,7 @@ for el in "${el_dists[@]}"; do
       exit 1
     fi
 
-    for php in 7.4 8.0 8.1 8.2 8.3 8.4 8.5; do
+    for php in "${php_versions[@]}"; do
       api=${php_api[$php]}
       url="$baseurl-php$php-$url_distro-${arch/_/-}.tar.gz"
 
